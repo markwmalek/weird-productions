@@ -434,6 +434,16 @@
 
 /* ── RESPONSIVE ── */
 
+@media (max-width: 600px) {
+  .home-hero-lindsay {
+    top: -55%;
+  }
+
+  .home-hero-mark {
+    top: 70%;
+  }
+}
+
 @media (max-width: 900px) {
   .home-hero {
     padding: 60px 24px 16px;
