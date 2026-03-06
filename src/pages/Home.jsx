@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const SLIDESHOW_IMAGES = [
@@ -130,6 +130,55 @@ export default function Home() {
           <p className="home-wwd-note">
             We curate artists, chefs, performers, and creatives from our expansive network.
           </p>
+        </div>
+      </section>
+
+      {/* ── PORTFOLIO ── */}
+      <section className="home-portfolio">
+        <h2 className="home-portfolio-heading">Portfolio</h2>
+        <div className="home-portfolio-track">
+          <Link to="/salondurham" className="home-portfolio-card">
+            <div className="home-portfolio-card-img">
+              <img src="/images/salon/0968.jpeg" alt="The Salon Durham" loading="lazy" />
+            </div>
+            <p className="home-portfolio-card-title">The Salon</p>
+            <p className="home-portfolio-card-desc">Women's event — Durham, NC, 2025</p>
+          </Link>
+          <Link to="/speedhouse" className="home-portfolio-card">
+            <div className="home-portfolio-card-img">
+              <img src="/images/speedhouse/WP-134.jpg" alt="Fast & Loose Art Salon" loading="lazy" />
+            </div>
+            <p className="home-portfolio-card-title">Fast &amp; Loose</p>
+            <p className="home-portfolio-card-desc">Art salon — Durham, NC, 2025</p>
+          </Link>
+          <Link to="/raleigh" className="home-portfolio-card">
+            <div className="home-portfolio-card-img">
+              <img src="/images/raleigh/A7I09373.jpg" alt="Raleigh Renaissance Fashion Show" loading="lazy" />
+            </div>
+            <p className="home-portfolio-card-title">Raleigh Renaissance</p>
+            <p className="home-portfolio-card-desc">Fashion show — Raleigh, NC, 2024</p>
+          </Link>
+          <Link to="/smash" className="home-portfolio-card">
+            <div className="home-portfolio-card-img">
+              <img src="/images/smash/DSC07772.jpg" alt="Sunday Smash & Slam" loading="lazy" />
+            </div>
+            <p className="home-portfolio-card-title">Smash &amp; Slam</p>
+            <p className="home-portfolio-card-desc">Burger + poetry competition — Durham, NC, 2024</p>
+          </Link>
+          <Link to="/dollyweird" className="home-portfolio-card">
+            <div className="home-portfolio-card-img">
+              <img src="/images/dollyweird/DSC06240.jpg" alt="Dollyweird Art Show" loading="lazy" />
+            </div>
+            <p className="home-portfolio-card-title">Dollyweird</p>
+            <p className="home-portfolio-card-desc">One-night art party — Durham, NC, 2023</p>
+          </Link>
+          <Link to="/american-underground" className="home-portfolio-card">
+            <div className="home-portfolio-card-img">
+              <img src="/images/au/p6_0.png" alt="American Underground" loading="lazy" />
+            </div>
+            <p className="home-portfolio-card-title">American Underground</p>
+            <p className="home-portfolio-card-desc">Interior art curation proposal — Durham, NC</p>
+          </Link>
         </div>
       </section>
 
