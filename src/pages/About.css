@@ -1,0 +1,82 @@
+/* ── PORTFOLIO PAGE ── */
+
+.portfolio-page {
+  background: #EFEEEA;
+  min-height: 100vh;
+  padding: 64px 0;
+}
+
+.portfolio-page .portfolio-header {
+  margin-bottom: 64px;
+}
+
+.portfolio-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  color: #000000;
+  line-height: 1;
+}
+
+/* ── GRID ── */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 32px;
+}
+
+/* ── CARD ── */
+.portfolio-card {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+}
+
+.portfolio-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.portfolio-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-card-img img {
+  transform: scale(1.04);
+}
+
+.portfolio-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.4vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.portfolio-card-desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.5;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .portfolio-page {
+    padding: 40px 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

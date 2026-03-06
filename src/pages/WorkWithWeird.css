@@ -1,0 +1,386 @@
+/* ── WORK WITH WEIRD PAGE — matches home page design language ── */
+
+.www-page {
+  background: #EFEEEA;
+}
+
+/* ── HERO ── */
+.www-hero {
+  padding: 80px 48px 64px;
+  background: #EFEEEA;
+}
+
+.www-hero .page-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.www-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  line-height: 0.9;
+  color: #000000;
+}
+
+.www-hero-sub {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.6vw, 24px);
+  font-weight: 400;
+  color: #000000;
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+.www-hero-dm {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.www-hero-dm:hover {
+  opacity: 0.5;
+}
+
+/* ── SECTION HEADING (shared) ── */
+.www-section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 3.2vw, 48px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  line-height: 0.9;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+/* ── PITCH ── */
+.www-pitch {
+  padding: 64px 48px;
+  border-top: 1px solid #000000;
+}
+
+.www-pitch-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.www-pitch-heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 3.2vw, 48px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  line-height: 0.9;
+  color: #000000;
+}
+
+.www-pitch-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.www-pitch-body p {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* ── SERVICES ── */
+.www-services {
+  padding: 64px 48px;
+  border-top: 1px solid #000000;
+}
+
+.www-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.www-service {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.www-service-title {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.www-service-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* ── PROMO STRIP ── */
+.www-promo-strip {
+  display: flex;
+  height: clamp(200px, 20vw, 340px);
+  overflow: hidden;
+}
+
+.www-promo-item {
+  flex: 1;
+  overflow: hidden;
+}
+
+.www-promo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.www-promo-item:hover img {
+  transform: scale(1.06);
+}
+
+/* ── WHY WEIRD ── */
+.www-why {
+  padding: 64px 48px;
+  border-top: 1px solid #000000;
+}
+
+.www-why-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.www-why-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.www-why-item:nth-child(odd) {
+  padding-right: 48px;
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+
+.www-why-item:nth-child(even) {
+  padding-left: 48px;
+}
+
+.www-why-item:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.www-why-num {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(0,0,0,0.3);
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+
+.www-why-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* ── PORTFOLIO ── */
+.www-portfolio {
+  padding: 64px 48px;
+  border-top: 1px solid #000000;
+}
+
+.www-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.www-portfolio-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.www-portfolio-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.www-portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.www-portfolio-item:hover .www-portfolio-img img {
+  transform: scale(1.04);
+}
+
+.www-portfolio-cat {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555555;
+  font-weight: 500;
+}
+
+.www-portfolio-name {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #000000;
+}
+
+/* ── PARTNERS ── */
+.www-partners {
+  padding: 64px 48px;
+  border-top: 1px solid #000000;
+}
+
+.www-partners-logos {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.www-partner-logo {
+  padding: 16px 28px;
+  background: #000000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.www-partner-logo img {
+  max-height: 36px;
+  max-width: 180px;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+/* ── CTA ── */
+.www-cta {
+  background: #000000;
+  padding: 80px 48px;
+}
+
+.www-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.www-cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 64px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  line-height: 0.9;
+  color: #FFFFFF;
+}
+
+.www-cta-sub {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 20px);
+  color: rgba(255,255,255,0.7);
+}
+
+.www-cta-dm {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.www-cta-dm:hover {
+  opacity: 0.6;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .www-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .www-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .www-hero,
+  .www-pitch,
+  .www-services,
+  .www-why,
+  .www-portfolio,
+  .www-partners,
+  .www-cta {
+    padding: 48px 24px;
+  }
+
+  .www-pitch-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .www-why-list {
+    grid-template-columns: 1fr;
+  }
+
+  .www-why-item:nth-child(odd) {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+  }
+
+  .www-why-item:nth-child(even) {
+    padding-left: 0;
+  }
+
+  .www-why-item:last-child {
+    border-bottom: none;
+  }
+
+  .www-promo-item:nth-child(n+3) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .www-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .www-portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}

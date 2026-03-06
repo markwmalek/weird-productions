@@ -1,0 +1,35 @@
+/* Figma: 1512×68px, horizontal, space-between, padding 24px, border-top 1px #000 */
+.site-footer {
+  border-top: 1px solid #000000;
+  padding: 24px 48px;
+  background: #EFEEEA;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Figma: Sora 16px weight 400 */
+.footer-left,
+.footer-right {
+  font-family: 'Sora', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 24px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

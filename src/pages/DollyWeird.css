@@ -1,0 +1,165 @@
+/* ── DOLLYWEIRD PAGE ── */
+
+.dw-page {
+  background: #EFEEEA;
+}
+
+/* ── HERO ── */
+.dw-hero {
+  padding: 80px 48px 64px;
+  border-bottom: 1px solid #000000;
+}
+
+.dw-eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
+}
+
+.dw-title {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 12vw, 180px);
+  font-weight: 400;
+  letter-spacing: -3px;
+  line-height: 0.9;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.dw-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.dw-meta {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ── SECTION HEADING ── */
+.dw-section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3vw, 48px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  line-height: 0.9;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+/* ── ABOUT ── */
+.dw-about {
+  padding: 64px 48px;
+  border-bottom: 1px solid #000000;
+}
+
+.dw-about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.dw-about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dw-about-body p {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.65;
+  color: #000000;
+}
+
+/* ── SLIDESHOW ── */
+.dw-slideshow-section {
+  padding: 64px 48px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.dw-slideshow-box {
+  position: relative;
+  height: clamp(400px, 50vw, 760px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* ── PRESS ── */
+.dw-press {
+  padding: 64px 48px;
+}
+
+.dw-press-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.dw-press-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dw-press-list li {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: #000000;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.dw-press-list li:last-child {
+  border-bottom: none;
+}
+
+.dw-press-link {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.dw-press-link:hover {
+  opacity: 0.5;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .dw-hero,
+  .dw-about,
+  .dw-press {
+    padding: 48px 24px;
+  }
+
+  .dw-about-inner,
+  .dw-press-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .dw-slideshow-section {
+    padding: 48px 24px;
+  }
+
+  .dw-slideshow-box {
+    height: clamp(280px, 50vw, 500px);
+  }
+}

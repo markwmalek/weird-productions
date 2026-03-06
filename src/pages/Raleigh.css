@@ -1,0 +1,233 @@
+/* ── RALEIGH RENAISSANCE PAGE ── */
+
+.rl-page {
+  background: #EFEEEA;
+}
+
+/* ── HERO ── */
+.rl-hero {
+  padding: 80px 48px 64px;
+  border-bottom: 1px solid #000000;
+}
+
+.rl-eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
+}
+
+.rl-title {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 12vw, 180px);
+  font-weight: 400;
+  letter-spacing: -3px;
+  line-height: 0.9;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.rl-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.rl-meta {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ── SECTION HEADING ── */
+.rl-section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3vw, 48px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  line-height: 0.9;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+/* ── ABOUT ── */
+.rl-about {
+  padding: 64px 48px;
+  border-bottom: 1px solid #000000;
+}
+
+.rl-about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.rl-about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rl-about-body p {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.65;
+  color: #000000;
+}
+
+.rl-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rl-schedule-item {
+  display: flex;
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rl-schedule-time {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.rl-schedule-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: #000000;
+}
+
+/* ── DESIGNERS ── */
+.rl-designers {
+  padding: 64px 48px;
+  border-bottom: 1px solid #000000;
+}
+
+.rl-designers-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.rl-designer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rl-designer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rl-designer-item:first-child {
+  padding-top: 0;
+}
+
+.rl-designer-name {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.rl-designer-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ── SLIDESHOW ── */
+.rl-slideshow-section {
+  padding: 64px 48px;
+  border-bottom: 1px solid #000000;
+}
+
+.rl-slideshow-box {
+  position: relative;
+  height: clamp(400px, 50vw, 760px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* ── SPONSORS ── */
+.rl-sponsors {
+  padding: 64px 48px;
+}
+
+.rl-sponsors-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.rl-sponsor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rl-sponsor-list li {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: #000000;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.rl-sponsor-list li:first-child {
+  padding-top: 0;
+}
+
+.rl-sponsor-list li:last-child {
+  border-bottom: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .rl-hero,
+  .rl-about,
+  .rl-designers,
+  .rl-sponsors {
+    padding: 48px 24px;
+  }
+
+  .rl-about-inner,
+  .rl-designers-inner,
+  .rl-sponsors-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .rl-slideshow-section {
+    padding: 48px 24px;
+  }
+
+  .rl-slideshow-box {
+    height: clamp(280px, 50vw, 500px);
+  }
+}

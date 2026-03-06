@@ -1,0 +1,206 @@
+/* ── SUBSCRIBE PAGE ── */
+
+.subscribe-page {
+  padding-top: var(--header-height);
+}
+
+/* Header */
+.subscribe-header {
+  padding-top: 72px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.subscribe-title {
+  font-size: clamp(36px, 6vw, 80px);
+  font-weight: 300;
+  font-style: italic;
+  font-family: var(--font-display);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.subscribe-sub {
+  font-size: 14px;
+  color: var(--gray-mid);
+  letter-spacing: 0.06em;
+  font-weight: 400;
+}
+
+/* Body */
+.subscribe-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+/* Left */
+.subscribe-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.subscribe-benefits p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subscribe-input {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid var(--gray-light);
+  font-size: 16px;
+  font-family: var(--font-body);
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+  color: var(--black);
+}
+
+.subscribe-input::placeholder {
+  color: var(--gray-light);
+}
+
+.subscribe-input:focus {
+  border-bottom-color: var(--black);
+}
+
+.subscribe-privacy {
+  font-size: 12px;
+  color: var(--gray-mid);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.subscribe-success {
+  padding: 0;
+}
+
+.subscribe-success-check {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.subscribe-success h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.subscribe-success p {
+  font-size: 15px;
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+/* Right */
+.subscribe-why-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.subscribe-why-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-dark);
+  margin-bottom: 12px;
+}
+
+.subscribe-ig-block {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subscribe-ig-text {
+  font-size: 13px;
+  color: var(--gray-mid);
+}
+
+/* Strip */
+.subscribe-strip {
+  background: var(--off-white);
+  border-top: 1px solid var(--gray-light);
+}
+
+.subscribe-strip-inner {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subscribe-strip-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+}
+
+.subscribe-strip-text {
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 300;
+  font-style: italic;
+  font-family: var(--font-display);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.subscribe-strip-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.subscribe-strip-links a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.subscribe-strip-links a:hover {
+  opacity: 0.5;
+}
+
+.subscribe-strip-dot {
+  color: var(--gray-mid);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscribe-body {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding-top: 48px;
+  }
+
+  .subscribe-header {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+}
