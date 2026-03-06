@@ -318,6 +318,22 @@
   margin: 0;
 }
 
+.home-portfolio-see-all {
+  display: inline-block;
+  margin-top: 32px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.home-portfolio-see-all:hover {
+  opacity: 0.5;
+}
+
 /* ── WORK WITH US ── */
 /* Figma: 1512×291px, padding 48px, gap 32px, vertical, centered */
 .home-wwu {
