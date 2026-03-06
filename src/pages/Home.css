@@ -53,7 +53,6 @@
   font-size: clamp(100px, 26.5vw, 400px);
   font-weight: 400;
   line-height: 0.9;
-  letter-spacing: clamp(-4px, -1.06vw, -16px);
   color: #000000;
   margin: 0;
 }
@@ -63,7 +62,6 @@
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: 1.2px;
   color: #000000;
   margin: 0;
 }
@@ -160,7 +158,6 @@
   font-family: var(--font-display);
   font-size: clamp(36px, 3.2vw, 48px);
   font-weight: 400;
-  letter-spacing: -1.92px;
   line-height: 0.9;
   color: #000000;
   text-align: center;
@@ -261,7 +258,6 @@
   font-family: var(--font-display);
   font-size: clamp(36px, 3.2vw, 48px);
   font-weight: 400;
-  letter-spacing: -1.92px;
   line-height: 0.9;
   color: #000000;
   margin: 0;
@@ -356,7 +352,6 @@
   font-family: var(--font-display);
   font-size: clamp(36px, 3.2vw, 48px);
   font-weight: 400;
-  letter-spacing: -1.92px;
   line-height: 0.9;
   color: #000000;
   margin: 0;
@@ -409,7 +404,6 @@
   font-family: var(--font-display);
   font-size: clamp(36px, 3.2vw, 48px);
   font-weight: 400;
-  letter-spacing: -1.92px;
   line-height: 0.9;
   color: #FFFFFF;
   margin: 0;

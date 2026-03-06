@@ -15,7 +15,6 @@
 .contact-title {
   font-size: clamp(36px, 6vw, 88px);
   font-weight: normal;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 16px;
@@ -23,7 +22,6 @@
 
 .contact-sub {
   font-size: 13px;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gray-mid);
   font-weight: 400;
@@ -43,7 +41,6 @@
 .contact-info-heading {
   font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 400;
-  letter-spacing: -0.01em;
   margin-bottom: 16px;
   line-height: 1.3;
 }
@@ -84,7 +81,6 @@ a.contact-channel:hover {
 .contact-channel-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gray-mid);
   margin-bottom: 2px;
@@ -115,7 +111,6 @@ a.contact-channel:hover {
 .contact-label {
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gray-dark);
 }

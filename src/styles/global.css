@@ -131,7 +131,6 @@ h1 {
   font-size: 0.85rem;
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
   padding: 0.7rem 1.75rem;
   border-radius: 980px;
   border: 1.5px solid var(--color-black);

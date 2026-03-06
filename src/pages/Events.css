@@ -18,12 +18,10 @@
   font-family: var(--font-body);
   line-height: 1.1;
   margin-bottom: 16px;
-  letter-spacing: -0.01em;
 }
 
 .events-sub {
   font-size: 13px;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gray-mid);
   font-weight: 400;
@@ -38,7 +36,6 @@
 .events-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gray-mid);
   margin-bottom: 24px;
@@ -73,7 +70,6 @@
   font-weight: 500;
   color: var(--gray-mid);
   white-space: nowrap;
-  letter-spacing: 0.02em;
 }
 
 .event-main {
@@ -86,7 +82,6 @@
 .event-name {
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: -0.01em;
   color: var(--black);
 }
 
@@ -113,7 +108,6 @@
 
 .event-tba {
   font-size: 11px;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gray-light);
   font-weight: 500;
@@ -147,7 +141,6 @@
   font-weight: 300;
   font-style: italic;
   font-family: var(--font-body);
-  letter-spacing: -0.01em;
 }
 
 /* Bottom CTA */
