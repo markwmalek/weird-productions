@@ -80,9 +80,11 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="home-hero">
-        <img src="/images/hero-lindsay.png" alt="" className="home-hero-char home-hero-lindsay" aria-hidden="true" />
-        <img src="/images/hero-mark.png"    alt="" className="home-hero-char home-hero-mark"    aria-hidden="true" />
-        <h1 className="home-hero-title">Weird</h1>
+        <div className="home-hero-title-wrap">
+          <img src="/images/hero-lindsay.png" alt="" className="home-hero-char home-hero-lindsay" aria-hidden="true" />
+          <img src="/images/hero-mark.png"    alt="" className="home-hero-char home-hero-mark"    aria-hidden="true" />
+          <h1 className="home-hero-title">Weird</h1>
+        </div>
         <p className="home-hero-sub">A CREATIVE STUDIO</p>
         <div className="home-hero-arrow" />
       </section>
