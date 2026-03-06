@@ -6,7 +6,7 @@
 
 /* ── HERO ── */
 .dw-hero {
-  padding: 80px 48px 64px;
+  padding: 80px 48px 48px;
   border-bottom: 1px solid #000000;
 }
 
@@ -53,19 +53,19 @@
   letter-spacing: -1.92px;
   line-height: 0.9;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 /* ── ABOUT ── */
 .dw-about {
-  padding: 64px 48px;
+  padding: 48px;
   border-bottom: 1px solid #000000;
 }
 
 .dw-about-inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 80px;
+  gap: 48px;
   align-items: start;
 }
 
@@ -84,7 +84,7 @@
 
 /* ── SLIDESHOW ── */
 .dw-slideshow-section {
-  padding: 64px 48px;
+  padding: 48px;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
 }
@@ -98,13 +98,13 @@
 
 /* ── PRESS ── */
 .dw-press {
-  padding: 64px 48px;
+  padding: 48px;
 }
 
 .dw-press-inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 80px;
+  gap: 48px;
   align-items: start;
 }
 

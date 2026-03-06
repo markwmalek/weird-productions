@@ -6,7 +6,7 @@
 
 /* ── HERO ── */
 .sd-hero {
-  padding: 80px 48px 64px;
+  padding: 80px 48px 48px;
   border-bottom: 1px solid #000000;
 }
 
@@ -54,7 +54,7 @@
   letter-spacing: -1.92px;
   line-height: 0.9;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .sd-section-heading--spaced {
@@ -63,14 +63,14 @@
 
 /* ── ABOUT ── */
 .sd-about {
-  padding: 64px 48px;
+  padding: 48px;
   border-bottom: 1px solid #000000;
 }
 
 .sd-about-inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 80px;
+  gap: 48px;
   align-items: start;
 }
 
@@ -106,14 +106,14 @@
 
 /* ── PEOPLE ── */
 .sd-people {
-  padding: 64px 48px;
+  padding: 48px;
   border-bottom: 1px solid #000000;
 }
 
 .sd-people-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: start;
 }
 
@@ -129,7 +129,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 14px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -162,7 +162,7 @@
   font-family: var(--font-body);
   font-size: 16px;
   color: #000000;
-  padding: 10px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -172,7 +172,7 @@
 
 /* ── SLIDESHOW ── */
 .sd-slideshow-section {
-  padding: 64px 48px;
+  padding: 48px;
   border-bottom: 1px solid #000000;
 }
 
@@ -185,13 +185,13 @@
 
 /* ── PRODUCTION ── */
 .sd-production {
-  padding: 64px 48px;
+  padding: 48px;
 }
 
 .sd-production-inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 80px;
+  gap: 48px;
   align-items: start;
 }
 
