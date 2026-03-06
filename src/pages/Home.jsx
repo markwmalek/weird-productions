@@ -137,31 +137,33 @@ export default function Home() {
 
       {/* ── PORTFOLIO ── */}
       <section className="home-portfolio">
-        <h2 className="home-portfolio-heading">Portfolio</h2>
-        <div className="home-portfolio-track">
-          <Link to="/salondurham" className="home-portfolio-card">
-            <div className="home-portfolio-card-img">
-              <img src="/images/salon/0968.jpeg" alt="The Salon Durham" loading="lazy" />
-            </div>
-            <p className="home-portfolio-card-title">The Salon</p>
-            <p className="home-portfolio-card-desc">Women's event — Durham, NC, 2025</p>
-          </Link>
-          <Link to="/dollyweird" className="home-portfolio-card">
-            <div className="home-portfolio-card-img">
-              <img src="/images/dollyweird/DSC06240.jpg" alt="Dollyweird Art Show" loading="lazy" />
-            </div>
-            <p className="home-portfolio-card-title">Dollyweird</p>
-            <p className="home-portfolio-card-desc">One-night art party — Durham, NC, 2023</p>
-          </Link>
-          <Link to="/speedhouse" className="home-portfolio-card">
-            <div className="home-portfolio-card-img">
-              <img src="/images/speedhouse/WP-134.jpg" alt="Fast & Loose Art Salon" loading="lazy" />
-            </div>
-            <p className="home-portfolio-card-title">Fast &amp; Loose</p>
-            <p className="home-portfolio-card-desc">Art salon — Durham, NC, 2025</p>
-          </Link>
+        <div className="home-portfolio-inner">
+          <h2 className="home-portfolio-heading">Portfolio</h2>
+          <div className="home-portfolio-grid">
+            <Link to="/salondurham" className="home-portfolio-card">
+              <div className="home-portfolio-card-img">
+                <img src="/images/salon/0968.jpeg" alt="The Salon Durham" loading="lazy" />
+              </div>
+              <p className="home-portfolio-card-title">The Salon</p>
+              <p className="home-portfolio-card-desc">Women's event — Durham, NC, 2025</p>
+            </Link>
+            <Link to="/dollyweird" className="home-portfolio-card">
+              <div className="home-portfolio-card-img">
+                <img src="/images/dollyweird/DSC06240.jpg" alt="Dollyweird Art Show" loading="lazy" />
+              </div>
+              <p className="home-portfolio-card-title">Dollyweird</p>
+              <p className="home-portfolio-card-desc">One-night art party — Durham, NC, 2023</p>
+            </Link>
+            <Link to="/speedhouse" className="home-portfolio-card">
+              <div className="home-portfolio-card-img">
+                <img src="/images/speedhouse/WP-134.jpg" alt="Fast & Loose Art Salon" loading="lazy" />
+              </div>
+              <p className="home-portfolio-card-title">Fast &amp; Loose</p>
+              <p className="home-portfolio-card-desc">Art salon — Durham, NC, 2025</p>
+            </Link>
+          </div>
+          <Link to="/about" className="home-portfolio-see-all">See all</Link>
         </div>
-        <Link to="/about" className="home-portfolio-see-all">See all</Link>
       </section>
 
       {/* ── WORK WITH US ── */}
