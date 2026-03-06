@@ -11,6 +11,16 @@ export default function About() {
 
       <div className="portfolio-grid page-wrap">
 
+        <Link to="/salondurham" className="portfolio-card">
+          <div className="portfolio-card-img">
+            <img src="/images/salon/0968.jpeg" alt="The Salon Durham" loading="lazy" />
+          </div>
+          <div className="portfolio-card-info">
+            <h2 className="portfolio-card-title">The Salon</h2>
+            <p className="portfolio-card-desc">Women's event — Durham, NC, 2025</p>
+          </div>
+        </Link>
+
         <Link to="/speedhouse" className="portfolio-card">
           <div className="portfolio-card-img">
             <img src="/images/speedhouse/WP-134.jpg" alt="Fast & Loose Art Salon" loading="lazy" />

@@ -55,8 +55,8 @@
 /* Figma: Sora 24px weight 600, ls 1.2px */
 .home-hero-sub {
   font-family: var(--font-body);
-  font-size: clamp(14px, 1.6vw, 24px);
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 1.2px;
   color: #000000;
   margin: 0;
@@ -126,7 +126,7 @@
 /* Figma: Sora 24px weight 400, centered, #000 */
 .home-slideshow-caption {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   text-align: center;
@@ -164,7 +164,7 @@
 /* Figma: Sora 24px weight 400, centered */
 .home-wwd-sub {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   text-align: center;
@@ -210,8 +210,8 @@
 /* Figma: Sora 24px weight 600 */
 .home-wwd-label {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   color: #000000;
   margin: 0;
 }
@@ -229,7 +229,7 @@
 /* Figma: Sora 24px weight 400, centered */
 .home-wwd-note {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   text-align: center;
@@ -267,7 +267,7 @@
 /* Figma: Sora 24px weight 400, centered */
 .home-wwu-body {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   line-height: 1.6;
@@ -277,7 +277,7 @@
 /* Figma: "DM us" — same text style, treated as link */
 .home-wwu-dm {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   text-decoration: underline;
@@ -320,7 +320,7 @@
 /* Figma: Sora 24px weight 400, #fff, centered */
 .home-gol-sub {
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
+  font-size: 16px;
   font-weight: 400;
   color: #FFFFFF;
   margin: 0;
@@ -332,7 +332,7 @@
   height: 62px;
   padding: 16px;
   font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
+  font-size: 16px;
   font-weight: 400;
   color: #FFFFFF;
   background: rgba(255, 255, 255, 0.1);

@@ -14,6 +14,7 @@ import DollyWeird from './pages/DollyWeird';
 import Smash from './pages/Smash';
 import Raleigh from './pages/Raleigh';
 import SpeedHouse from './pages/SpeedHouse';
+import SalonDurham from './pages/SalonDurham';
 import './App.css';
 import './styles/global.css';
 
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/smash" element={<Smash />} />
         <Route path="/raleigh" element={<Raleigh />} />
         <Route path="/speedhouse" element={<SpeedHouse />} />
+        <Route path="/salondurham" element={<SalonDurham />} />
       </Routes>
       <Footer />
     </BrowserRouter>

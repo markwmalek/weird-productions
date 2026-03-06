@@ -1,0 +1,221 @@
+/* ── THE SALON DURHAM PAGE ── */
+
+.sd-page {
+  background: #EFEEEA;
+}
+
+/* ── HERO ── */
+.sd-hero {
+  padding: 80px 48px 64px;
+  border-bottom: 1px solid #000000;
+}
+
+.sd-eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
+}
+
+.sd-title {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 12vw, 180px);
+  font-weight: 400;
+  letter-spacing: -3px;
+  line-height: 0.9;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.sd-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  max-width: 640px;
+}
+
+.sd-meta {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ── SECTION HEADING ── */
+.sd-section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3vw, 48px);
+  font-weight: 400;
+  letter-spacing: -1.92px;
+  line-height: 0.9;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+.sd-section-heading--spaced {
+  margin-top: 48px;
+}
+
+/* ── ABOUT ── */
+.sd-about {
+  padding: 64px 48px;
+  border-bottom: 1px solid #000000;
+}
+
+.sd-about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sd-about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sd-about-body p {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.65;
+  color: #000000;
+}
+
+.sd-inclusions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.sd-inclusions li {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.2vw, 18px);
+  color: #000000;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ── PEOPLE ── */
+.sd-people {
+  padding: 64px 48px;
+  border-bottom: 1px solid #000000;
+}
+
+.sd-people-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sd-person-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sd-person-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.sd-person-item:first-child {
+  padding-top: 0;
+}
+
+.sd-person-name {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.sd-person-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.sd-artist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sd-artist-list li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: #000000;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.sd-artist-list li:first-child {
+  padding-top: 0;
+}
+
+/* ── SLIDESHOW ── */
+.sd-slideshow-section {
+  padding: 64px 48px;
+  border-bottom: 1px solid #000000;
+}
+
+.sd-slideshow-box {
+  position: relative;
+  height: clamp(400px, 50vw, 760px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* ── PRODUCTION ── */
+.sd-production {
+  padding: 64px 48px;
+}
+
+.sd-production-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .sd-hero,
+  .sd-about,
+  .sd-people,
+  .sd-production {
+    padding: 48px 24px;
+  }
+
+  .sd-about-inner,
+  .sd-people-inner,
+  .sd-production-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .sd-slideshow-section {
+    padding: 48px 24px;
+  }
+
+  .sd-slideshow-box {
+    height: clamp(280px, 50vw, 500px);
+  }
+}
