@@ -256,25 +256,27 @@
 
 .www-partners-logos {
   display: flex;
-  gap: 24px;
   align-items: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 32px;
+  background: #000000;
+  border-radius: 16px;
+  padding: 40px 48px;
+  width: 100%;
 }
 
 .www-partner-logo {
-  padding: 16px 28px;
-  background: #000000;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .www-partner-logo img {
-  max-height: 36px;
-  max-width: 180px;
+  max-height: 28px;
+  max-width: 160px;
   object-fit: contain;
-  filter: invert(1);
+  filter: brightness(0) invert(1);
 }
 
 /* ── CTA ── */
