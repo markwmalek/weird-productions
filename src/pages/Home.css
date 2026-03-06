@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  padding: 80px 48px 48px;
+  padding: 80px 48px 16px;
   background: #EFEEEA;
   text-align: center;
   overflow: hidden;
@@ -88,7 +88,7 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  padding: 48px;
+  padding: 16px 48px 48px;
   background: #EFEEEA;
 }
 
@@ -445,14 +445,17 @@
 
 @media (max-width: 900px) {
   .home-hero {
-    padding: 60px 24px 40px;
+    padding: 60px 24px 16px;
   }
 
   .home-portfolio-card {
     flex: 0 0 280px;
   }
 
-  .home-slideshow,
+  .home-slideshow {
+    padding: 16px 24px 40px;
+  }
+
   .home-portfolio,
   .home-wwd,
   .home-wwu,
