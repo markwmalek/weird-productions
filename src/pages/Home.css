@@ -427,6 +427,22 @@
 }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .home-hero-lindsay {
+    left: 14%;
+    top: 8%;
+    width: 18%;
+    min-width: 56px;
+  }
+
+  .home-hero-mark {
+    left: 74%;
+    top: 42%;
+    width: 18%;
+    min-width: 56px;
+  }
+}
+
 @media (max-width: 900px) {
   .home-hero {
     padding: 60px 24px 40px;
