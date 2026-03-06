@@ -33,18 +33,18 @@
 
 /* Lindsay: left of W, peeking above */
 .home-hero-lindsay {
-  left: 11%;
-  top: -28%;
-  width: 13%;
-  min-width: 55px;
+  left: 12%;
+  top: -15%;
+  width: 9%;
+  min-width: 40px;
 }
 
 /* Mark: overlapping R and D on the right */
 .home-hero-mark {
   left: 76%;
-  top: 8%;
-  width: 13%;
-  min-width: 55px;
+  top: 5%;
+  width: 9%;
+  min-width: 40px;
 }
 
 /* Figma: TAY Waffle Cone, 400px, lh 360px, ls -16px */
@@ -436,10 +436,12 @@
 
 @media (max-width: 600px) {
   .home-hero-lindsay {
+    width: 14%;
     top: -55%;
   }
 
   .home-hero-mark {
+    width: 14%;
     top: 70%;
   }
 }
