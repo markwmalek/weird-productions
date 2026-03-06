@@ -239,7 +239,7 @@
 /* ── PORTFOLIO SCROLL ── */
 .home-portfolio {
   background: #EFEEEA;
-  padding: 48px 0;
+  padding: 48px;
 }
 
 .home-portfolio-heading {
@@ -250,7 +250,6 @@
   line-height: 0.9;
   color: #000000;
   margin: 0 0 32px;
-  padding: 0 48px;
 }
 
 .home-portfolio-track {
@@ -260,7 +259,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 0 48px 4px;
+  padding-bottom: 4px;
 }
 
 .home-portfolio-track::-webkit-scrollbar {
@@ -433,19 +432,12 @@
     padding: 60px 24px 40px;
   }
 
-  .home-portfolio-heading {
-    padding: 0 24px;
-  }
-
-  .home-portfolio-track {
-    padding: 0 24px 4px;
-  }
-
   .home-portfolio-card {
     flex: 0 0 280px;
   }
 
   .home-slideshow,
+  .home-portfolio,
   .home-wwd,
   .home-wwu,
   .home-gol {
