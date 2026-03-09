@@ -273,8 +273,8 @@
 }
 
 .www-partner-logo img {
-  max-height: 28px;
-  max-width: 160px;
+  max-height: 56px;
+  max-width: 200px;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }

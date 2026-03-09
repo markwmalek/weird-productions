@@ -36,16 +36,13 @@ const portfolio = [
   { name: 'UNCANNY Salon', category: 'Art Event', img: '/images/wwww-gallery6.jpg' },
 ];
 
-const promoImages = [
-  '/images/wwww-promo1.png',
-  '/images/wwww-promo2.png',
-  '/images/wwww-promo4.png',
-  '/images/wwww-promo5.png',
-];
-
 const partners = [
   { src: '/images/wwww-logo-hubrtp.png', alt: 'HUB RTP' },
   { src: '/images/wwww-logo-layer1.png', alt: 'Partner' },
+  { src: '/images/wwww-promo1.png', alt: 'Durham Art Guild' },
+  { src: '/images/wwww-promo2.png', alt: '21c Museum Hotel' },
+  { src: '/images/wwww-promo4.png', alt: 'Night' },
+  { src: '/images/wwww-promo5.png', alt: 'American Underground' },
 ];
 
 export default function WorkWithWeird() {
@@ -102,15 +99,6 @@ export default function WorkWithWeird() {
           </div>
         </div>
       </section>
-
-      {/* Promo photo strip */}
-      <div className="www-promo-strip">
-        {promoImages.map((src, i) => (
-          <div key={i} className="www-promo-item">
-            <img src={src} alt={`Weird Productions promo ${i + 1}`} loading="lazy" />
-          </div>
-        ))}
-      </div>
 
       {/* Why Weird */}
       <section className="www-why">
