@@ -1,26 +1,31 @@
-/* ── HEADER — Figma: 1512×77px, padding 24px/48px, border-bottom 1px #000 ── */
+/* ── FLOATING PILL NAV ── */
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
-  background: #EFEEEA;
-  border-bottom: 1px solid #000000;
+  pointer-events: none; /* let clicks pass through the wrapper */
 }
 
-.header-inner {
+/* The pill itself */
+.pill-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 24px 48px;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 60px;
+  padding: 14px 28px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.12);
+  pointer-events: all;
+  white-space: nowrap;
 }
 
-/* Figma: TAY WaffleCone 32px, weight 400, ls -1.28px */
+/* Logo — WaffleCone display font */
 .header-logo {
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 400;
   color: #000000;
   text-decoration: none;
@@ -28,16 +33,24 @@
   flex-shrink: 0;
 }
 
-/* Figma: Sora 16px weight 400, gap 48px */
-.header-nav {
+/* Thin vertical divider between logo and links */
+.pill-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+/* Desktop link group */
+.pill-links {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
 }
 
 .nav-link {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #000000;
   text-decoration: none;
@@ -47,14 +60,14 @@
 }
 
 .nav-link:hover {
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .nav-link.active {
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
-/* Hamburger (mobile only) */
+/* Hamburger (hidden on desktop) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -62,59 +75,82 @@
   gap: 5px;
   background: none;
   border: none;
-  padding: 8px;
-  width: 40px;
-  height: 40px;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 
 .hamburger .top-bun,
 .hamburger .patty,
 .hamburger .bottom-bun {
   display: block;
-  width: 22px;
+  width: 20px;
   height: 1.5px;
   background: #000000;
   transition: transform 0.25s ease, opacity 0.2s ease;
   transform-origin: center;
 }
 
-.hamburger.open .top-bun  { transform: translateY(6.5px) rotate(45deg); }
-.hamburger.open .patty    { opacity: 0; transform: scaleX(0); }
+.hamburger.open .top-bun    { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open .patty      { opacity: 0; transform: scaleX(0); }
 .hamburger.open .bottom-bun { transform: translateY(-6.5px) rotate(-45deg); }
 
+/* ── MOBILE FULL-SCREEN OVERLAY ── */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: #EFEEEA;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 48px 32px;
+  gap: 0;
+}
+
+.mobile-link {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  line-height: 1;
+  transition: opacity 0.15s;
+}
+
+.mobile-link:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.mobile-link:hover,
+.mobile-link.active {
+  opacity: 0.5;
+}
+
 /* ── MOBILE ── */
-@media (max-width: 900px) {
-  .header-inner {
-    padding: 20px 24px;
+@media (max-width: 640px) {
+  .site-header {
+    bottom: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .pill-nav {
+    justify-content: space-between;
+    padding: 14px 22px;
+    border-radius: 50px;
+  }
+
+  .pill-links,
+  .pill-divider {
+    display: none;
   }
 
   .hamburger {
     display: flex;
-  }
-
-  .header-nav {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: #EFEEEA;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0;
-    padding: 80px 24px 32px;
-    overflow-y: auto;
-  }
-
-  .header-nav.open {
-    display: flex;
-  }
-
-  .nav-link {
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    padding: 1rem 0;
-    width: 100%;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    opacity: 1 !important;
   }
 }

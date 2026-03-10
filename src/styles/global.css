@@ -41,7 +41,7 @@
   --font-sans: var(--font-body);
   --font-mono: var(--font-body);
 
-  /* Sticky nav takes up space in flow, no offset needed */
+  /* Floating pill nav sits fixed at bottom — no flow offset needed */
   --header-height: 0px;
   --page-padding: var(--gutter);
 }
