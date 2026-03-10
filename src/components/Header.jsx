@@ -1,11 +1,14 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
+  // Render directly into document.body so no parent container
+  // (overflow, transform, etc.) can ever clip the fixed pill nav
+  return createPortal(
     <>
       {/* Floating pill nav */}
       <header className="site-header">
@@ -73,6 +76,7 @@ export default function Header() {
           </a>
         </div>
       )}
-    </>
+    </>,
+    document.body
   );
 }
