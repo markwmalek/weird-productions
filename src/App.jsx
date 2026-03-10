@@ -31,22 +31,25 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/artists" element={<Artists />} />
-        <Route path="/work-with-weird" element={<WorkWithWeird />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/subscribe" element={<Subscribe />} />
-        <Route path="/american-underground" element={<AmericanUnderground />} />
-        <Route path="/dollyweird" element={<DollyWeird />} />
-        <Route path="/smash" element={<Smash />} />
-        <Route path="/raleigh" element={<Raleigh />} />
-        <Route path="/speedhouse" element={<SpeedHouse />} />
-        <Route path="/salondurham" element={<SalonDurham />} />
-      </Routes>
-      <Footer />
+      {/* page-wrapper clips horizontal overflow without trapping the fixed pill nav */}
+      <div className="page-wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/artists" element={<Artists />} />
+          <Route path="/work-with-weird" element={<WorkWithWeird />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/subscribe" element={<Subscribe />} />
+          <Route path="/american-underground" element={<AmericanUnderground />} />
+          <Route path="/dollyweird" element={<DollyWeird />} />
+          <Route path="/smash" element={<Smash />} />
+          <Route path="/raleigh" element={<Raleigh />} />
+          <Route path="/speedhouse" element={<SpeedHouse />} />
+          <Route path="/salondurham" element={<SalonDurham />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

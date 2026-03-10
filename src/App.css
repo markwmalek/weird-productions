@@ -5,3 +5,9 @@
   padding: 0;
   text-align: left;
 }
+
+/* Clips horizontal overflow on page content WITHOUT affecting the fixed pill nav.
+   Keeping this off <body> is critical — overflow on body breaks position:fixed on iOS Safari. */
+.page-wrapper {
+  overflow-x: clip;
+}
