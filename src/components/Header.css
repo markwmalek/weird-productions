@@ -141,16 +141,25 @@
 
   .pill-nav {
     justify-content: space-between;
-    padding: 14px 22px;
+    padding: 12px 20px;
     border-radius: 50px;
+    gap: 12px;
   }
 
-  .pill-links,
-  .pill-divider {
-    display: none;
+  .header-logo {
+    font-size: 18px;
   }
 
+  .pill-links {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  /* hamburger stays hidden — links are shown directly */
   .hamburger {
-    display: flex;
+    display: none;
   }
 }
