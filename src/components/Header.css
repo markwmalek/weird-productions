@@ -140,10 +140,10 @@
   }
 
   .pill-nav {
-    justify-content: space-between;
+    justify-content: center;
     padding: 12px 20px;
     border-radius: 50px;
-    gap: 12px;
+    gap: 10px;
   }
 
   .header-logo {
@@ -151,7 +151,7 @@
   }
 
   .pill-links {
-    gap: 16px;
+    gap: 14px;
   }
 
   .nav-link {
