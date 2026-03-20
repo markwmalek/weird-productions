@@ -132,9 +132,13 @@
   font-family: var(--font-display);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1;
-  color: var(--color-border-light);
+  color: rgba(0, 0, 0, 0.18);
   flex-shrink: 0;
   user-select: none;
+}
+
+.aub__deliverable--alt .aub__deliverable-num {
+  color: rgba(0, 0, 0, 0.14);
 }
 
 .aub__deliverable-title {

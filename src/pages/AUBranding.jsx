@@ -23,31 +23,28 @@ export default function AUBranding() {
     }
   };
 
-  if (!unlocked) {
-    return (
-      <div className="au-gate">
-        <div className="au-gate__inner">
-          <h1 className="au-gate__title">American Underground</h1>
-          <p className="au-gate__sub">This page is private. Enter the password to continue.</p>
-          <form className="au-gate__form" onSubmit={handleSubmit}>
-            <input
-              type="password"
-              className={`au-gate__input ${error ? 'au-gate__input--error' : ''}`}
-              placeholder="Password"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              autoFocus
-            />
-            <button type="submit" className="au-gate__btn">Enter</button>
-          </form>
-          {error && <p className="au-gate__error">Incorrect password</p>}
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="aub">
+      {!unlocked && (
+        <div className="au-gate">
+          <div className="au-gate__inner">
+            <h1 className="au-gate__title">American Underground</h1>
+            <p className="au-gate__sub">This page is private. Enter the password to continue.</p>
+            <form className="au-gate__form" onSubmit={handleSubmit}>
+              <input
+                type="password"
+                className={`au-gate__input ${error ? 'au-gate__input--error' : ''}`}
+                placeholder="Password"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                autoFocus
+              />
+              <button type="submit" className="au-gate__btn">Enter</button>
+            </form>
+            {error && <p className="au-gate__error">Incorrect password</p>}
+          </div>
+        </div>
+      )}
 
       {/* Hero */}
       <section className="aub__hero">
