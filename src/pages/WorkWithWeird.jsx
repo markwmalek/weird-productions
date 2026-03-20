@@ -1,40 +1,69 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 import './WorkWithWeird.css';
+
+const GALLERY_IMAGES = [
+  '/images/wwww-gallery1.jpg',
+  '/images/wwww-gallery2.jpg',
+  '/images/wwww-gallery3.jpg',
+  '/images/wwww-gallery4.jpg',
+  '/images/wwww-gallery5.jpg',
+  '/images/wwww-gallery6.jpg',
+];
+
+function WorldSlideshow() {
+  const [index, setIndex] = useState(0);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setIndex(i => (i + 1) % GALLERY_IMAGES.length);
+    }, 600);
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  return (
+    <div className="www-slideshow-box">
+      <div className="slideshow-rapid">
+        {GALLERY_IMAGES.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            aria-hidden="true"
+            className={`slideshow-frame ${i === index ? 'active' : ''}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const services = [
   {
-    title: 'Immersive Celebrations',
-    description: 'Host unforgettable events that go beyond the expected. We design and produce parties, launches, and gatherings people actually talk about.',
+    title: 'Events',
+    description: 'We design and produce nights people don\'t forget — art salons, launch parties, competitions, community gatherings. If you want something with a real pulse, this is it.',
+    offerings: ['Concept & creative direction', 'Artist and talent curation', 'Full event production'],
   },
   {
-    title: 'Initiative Launches',
-    description: 'Launch programs, campaigns, or products with promotional events that have real creative impact. We know how to create buzz.',
+    title: 'Interiors',
+    description: 'We source and place art that belongs in your space — not just on the wall. Whether it\'s a restaurant, office, or venue, we make rooms feel intentional.',
+    offerings: ['Art sourcing & curation', 'Installation planning', 'Artist partnerships'],
   },
   {
-    title: 'Values-Driven Experiences',
-    description: 'Create events that authentically reflect your mission and values. We build trust through art and community.',
-  },
-  {
-    title: 'Audience Connection',
-    description: 'Connect with audiences through art and authenticity. We bridge organizations and creative communities in meaningful ways.',
+    title: 'Branding',
+    description: 'We build visual identities and brand voices for people who want to stand out. From naming to design systems, we make sure your brand feels like you — but better.',
+    offerings: ['Naming & brand voice', 'Visual identity & design', 'Social and digital assets'],
   },
 ];
 
 const whyWeird = [
-  'Curating artists, chefs, performers, and creatives from our established community network',
-  'We understand impact creation vs. impression-focused metrics. We make things that matter.',
-  'Budget-conscious, timely, and reliable event execution. Every time.',
-  'We combine structure and soul in every project. Professional + weird = the sweet spot.',
+  'A deep network of artists, makers, chefs, performers, and creatives — ready to work.',
+  'We don\'t do cookie-cutter. Every project gets a real point of view.',
+  'Budget-conscious, reliable, and on time. Without sacrificing the work.',
+  'Structure and soul in equal measure. Professional + weird = the sweet spot.',
 ];
 
-const portfolio = [
-  { name: 'Triangle Tech Night: Moonlighting Edition', category: 'Corporate Event', img: '/images/wwww-gallery2.jpg' },
-  { name: 'Fast & Loose Art Salon', category: 'Art Event', img: '/images/wwww-gallery3.jpg' },
-  { name: 'THE SALON', category: 'Art Event', img: '/images/wwww-gallery4.jpg' },
-  { name: 'Raleigh Renaissance Fashion Show', category: 'Fashion Show', img: '/images/wwww-gallery1.jpg' },
-  { name: 'Third Friday Takeover', category: 'Community Event', img: '/images/wwww-gallery5.jpg' },
-  { name: 'UNCANNY Salon', category: 'Art Event', img: '/images/wwww-gallery6.jpg' },
-];
 
 const partners = [
   { src: '/images/wwww-logo-hubrtp.png', alt: 'HUB RTP' },
@@ -73,13 +102,11 @@ export default function WorkWithWeird() {
           <h2 className="www-pitch-heading">Who we are</h2>
           <div className="www-pitch-body">
             <p>
-              Weird Productions is not your standard event vendor. We're a creative event studio
-              that specializes in building experiences with art at the center.
+              Weird Productions is a creative studio working at the intersection of events, interiors, and branding.
+              We partner with businesses and organizations who want more than what's expected — and aren't afraid to be a little weird about it.
             </p>
             <p>
-              Whether you're a tech company looking to connect with the creative community,
-              a nonprofit wanting to celebrate your mission, or a brand that wants to make
-              something genuinely memorable — we'd love to talk.
+              Whether you're throwing an event, furnishing a space with art, or building a brand identity from scratch — we bring the same thing to all of it: intention, taste, and a network of genuinely talented people.
             </p>
           </div>
         </div>
@@ -94,6 +121,11 @@ export default function WorkWithWeird() {
               <div key={i} className="www-service">
                 <h3 className="www-service-title">{s.title}</h3>
                 <p className="www-service-desc">{s.description}</p>
+                <ul className="www-service-list">
+                  {s.offerings.map((o, j) => (
+                    <li key={j}>{o}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -119,17 +151,7 @@ export default function WorkWithWeird() {
       <section className="www-portfolio">
         <div className="page-wrap">
           <h2 className="www-section-heading">WEIRD IN THE WORLD</h2>
-          <div className="www-portfolio-grid">
-            {portfolio.map((p, i) => (
-              <div key={i} className="www-portfolio-item">
-                <div className="www-portfolio-img">
-                  <img src={p.img} alt={p.name} loading="lazy" />
-                </div>
-                <span className="www-portfolio-cat">{p.category}</span>
-                <p className="www-portfolio-name">{p.name}</p>
-              </div>
-            ))}
-          </div>
+          <WorldSlideshow />
         </div>
       </section>
 

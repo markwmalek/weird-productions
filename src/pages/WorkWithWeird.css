@@ -125,6 +125,29 @@
   color: #555555;
 }
 
+.www-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.www-service-list li {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #777777;
+  padding-left: 14px;
+  position: relative;
+}
+
+.www-service-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+}
+
 /* ── PROMO STRIP ── */
 .www-promo-strip {
   display: flex;
@@ -199,8 +222,18 @@
 
 /* ── PORTFOLIO ── */
 .www-portfolio {
-  padding: 64px 48px;
+  padding-top: 64px;
   border-top: 1px solid #000000;
+}
+
+.www-slideshow-box {
+  position: relative;
+  width: 100%;
+  height: clamp(400px, 50vw, 760px);
+  background: #000000;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 32px;
 }
 
 .www-portfolio-grid {

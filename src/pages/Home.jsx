@@ -1,10 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const SLIDESHOW_IMAGES = [
-  '/images/slideshow/0E57C2DE-7C0F-4125-9554-52CA0B03C986_1_105_c.jpeg',
-  '/images/slideshow/417FE75E-27FB-4AF2-951B-93E8F26EFD83_1_105_c.jpeg',
+  '/images/slideshow/20250913_PS37_Dollyweird_051_TommyCoyote_IG tommycoyote.jpg',
+  '/images/slideshow/20250913_PS37_Dollyweird_122_TommyCoyote_IG tommycoyote.jpg',
+  '/images/slideshow/20250913_PS37_Dollyweird_123_TommyCoyote_IG tommycoyote.jpg',
+  '/images/slideshow/20250913_PS37_Dollyweird_140_TommyCoyote_IG tommycoyote.jpg',
   '/images/slideshow/A7I030591.jpg',
   '/images/slideshow/A7I03498.jpg',
   '/images/slideshow/A7I03512.jpg',
@@ -20,7 +22,6 @@ const SLIDESHOW_IMAGES = [
   '/images/slideshow/A7I09413.jpg',
   '/images/slideshow/A7I09507-Enhanced-NR-Edit.jpg',
   '/images/slideshow/IMG_3674.jpg',
-  '/images/slideshow/IMG_4470.jpg',
   '/images/slideshow/Speedhouse-X-WP-29.jpg',
   '/images/slideshow/Speedhouse-X-WP-45.jpg',
   '/images/slideshow/Speedhouse-X-WP-57.jpg',
@@ -38,6 +39,16 @@ function shuffle(arr) {
   }
   return a;
 }
+
+const PORTFOLIO_ITEMS = [
+  { to: '/salondurham', img: '/images/salon/0810.jpeg', alt: 'The Salon Durham', title: 'The Salon', desc: "Women's event — Durham, NC, 2025" },
+  { to: '/speedhouse', img: '/images/speedhouse/WP-45.jpg', alt: 'Fast & Loose Art Salon', title: 'Fast & Loose', desc: 'Art salon — Durham, NC, 2025' },
+  { to: '/raleigh', img: '/images/raleigh/A7I09373.jpg', alt: 'Raleigh Renaissance Fashion Show', title: 'Raleigh Renaissance', desc: 'Fashion show — Raleigh, NC, 2024' },
+  { to: '/smash', img: '/images/smash/DSC_0689.jpg', alt: 'Sunday Smash & Slam', title: 'Smash & Slam', desc: 'Burger + poetry competition — Durham, NC, 2024' },
+  { to: '/dollyweird', img: '/images/dollyweird/dw_1.jpg', alt: 'Dollyweird Art Show', title: 'Dollyweird', desc: 'One-night art party — Durham, NC, 2023' },
+  { to: '/american-underground', img: '/images/au/p4_7.jpeg', alt: 'American Underground', title: 'American Underground', desc: 'Interior art curation — Durham, NC' },
+  { to: '/film-durham', img: '/images/film-durham/film-durham-thumb.png', alt: 'Film Durham', title: 'Film Durham', desc: 'Brand guidelines — Durham, NC, 2025' },
+];
 
 function RapidSlideshow() {
   const [images] = useState(() => shuffle(SLIDESHOW_IMAGES));
@@ -69,6 +80,7 @@ function RapidSlideshow() {
 export default function Home() {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
+  const portfolioItems = useMemo(() => shuffle(PORTFOLIO_ITEMS).slice(0, 2), []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -103,35 +115,33 @@ export default function Home() {
       <section className="home-wwd">
         <div className="home-wwd-inner">
           <h2 className="home-wwd-heading">What we do</h2>
-          <p className="home-wwd-sub">We partner with people who want more than what's expected.</p>
+          <p className="home-wwd-sub">We partner with people who want more than what's expected — curating artists, chefs, performers, and creatives from our expansive network.</p>
 
           <div className="home-wwd-grid">
             <div className="home-wwd-card">
               <div className="home-wwd-img">
-                <img src="/images/artists-gallery4.jpg" alt="Projects" loading="lazy" />
+                <img src="/images/au/p4_7.jpeg" alt="Interiors" loading="lazy" />
               </div>
-              <h3 className="home-wwd-label">Projects</h3>
-              <p className="home-wwd-desc">We want to find new ways for people to connect.</p>
+              <h3 className="home-wwd-label">Interiors</h3>
+              <p className="home-wwd-desc">Art that earns its place on the wall.</p>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/wwww-gallery2.jpg" alt="Events" loading="lazy" />
               </div>
               <h3 className="home-wwd-label">Events</h3>
-              <p className="home-wwd-desc">We want people to talk about your events for months.</p>
+              <p className="home-wwd-desc">The kind of night people bring up for months.</p>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/wwd-branding.png" alt="Branding" loading="lazy" />
               </div>
               <h3 className="home-wwd-label">Branding</h3>
-              <p className="home-wwd-desc">We want them to feel something.</p>
+              <p className="home-wwd-desc">A look people stop scrolling for.</p>
             </div>
           </div>
 
-          <p className="home-wwd-note">
-            We curate artists, chefs, performers, and creatives from our expansive network.
-          </p>
+
         </div>
       </section>
 
@@ -140,29 +150,17 @@ export default function Home() {
         <div className="home-portfolio-inner">
           <h2 className="home-portfolio-heading">Portfolio</h2>
           <div className="home-portfolio-grid">
-            <Link to="/salondurham" className="home-portfolio-card">
-              <div className="home-portfolio-card-img">
-                <img src="/images/salon/0968.jpeg" alt="The Salon Durham" loading="lazy" />
-              </div>
-              <p className="home-portfolio-card-title">The Salon</p>
-              <p className="home-portfolio-card-desc">Women's event — Durham, NC, 2025</p>
-            </Link>
-            <Link to="/dollyweird" className="home-portfolio-card">
-              <div className="home-portfolio-card-img">
-                <img src="/images/dollyweird/DSC06240.jpg" alt="Dollyweird Art Show" loading="lazy" />
-              </div>
-              <p className="home-portfolio-card-title">Dollyweird</p>
-              <p className="home-portfolio-card-desc">One-night art party — Durham, NC, 2023</p>
-            </Link>
-            <Link to="/speedhouse" className="home-portfolio-card">
-              <div className="home-portfolio-card-img">
-                <img src="/images/speedhouse/WP-134.jpg" alt="Fast & Loose Art Salon" loading="lazy" />
-              </div>
-              <p className="home-portfolio-card-title">Fast &amp; Loose</p>
-              <p className="home-portfolio-card-desc">Art salon — Durham, NC, 2025</p>
-            </Link>
+            {portfolioItems.map((item) => (
+              <Link key={item.to} to={item.to} className="home-portfolio-card">
+                <div className="home-portfolio-card-img">
+                  <img src={item.img} alt={item.alt} loading="lazy" />
+                </div>
+                <p className="home-portfolio-card-title">{item.title}</p>
+                <p className="home-portfolio-card-desc">{item.desc}</p>
+              </Link>
+            ))}
           </div>
-          <Link to="/about" className="home-portfolio-see-all">See all</Link>
+          <Link to="/portfolio" className="home-portfolio-see-all">See all</Link>
         </div>
       </section>
 
@@ -174,14 +172,9 @@ export default function Home() {
             Weird blends artistic direction and strategic vision to create unforgettable experiences.<br />
             We don't do cookie-cutter.
           </p>
-          <a
-            href="https://instagram.com/weirdproductions.art"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="home-wwu-dm"
-          >
-            DM us
-          </a>
+          <Link to="/work-with-weird" className="home-wwu-dm">
+            Work with us
+          </Link>
         </div>
       </section>
 

@@ -266,7 +266,7 @@
 
 .home-portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   width: 100%;
   padding: 8px 0;
@@ -328,6 +328,31 @@
 
 .home-portfolio-see-all:hover {
   opacity: 0.5;
+}
+
+/* ── NON-PROFIT STRIP ── */
+.home-nonprofit-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 48px;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: opacity 0.15s ease;
+}
+
+.home-nonprofit-strip:hover {
+  opacity: 0.8;
+}
+
+.home-nonprofit-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* ── WORK WITH US ── */

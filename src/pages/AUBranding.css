@@ -1,0 +1,395 @@
+/* ─── Password Gate (reuses au-gate classes from AmericanUnderground.css) ── */
+
+/* ─── Page Container ────────────────────────────────────────────────────── */
+
+.aub {
+  padding-bottom: 6rem;
+}
+
+/* ─── Section Basics ────────────────────────────────────────────────────── */
+
+.aub__section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem var(--gutter);
+}
+
+.aub__section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.aub__section-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  line-height: 1.2;
+  max-width: 700px;
+}
+
+/* ─── Hero ──────────────────────────────────────────────────────────────── */
+
+.aub__hero {
+  border-bottom: 1.5px solid var(--color-border-light);
+}
+
+.aub__hero-text {
+  padding: 5rem var(--gutter) 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.aub__eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.aub__hero h1 {
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.aub__hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  color: var(--color-text-muted);
+}
+
+.aub__hero-byline {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* ─── Intro ─────────────────────────────────────────────────────────────── */
+
+.aub__intro {
+  border-bottom: 1.5px solid var(--color-border-light);
+}
+
+.aub__intro-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem var(--gutter);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.aub__intro-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 680px;
+}
+
+.aub__intro-body p {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+/* ─── Deliverables Header ───────────────────────────────────────────────── */
+
+.aub__deliverables-header {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.aub__deliverables-header .aub__section-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.aub__deliverables-header .aub__section-title {
+  color: #ffffff;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 100%;
+}
+
+/* ─── Deliverable Sections ──────────────────────────────────────────────── */
+
+.aub__deliverable {
+  border-top: 1.5px solid var(--color-border-light);
+}
+
+.aub__deliverable--alt {
+  background: var(--color-bg-cream);
+}
+
+.aub__deliverable-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.aub__deliverable-num {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  color: var(--color-border-light);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.aub__deliverable-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.1;
+}
+
+.aub__deliverable-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: calc(clamp(3rem, 6vw, 5rem) + 1.5rem);
+}
+
+.aub__deliverable-desc {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--color-text);
+  max-width: 640px;
+}
+
+.aub__deliverable-scope-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: -0.5rem;
+}
+
+/* ─── List ──────────────────────────────────────────────────────────────── */
+
+.aub__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 560px;
+}
+
+.aub__list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.aub__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+}
+
+/* ─── Deliverable Callout ───────────────────────────────────────────────── */
+
+.aub__deliverable-callout {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1.5px solid var(--color-border-light);
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  width: fit-content;
+}
+
+.aub__callout-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.aub__callout-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* ─── Timeline ──────────────────────────────────────────────────────────── */
+
+.aub__timeline {
+  border-top: 1.5px solid var(--color-border-light);
+  background: var(--color-bg-cream);
+}
+
+.aub__timeline-steps {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  max-width: 560px;
+}
+
+.aub__timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.aub__step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.aub__step-num {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aub__step-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding-top: 0.4rem;
+}
+
+.aub__step-date {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+  font-weight: 400;
+}
+
+.aub__timeline-connector {
+  width: 1.5px;
+  height: 2rem;
+  background: var(--color-border-light);
+  margin: 0.3rem 0;
+  align-self: stretch;
+}
+
+/* ─── Investment ────────────────────────────────────────────────────────── */
+
+.aub__investment {
+  border-top: 1.5px solid var(--color-border-light);
+}
+
+.aub__invest-card {
+  background: var(--color-black);
+  color: var(--color-white);
+  border-radius: 6px;
+  padding: 3rem;
+  margin-top: 2rem;
+}
+
+.aub__invest-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.aub__invest-scope {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.aub__invest-total {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.aub__invest-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 2.5rem 0;
+}
+
+.aub__invest-schedule-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.aub__invest-payments {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.aub__invest-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.aub__invest-pct {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  color: #ffffff;
+}
+
+.aub__invest-note {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 200px;
+  line-height: 1.5;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .aub__intro-inner {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .aub__deliverable-body {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .aub__hero-text {
+    padding: 3rem var(--gutter) 2.5rem;
+  }
+
+  .aub__hero h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .aub__deliverable-header {
+    gap: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .aub__deliverable-num {
+    font-size: 2.5rem;
+  }
+
+  .aub__invest-card {
+    padding: 2rem;
+  }
+
+  .aub__invest-payments {
+    gap: 2rem;
+  }
+}

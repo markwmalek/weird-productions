@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FloatingButton from './components/FloatingButton';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import About from './pages/About';
@@ -15,6 +16,8 @@ import Smash from './pages/Smash';
 import Raleigh from './pages/Raleigh';
 import SpeedHouse from './pages/SpeedHouse';
 import SalonDurham from './pages/SalonDurham';
+import AUBranding from './pages/AUBranding';
+import FilmDurham from './pages/FilmDurham';
 import './App.css';
 import './styles/global.css';
 
@@ -31,12 +34,14 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Header />
+      <FloatingButton />
       {/* page-wrapper clips horizontal overflow without trapping the fixed pill nav */}
       <div className="page-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<About />} />
+          <Route path="/about" element={<Navigate to="/portfolio" replace />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/work-with-weird" element={<WorkWithWeird />} />
           <Route path="/contact" element={<Contact />} />
@@ -47,6 +52,8 @@ export default function App() {
           <Route path="/raleigh" element={<Raleigh />} />
           <Route path="/speedhouse" element={<SpeedHouse />} />
           <Route path="/salondurham" element={<SalonDurham />} />
+          <Route path="/american-underground-branding" element={<AUBranding />} />
+          <Route path="/film-durham" element={<FilmDurham />} />
         </Routes>
         <Footer />
       </div>

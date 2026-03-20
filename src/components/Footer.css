@@ -14,6 +14,35 @@
 }
 
 /* Figma: Sora 16px weight 400 */
+.footer-nonprofit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  text-decoration: none;
+  color: #000000;
+  transition: opacity 0.15s ease;
+}
+
+.footer-nonprofit:hover {
+  opacity: 0.65;
+}
+
+.footer-nonprofit-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-nonprofit-text {
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
 .footer-left,
 .footer-right {
   font-family: 'Sora', sans-serif;

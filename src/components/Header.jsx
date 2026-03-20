@@ -107,7 +107,7 @@ export default function Header() {
 
           {/* Desktop links */}
           <div className="pill-links">
-            <NavLink to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
+            <NavLink to="/portfolio" className="nav-link" onClick={() => setMenuOpen(false)}>
               Portfolio
             </NavLink>
             <NavLink to="/work-with-weird" className="nav-link" onClick={() => setMenuOpen(false)}>
@@ -136,7 +136,7 @@ export default function Header() {
       {/* Mobile full-screen overlay */}
       {menuOpen && (
         <div className="mobile-overlay">
-          <NavLink to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/portfolio" className="mobile-link" onClick={() => setMenuOpen(false)}>
             Portfolio
           </NavLink>
           <NavLink to="/work-with-weird" className="mobile-link" onClick={() => setMenuOpen(false)}>
