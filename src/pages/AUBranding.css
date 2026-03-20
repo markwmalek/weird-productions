@@ -204,16 +204,23 @@
   width: fit-content;
 }
 
+.aub__deliverable--alt .aub__deliverable-callout {
+  border-color: rgba(0, 0, 0, 0.18);
+}
+
 .aub__callout-label {
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
   color: var(--color-text-muted);
 }
 
 .aub__callout-value {
   font-size: 0.9rem;
   font-weight: 600;
+  line-height: 1;
   color: var(--color-text);
 }
 
