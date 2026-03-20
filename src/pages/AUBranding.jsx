@@ -185,6 +185,7 @@ export default function AUBranding() {
               <li>Integration of the new brand system (typography, color, graphics)</li>
               <li>Layout design for key pages (about, membership, events, community)</li>
               <li>Visual assets and graphic elements</li>
+              <li>Tech stack agreement (platform, CMS, and hosting decisions made collaboratively)</li>
             </ul>
             <div className="aub__deliverable-callout">
               <span className="aub__callout-label">Deliverable</span>
