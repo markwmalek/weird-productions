@@ -115,6 +115,10 @@ export default function AUBranding() {
               <li>Imagery direction</li>
               <li>Overall visual language</li>
             </ul>
+            <div className="aub__deliverable-callout">
+              <span className="aub__callout-label">Deliverable</span>
+              <span className="aub__callout-value">Three Distinct Visual Directions to Choose From</span>
+            </div>
           </div>
         </div>
       </section>
