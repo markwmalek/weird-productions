@@ -7,7 +7,9 @@
 }
 
 /* Clips horizontal overflow on page content WITHOUT affecting the fixed pill nav.
-   Keeping this off <body> is critical — overflow on body breaks position:fixed on iOS Safari. */
+   Header & FloatingButton are siblings of .page-wrapper, so overflow:hidden here
+   does not affect their position:fixed — safe on all iOS Safari versions. */
 .page-wrapper {
-  overflow-x: clip;
+  overflow-x: hidden;
+  max-width: 100%;
 }
