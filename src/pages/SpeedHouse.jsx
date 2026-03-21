@@ -75,6 +75,13 @@ export default function SpeedHouse() {
         </div>
       </section>
 
+      {/* Slideshow */}
+      <section className="sh-slideshow-section">
+        <div className="sh-slideshow-box">
+          <RapidSlideshow images={images} />
+        </div>
+      </section>
+
       {/* Artists */}
       <section className="sh-artists">
         <div className="page-wrap sh-artists-inner">
@@ -87,13 +94,6 @@ export default function SpeedHouse() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Slideshow */}
-      <section className="sh-slideshow-section">
-        <div className="sh-slideshow-box">
-          <RapidSlideshow images={images} />
         </div>
       </section>
 
