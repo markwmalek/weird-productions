@@ -74,6 +74,13 @@ export default function Raleigh() {
         </div>
       </section>
 
+      {/* Slideshow */}
+      <section className="rl-slideshow-section">
+        <div className="rl-slideshow-box">
+          <RapidSlideshow images={images} />
+        </div>
+      </section>
+
       {/* Designers */}
       <section className="rl-designers">
         <div className="page-wrap rl-designers-inner">
@@ -86,13 +93,6 @@ export default function Raleigh() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Slideshow */}
-      <section className="rl-slideshow-section">
-        <div className="rl-slideshow-box">
-          <RapidSlideshow images={images} />
         </div>
       </section>
 
