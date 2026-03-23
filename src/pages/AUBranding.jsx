@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import './AUBranding.css';
+import RapidSlideshow from '../components/RapidSlideshow';
+
+const TOOLKIT_IMAGES = Array.from({ length: 15 }, (_, i) => `/images/au-brand/aub-toolkit/${i + 1}.png`);
 
 const PASSWORD = 'AU2026';
 const STORAGE_KEY = 'au_brand_unlocked';
@@ -78,93 +81,115 @@ export default function AUBranding() {
 
       {/* 01 Brand Discovery */}
       <section className="aub__deliverable">
-        <div className="aub__section-inner">
-          <div className="aub__deliverable-header">
-            <span className="aub__deliverable-num">01</span>
-            <h2 className="aub__deliverable-title">Brand Discovery Workshop</h2>
-          </div>
-          <div className="aub__deliverable-body">
-            <ul className="aub__list">
-              <li>Brand discussion and discovery session</li>
-              <li>Review of existing brand materials and messaging</li>
-              <li>Visual research and cultural references</li>
-              <li>Development of creative positioning for the brand</li>
-              <li>Presentation of a clear visual direction</li>
-            </ul>
-            <div className="aub__deliverable-callout">
-              <span className="aub__callout-label">Deliverable</span>
-              <span className="aub__callout-value">Creative Direction Presentation</span>
+        <div className="aub__section-inner aub__deliverable-layout">
+          <div className="aub__deliverable-content">
+            <div className="aub__deliverable-header">
+              <span className="aub__deliverable-num">01</span>
+              <h2 className="aub__deliverable-title">Brand Discovery Workshop</h2>
             </div>
+            <div className="aub__deliverable-body">
+              <ul className="aub__list">
+                <li>Brand discussion and discovery session</li>
+                <li>Review of existing brand materials and messaging</li>
+                <li>Visual research and cultural references</li>
+                <li>Development of creative positioning for the brand</li>
+                <li>Presentation of a clear visual direction</li>
+              </ul>
+              <div className="aub__deliverable-callout">
+                <span className="aub__callout-label">Deliverable</span>
+                <span className="aub__callout-value">Creative Direction Presentation</span>
+              </div>
+            </div>
+          </div>
+          <div className="aub__deliverable-img-wrap">
+            <img src="/images/au-brand/aub-workshop.png" alt="Brand Discovery Workshop" className="aub__deliverable-img" />
           </div>
         </div>
       </section>
 
       {/* 02 Visual Identity */}
       <section className="aub__deliverable aub__deliverable--alt">
-        <div className="aub__section-inner">
-          <div className="aub__deliverable-header">
-            <span className="aub__deliverable-num">02</span>
-            <h2 className="aub__deliverable-title">Visual Identity Package</h2>
-          </div>
-          <div className="aub__deliverable-body">
-            <ul className="aub__list">
-              <li>Refinement or redesign of the American Underground logo</li>
-              <li>Typography system</li>
-              <li>Color palette</li>
-              <li>Graphic elements and patterns</li>
-              <li>Imagery direction</li>
-              <li>Overall visual language</li>
-              <li>Selection of one visual direction from three options, with one round of follow-up edits included</li>
-            </ul>
-            <div className="aub__deliverable-callout">
-              <span className="aub__callout-label">Deliverable</span>
-              <span className="aub__callout-value">Three Distinct Visual Directions to Choose From</span>
+        <div className="aub__section-inner aub__deliverable-layout">
+          <div className="aub__deliverable-content">
+            <div className="aub__deliverable-header">
+              <span className="aub__deliverable-num">02</span>
+              <h2 className="aub__deliverable-title">Visual Identity Package</h2>
             </div>
+            <div className="aub__deliverable-body">
+              <ul className="aub__list">
+                <li>Refinement or redesign of the American Underground logo</li>
+                <li>Typography system</li>
+                <li>Color palette</li>
+                <li>Graphic elements and patterns</li>
+                <li>Imagery direction</li>
+                <li>Overall visual language</li>
+                <li>Selection of one visual direction from three options, with one round of follow-up edits included</li>
+              </ul>
+              <div className="aub__deliverable-callout">
+                <span className="aub__callout-label">Deliverable</span>
+                <span className="aub__callout-value">Three Distinct Visual Directions to Choose From</span>
+              </div>
+            </div>
+          </div>
+          <div className="aub__deliverable-img-wrap">
+            <img src="/images/au-brand/aub-package.png" alt="Visual Identity Package" className="aub__deliverable-img" />
           </div>
         </div>
       </section>
 
       {/* 03 Environmental Brand Integration */}
       <section className="aub__deliverable">
-        <div className="aub__section-inner">
-          <div className="aub__deliverable-header">
-            <span className="aub__deliverable-num">03</span>
-            <h2 className="aub__deliverable-title">Environmental Brand Integration</h2>
-          </div>
-          <div className="aub__deliverable-body">
-            <p className="aub__deliverable-desc">American Underground lives both physically and digitally, so the identity system extends to the building environment.</p>
-            <ul className="aub__list">
-              <li>Signage and wayfinding</li>
-              <li>Wall graphics</li>
-              <li>Mural concepts</li>
-              <li>Branded moments within shared spaces</li>
-              <li>Visual consistency between the physical space and brand materials</li>
-            </ul>
-            <div className="aub__deliverable-callout">
-              <span className="aub__callout-label">Deliverable</span>
-              <span className="aub__callout-value">Environmental Brand Concepts</span>
+        <div className="aub__section-inner aub__deliverable-layout">
+          <div className="aub__deliverable-content">
+            <div className="aub__deliverable-header">
+              <span className="aub__deliverable-num">03</span>
+              <h2 className="aub__deliverable-title">Environmental Brand Integration</h2>
             </div>
+            <div className="aub__deliverable-body">
+              <p className="aub__deliverable-desc">American Underground lives both physically and digitally, so the identity system extends to the building environment.</p>
+              <ul className="aub__list">
+                <li>Signage and wayfinding</li>
+                <li>Wall graphics</li>
+                <li>Mural concepts</li>
+                <li>Branded moments within shared spaces</li>
+                <li>Visual consistency between the physical space and brand materials</li>
+              </ul>
+              <div className="aub__deliverable-callout">
+                <span className="aub__callout-label">Deliverable</span>
+                <span className="aub__callout-value">Environmental Brand Concepts</span>
+              </div>
+            </div>
+          </div>
+          <div className="aub__deliverable-img-wrap">
+            <img src="/images/au-brand/aub-enviornment.jpg" alt="Environmental Brand Integration" className="aub__deliverable-img" />
           </div>
         </div>
       </section>
 
       {/* 04 Brand Toolkit */}
       <section className="aub__deliverable aub__deliverable--alt">
-        <div className="aub__section-inner">
-          <div className="aub__deliverable-header">
-            <span className="aub__deliverable-num">04</span>
-            <h2 className="aub__deliverable-title">Brand Toolkit</h2>
+        <div className="aub__section-inner aub__deliverable-layout">
+          <div className="aub__deliverable-content">
+            <div className="aub__deliverable-header">
+              <span className="aub__deliverable-num">04</span>
+              <h2 className="aub__deliverable-title">Brand Toolkit</h2>
+            </div>
+            <div className="aub__deliverable-body">
+              <ul className="aub__list">
+                <li>Logo files and variations</li>
+                <li>Color and typography specifications</li>
+                <li>Basic brand guidelines</li>
+                <li>Templates for presentations or communications</li>
+              </ul>
+              <div className="aub__deliverable-callout">
+                <span className="aub__callout-label">Deliverable</span>
+                <span className="aub__callout-value">Brand Toolkit &amp; Guidelines</span>
+              </div>
+            </div>
           </div>
-          <div className="aub__deliverable-body">
-            <ul className="aub__list">
-              <li>Logo files and variations</li>
-              <li>Color and typography specifications</li>
-              <li>Basic brand guidelines</li>
-              <li>Templates for presentations or communications</li>
-            </ul>
-            <div className="aub__deliverable-callout">
-              <span className="aub__callout-label">Deliverable</span>
-              <span className="aub__callout-value">Brand Toolkit &amp; Guidelines</span>
+          <div className="aub__deliverable-img-wrap">
+            <div className="aub__toolkit-slideshow">
+              <RapidSlideshow images={TOOLKIT_IMAGES} interval={600} />
             </div>
           </div>
         </div>
@@ -172,26 +197,31 @@ export default function AUBranding() {
 
       {/* 05 Website */}
       <section className="aub__deliverable">
-        <div className="aub__section-inner">
-          <div className="aub__deliverable-header">
-            <span className="aub__deliverable-num">05</span>
-            <h2 className="aub__deliverable-title">Website</h2>
-          </div>
-          <div className="aub__deliverable-body">
-            <p className="aub__deliverable-desc">Embodies the same creative energy and visual identity as the physical space, communicating the organization's role as a hub for founders, creators, and innovators.</p>
-            <p className="aub__deliverable-scope-label">Scope may include:</p>
-            <ul className="aub__list">
-              <li>Website structure and page architecture</li>
-              <li>Homepage design and visual storytelling</li>
-              <li>Integration of the new brand system (typography, color, graphics)</li>
-              <li>Layout design for key pages (about, membership, events, community)</li>
-              <li>Visual assets and graphic elements</li>
-              <li>Tech stack agreement (platform, CMS, and hosting decisions made collaboratively)</li>
-            </ul>
-            <div className="aub__deliverable-callout">
-              <span className="aub__callout-label">Deliverable</span>
-              <span className="aub__callout-value">Website</span>
+        <div className="aub__section-inner aub__deliverable-layout">
+          <div className="aub__deliverable-content">
+            <div className="aub__deliverable-header">
+              <span className="aub__deliverable-num">05</span>
+              <h2 className="aub__deliverable-title">Website</h2>
             </div>
+            <div className="aub__deliverable-body">
+              <p className="aub__deliverable-desc">Embodies the same creative energy and visual identity as the physical space, communicating the organization's role as a hub for founders, creators, and innovators.</p>
+              <p className="aub__deliverable-scope-label">Scope may include:</p>
+              <ul className="aub__list">
+                <li>Website structure and page architecture</li>
+                <li>Homepage design and visual storytelling</li>
+                <li>Integration of the new brand system (typography, color, graphics)</li>
+                <li>Layout design for key pages (about, membership, events, community)</li>
+                <li>Visual assets and graphic elements</li>
+                <li>Tech stack agreement (platform, CMS, and hosting decisions made collaboratively)</li>
+              </ul>
+              <div className="aub__deliverable-callout">
+                <span className="aub__callout-label">Deliverable</span>
+                <span className="aub__callout-value">Website</span>
+              </div>
+            </div>
+          </div>
+          <div className="aub__deliverable-img-wrap">
+            <img src="/images/au-brand/aub-website.png" alt="Website" className="aub__deliverable-img" />
           </div>
         </div>
       </section>
