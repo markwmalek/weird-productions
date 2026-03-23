@@ -80,7 +80,7 @@ export default function AUBranding() {
       </section>
 
       {/* 01 Brand Discovery */}
-      <section className="aub__deliverable">
+      <section className="aub__deliverable aub__deliverable--alt">
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
@@ -108,7 +108,7 @@ export default function AUBranding() {
       </section>
 
       {/* 02 Visual Identity */}
-      <section className="aub__deliverable aub__deliverable--alt">
+      <section className="aub__deliverable">
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
@@ -138,7 +138,7 @@ export default function AUBranding() {
       </section>
 
       {/* 03 Environmental Brand Integration */}
-      <section className="aub__deliverable">
+      <section className="aub__deliverable aub__deliverable--alt">
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
@@ -167,7 +167,7 @@ export default function AUBranding() {
       </section>
 
       {/* 04 Brand Toolkit */}
-      <section className="aub__deliverable aub__deliverable--alt">
+      <section className="aub__deliverable">
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
@@ -196,7 +196,7 @@ export default function AUBranding() {
       </section>
 
       {/* 05 Website */}
-      <section className="aub__deliverable">
+      <section className="aub__deliverable aub__deliverable--alt">
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
