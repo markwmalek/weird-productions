@@ -72,16 +72,9 @@ export default function AmericanUnderground() {
             <Placeholder aspect="16/9" />
           </div>
 
-          <div className="au__pspace-lower">
-            <div className="au__pspace-details">
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
-            </div>
-            <div className="au__pspace-scope">
-              <p className="au__pspace-scope-label">Scope</p>
-              <p className="au__pspace-scope-text">Area rug, entry runner, plants &amp; pots, floor lamps &amp; spotlights, bistro tables, leather accent chair</p>
-            </div>
+          <div className="au__pspace-details">
+            <Placeholder aspect="4/3" />
+            <Placeholder aspect="4/3" />
           </div>
 
           <div className="au__pspace-art">
@@ -119,16 +112,9 @@ export default function AmericanUnderground() {
             <Placeholder aspect="16/9" />
           </div>
 
-          <div className="au__pspace-lower">
-            <div className="au__pspace-details">
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
-            </div>
-            <div className="au__pspace-scope">
-              <p className="au__pspace-scope-label">Scope</p>
-              <p className="au__pspace-scope-text">Credenzas, hallway runner, plants &amp; pots, table lamps &amp; spotlights, custom graphic wall murals, styling layer, custom hallway mural</p>
-            </div>
+          <div className="au__pspace-details">
+            <Placeholder aspect="4/3" />
+            <Placeholder aspect="4/3" />
           </div>
 
           <div className="au__pspace-art">
@@ -166,16 +152,9 @@ export default function AmericanUnderground() {
             <Placeholder aspect="16/9" />
           </div>
 
-          <div className="au__pspace-lower">
-            <div className="au__pspace-details">
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
-            </div>
-            <div className="au__pspace-scope">
-              <p className="au__pspace-scope-label">Scope</p>
-              <p className="au__pspace-scope-text">Room dividers, oriental rugs, plants &amp; pots, table lamps &amp; spotlights, styling layer</p>
-            </div>
+          <div className="au__pspace-details">
+            <Placeholder aspect="4/3" />
+            <Placeholder aspect="4/3" />
           </div>
 
           <div className="au__pspace-art">
