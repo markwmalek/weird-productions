@@ -119,13 +119,20 @@ input, textarea, select {
 
 /* ── HEADINGS ── */
 /* TAY WaffleCone on h1 (big page heroes).
-   h2-h6 stay in the body font unless a page explicitly opts in via font-family. */
+   h3 uses script at a larger size; h4–h5 script; h2/h6 follow body unless a page overrides. */
 h1 {
   font-family: var(--font-display);
   font-weight: normal;
 }
 
-h3, h4, h5 {
+h3 {
+  font-family: var(--font-script);
+  font-weight: normal;
+  font-size: clamp(22px, 2.6vw, 32px);
+  line-height: 1.2;
+}
+
+h4, h5 {
   font-family: var(--font-script);
   font-weight: normal;
 }

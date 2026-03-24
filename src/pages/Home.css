@@ -210,11 +210,8 @@
   transform: scale(1.04);
 }
 
-/* Figma: Sora 24px weight 600 */
+/* Inherits h3 script sizing from global.css */
 .home-wwd-label {
-  font-family: var(--font-script);
-  font-size: 20px;
-  font-weight: 400;
   color: #000000;
   margin: 12px 0 0;
 }
@@ -300,9 +297,10 @@
 }
 
 .home-portfolio-card-title {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 400;
+  font-family: var(--font-script);
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: normal;
+  line-height: 1.2;
   color: #000000;
   margin: 12px 0 0;
 }
@@ -355,21 +353,26 @@
   flex-shrink: 0;
 }
 
-/* ── WORK WITH US ── */
-/* Figma: 1512×291px, padding 48px, gap 32px, vertical, centered */
-.home-wwu {
-  background: #EFEEEA;
-  padding: 48px;
+/* ── WORK WITH US + GET ON THE LIST (split) ── */
+.home-cta-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
-.home-wwu-inner {
-  max-width: 1416px;
-  margin: 0 auto;
+.home-cta-col {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 32px;
   text-align: center;
+  padding: 48px;
+  background: #000000;
+}
+
+.home-cta-col--work {
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Figma: TAY Waffle Cone 48px, ls -1.92px */
@@ -378,7 +381,7 @@
   font-size: clamp(36px, 3.2vw, 48px);
   font-weight: 400;
   line-height: 0.9;
-  color: #000000;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -387,7 +390,7 @@
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.6;
   margin: 0;
 }
@@ -397,7 +400,7 @@
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
-  color: #000000;
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: opacity 0.2s;
@@ -405,23 +408,6 @@
 
 .home-wwu-dm:hover {
   opacity: 0.5;
-}
-
-/* ── GET ON THE LIST ── */
-/* Figma: 1512×295px, bg #000, padding 48px, gap 32px, vertical, centered */
-.home-gol {
-  background: #000000;
-  padding: 48px;
-}
-
-.home-gol-inner {
-  max-width: 1416px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  text-align: center;
 }
 
 /* Figma: TAY Waffle Cone 48px, #fff, ls -1.92px */
@@ -445,7 +431,8 @@
 
 /* Figma: 320×62px, padding 16px, bg rgba(255,255,255,0.1), stroke #fff 1px, text Sora 24px #fff */
 .home-gol-input {
-  width: 320px;
+  width: min(320px, 100%);
+  max-width: 100%;
   height: 62px;
   padding: 16px;
   font-family: var(--font-body);
@@ -491,10 +478,21 @@
   }
 
   .home-portfolio,
-  .home-wwd,
-  .home-wwu,
-  .home-gol {
+  .home-wwd {
     padding: 40px 24px;
+  }
+
+  .home-cta-split {
+    grid-template-columns: 1fr;
+  }
+
+  .home-cta-col {
+    padding: 40px 24px;
+  }
+
+  .home-cta-col--work {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .home-portfolio-grid,

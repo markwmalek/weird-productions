@@ -38,8 +38,8 @@
 }
 
 .sh-meta {
-  font-family: var(--font-body);
-  font-size: 15px;
+  font-family: var(--font-script);
+  font-size: clamp(20px, 2.2vw, 28px);
   color: rgba(0, 0, 0, 0.5);
 }
 

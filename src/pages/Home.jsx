@@ -164,9 +164,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WORK WITH US ── */}
-      <section className="home-wwu">
-        <div className="home-wwu-inner">
+      {/* ── WORK WITH US + GET ON THE LIST (2 columns desktop) ── */}
+      <section className="home-cta-split" aria-label="Work with us and get on the list">
+        <div className="home-cta-col home-cta-col--work">
           <h2 className="home-wwu-heading">WORK WITH US</h2>
           <p className="home-wwu-body">
             Weird blends artistic direction and strategic vision to create unforgettable experiences.<br />
@@ -176,11 +176,7 @@ export default function Home() {
             Work with us
           </Link>
         </div>
-      </section>
-
-      {/* ── GET ON THE LIST ── */}
-      <section className="home-gol">
-        <div className="home-gol-inner">
+        <div className="home-cta-col home-cta-col--subscribe">
           <h2 className="home-gol-heading">GET ON THE LIST</h2>
           <p className="home-gol-sub">Cool events. Calls for art. Be the first to know.</p>
           <form onSubmit={handleSubmit}>
