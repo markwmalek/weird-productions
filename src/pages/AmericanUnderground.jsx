@@ -1,8 +1,12 @@
 import './AmericanUnderground.css';
 
-function Placeholder({ aspect = '16/9' }) {
+function Placeholder({ aspect, fill = false }) {
   return (
-    <div className="au__placeholder" style={{ aspectRatio: aspect }} aria-hidden="true" />
+    <div
+      className="au__placeholder"
+      style={fill ? { height: '100%' } : { aspectRatio: aspect }}
+      aria-hidden="true"
+    />
   );
 }
 
@@ -68,13 +72,14 @@ export default function AmericanUnderground() {
             </div>
           </div>
 
-          <div className="au__pspace-hero">
-            <Placeholder aspect="16/9" />
-          </div>
-
-          <div className="au__pspace-details">
-            <Placeholder aspect="4/3" />
-            <Placeholder aspect="4/3" />
+          <div className="au__pspace-collage">
+            <div className="au__pspace-collage-main">
+              <Placeholder fill />
+            </div>
+            <div className="au__pspace-collage-stack">
+              <Placeholder aspect="4/3" />
+              <Placeholder aspect="4/3" />
+            </div>
           </div>
 
           <div className="au__pspace-desc">
@@ -112,13 +117,14 @@ export default function AmericanUnderground() {
             </div>
           </div>
 
-          <div className="au__pspace-hero">
-            <Placeholder aspect="16/9" />
-          </div>
-
-          <div className="au__pspace-details">
-            <Placeholder aspect="4/3" />
-            <Placeholder aspect="4/3" />
+          <div className="au__pspace-collage">
+            <div className="au__pspace-collage-main">
+              <Placeholder fill />
+            </div>
+            <div className="au__pspace-collage-stack">
+              <Placeholder aspect="4/3" />
+              <Placeholder aspect="4/3" />
+            </div>
           </div>
 
           <div className="au__pspace-desc">
@@ -156,13 +162,14 @@ export default function AmericanUnderground() {
             </div>
           </div>
 
-          <div className="au__pspace-hero">
-            <Placeholder aspect="16/9" />
-          </div>
-
-          <div className="au__pspace-details">
-            <Placeholder aspect="4/3" />
-            <Placeholder aspect="4/3" />
+          <div className="au__pspace-collage">
+            <div className="au__pspace-collage-main">
+              <Placeholder fill />
+            </div>
+            <div className="au__pspace-collage-stack">
+              <Placeholder aspect="4/3" />
+              <Placeholder aspect="4/3" />
+            </div>
           </div>
 
           <div className="au__pspace-desc">
