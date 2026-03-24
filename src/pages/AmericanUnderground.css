@@ -188,38 +188,12 @@
   margin-bottom: 1.5rem;
 }
 
-/* Lower row: detail images + scope */
-.au__pspace-lower {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: start;
-}
-
+/* Detail images: two 50/50 below the hero */
 .au__pspace-details {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
-}
-
-.au__pspace-scope {
-  padding-top: 0.5rem;
-}
-
-.au__pspace-scope-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-muted);
-  margin-bottom: 0.6rem;
-}
-
-.au__pspace-scope-text {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--color-text);
+  margin-bottom: 3rem;
 }
 
 /* Art grid */
@@ -320,10 +294,6 @@
     display: none;
   }
 
-  .au__pspace-lower {
-    grid-template-columns: 1fr;
-  }
-
   .au__meta-item + .au__meta-item {
     border-left: none;
     border-top: 1.5px solid var(--color-border-light);
@@ -356,7 +326,6 @@
   }
 
   .au__pspace-details {
-    grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
   }
 
