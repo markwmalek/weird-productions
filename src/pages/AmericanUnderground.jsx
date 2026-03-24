@@ -77,6 +77,10 @@ export default function AmericanUnderground() {
             <Placeholder aspect="4/3" />
           </div>
 
+          <div className="au__pspace-desc">
+            <p>The first thing you feel walking into the HUB Lounge is that someone actually cared. A thrifted leather chair anchors one corner, a 14-foot oriental runner leads you through the front door, and warm spotlights make the whole space feel like late afternoon even at noon. This is where people linger — between meetings, between ideas, between the city outside and the work inside.</p>
+          </div>
+
           <div className="au__pspace-art">
             <p className="au__pspace-art-label">Art</p>
             <div className="au__pspace-art-grid">
@@ -117,6 +121,10 @@ export default function AmericanUnderground() {
             <Placeholder aspect="4/3" />
           </div>
 
+          <div className="au__pspace-desc">
+            <p>The coworking floor needed to feel productive without feeling corporate. Three salvaged credenzas divide the open plan into distinct zones, topped with books, plants, and objects that give the eye somewhere to rest. Flags from Durham's history hang alongside custom graphic panels — a reminder that this building sits at the intersection of community and ambition.</p>
+          </div>
+
           <div className="au__pspace-art">
             <p className="au__pspace-art-label">Art</p>
             <div className="au__pspace-art-grid">
@@ -155,6 +163,10 @@ export default function AmericanUnderground() {
           <div className="au__pspace-details">
             <Placeholder aspect="4/3" />
             <Placeholder aspect="4/3" />
+          </div>
+
+          <div className="au__pspace-desc">
+            <p>Upstairs, the second floor needed to feel like a different world — calmer, more focused, but no less alive. Room dividers carve out quiet corners without closing them off. Two large oriental rugs ground the space and soften the sound. Zeus Alexander's custom paintings bring the walls to life, bold enough to inspire without pulling focus from the work in front of you.</p>
           </div>
 
           <div className="au__pspace-art">

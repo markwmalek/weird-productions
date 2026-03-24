@@ -196,6 +196,33 @@
   margin-bottom: 3rem;
 }
 
+/* Description */
+.au__pspace-desc {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-top: 1.5px solid var(--color-border-light);
+  margin-bottom: 0;
+}
+
+.au__pspace-desc::before {
+  content: 'About';
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  padding-top: 0.2rem;
+}
+
+.au__pspace-desc p {
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 620px;
+}
+
 /* Art grid */
 .au__pspace-art {
   border-top: 1.5px solid var(--color-border-light);
@@ -327,6 +354,15 @@
 
   .au__pspace-details {
     gap: 0.5rem;
+  }
+
+  .au__pspace-desc {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .au__pspace-desc::before {
+    display: none;
   }
 
   .au__pspace-art-grid {
