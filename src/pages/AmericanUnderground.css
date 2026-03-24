@@ -182,18 +182,22 @@
   letter-spacing: 0.06em;
 }
 
-/* Hero image */
-.au__pspace-hero {
-  width: 100%;
-  margin-bottom: 1.5rem;
-}
-
-/* Detail images: two 50/50 below the hero */
-.au__pspace-details {
+/* Collage: tall vertical left + two stacked right */
+.au__pspace-collage {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.au__pspace-collage-main {
+  min-height: 400px;
+}
+
+.au__pspace-collage-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 /* Description */
@@ -352,8 +356,17 @@
     flex-wrap: wrap;
   }
 
-  .au__pspace-details {
-    gap: 0.5rem;
+  .au__pspace-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .au__pspace-collage-main {
+    min-height: unset;
+    aspect-ratio: 3/4;
+  }
+
+  .au__pspace-collage-stack {
+    flex-direction: row;
   }
 
   .au__pspace-desc {
