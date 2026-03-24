@@ -1,8 +1,4 @@
-import { useState } from 'react';
 import './AmericanUnderground.css';
-
-const PASSWORD = 'AU2026';
-const STORAGE_KEY = 'au_unlocked';
 
 function Placeholder({ aspect = '16/9' }) {
   return (
@@ -11,46 +7,8 @@ function Placeholder({ aspect = '16/9' }) {
 }
 
 export default function AmericanUnderground() {
-  const [unlocked, setUnlocked] = useState(() => {
-    try { return sessionStorage.getItem(STORAGE_KEY) === 'true'; } catch { return false; }
-  });
-  const [input, setInput] = useState('');
-  const [error, setError] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (input === PASSWORD) {
-      sessionStorage.setItem(STORAGE_KEY, 'true');
-      setUnlocked(true);
-    } else {
-      setError(true);
-      setInput('');
-      setTimeout(() => setError(false), 2000);
-    }
-  };
-
   return (
     <div className="au">
-      {!unlocked && (
-        <div className="au-gate">
-          <div className="au-gate__inner">
-            <h1 className="au-gate__title">American Underground</h1>
-            <p className="au-gate__sub">This page is private. Enter the password to continue.</p>
-            <form className="au-gate__form" onSubmit={handleSubmit}>
-              <input
-                type="password"
-                className={`au-gate__input ${error ? 'au-gate__input--error' : ''}`}
-                placeholder="Password"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                autoFocus
-              />
-              <button type="submit" className="au-gate__btn">Enter</button>
-            </form>
-            {error && <p className="au-gate__error">Incorrect password</p>}
-          </div>
-        </div>
-      )}
 
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="au__hero">
