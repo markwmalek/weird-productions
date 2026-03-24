@@ -119,7 +119,7 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <img src="/images/au/au-hubco-1.png" alt="The HUB Coworking" />
+              <img src="/images/au/au-co-2.png" alt="The HUB Coworking" />
             </div>
             <div className="au__pspace-collage-stack">
               <img src="/images/au/au-hubco-2.png" alt="The HUB Coworking detail" />
@@ -164,7 +164,7 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <img src="/images/au/au-co-2.png" alt="Coworking Space 2nd Floor" />
+              <img src="/images/au/au-hubco-1.png" alt="Coworking Space 2nd Floor" />
             </div>
             <div className="au__pspace-collage-stack">
               <img src="/images/au/au-co-3.png" alt="Coworking Space 2nd Floor detail" />
