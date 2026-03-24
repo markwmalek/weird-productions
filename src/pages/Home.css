@@ -59,8 +59,8 @@
 
 /* Figma: Sora 24px weight 600, ls 1.2px */
 .home-hero-sub {
-  font-family: var(--font-body);
-  font-size: 16px;
+  font-family: var(--font-script);
+  font-size: clamp(20px, 4vw, 32px);
   font-weight: 400;
   color: #000000;
   margin: 0;
@@ -212,7 +212,7 @@
 
 /* Figma: Sora 24px weight 600 */
 .home-wwd-label {
-  font-family: var(--font-display);
+  font-family: var(--font-script);
   font-size: 20px;
   font-weight: 400;
   color: #000000;

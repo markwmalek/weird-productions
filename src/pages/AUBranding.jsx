@@ -64,7 +64,7 @@ export default function AUBranding() {
         <div className="aub__intro-inner">
           <p className="aub__section-label">Overview</p>
           <div className="aub__intro-body">
-            <p>Following the design direction established through the American Underground interior project, we see an opportunity to evolve the organization's visual identity to better reflect the energy, creativity, and cultural presence of the space.</p>
+            <p>Following the design direction established through the American Underground interior project, we see an opportunity to evolve the organization's visual identity to reflect the energy, creativity, and cultural presence of the space.</p>
             <p>Our goal would be to translate the spirit of the physical environment into a cohesive brand system that can live across digital platforms, physical spaces, communications, and future programming.</p>
             <p>Rather than a simple logo update, this process would develop a visual language and creative direction that reflects American Underground's role as a hub for innovation, creativity, and community in Durham.</p>
           </div>
@@ -75,7 +75,7 @@ export default function AUBranding() {
       <section className="aub__deliverables-header">
         <div className="aub__section-inner">
           <p className="aub__section-label">Scope of Work</p>
-          <h2 className="aub__section-title">Five deliverables, built as one cohesive system.</h2>
+          <h2 className="aub__section-title">Five deliverables, one cohesive system.</h2>
         </div>
       </section>
 
@@ -180,6 +180,7 @@ export default function AUBranding() {
                 <li>Color and typography specifications</li>
                 <li>Basic brand guidelines</li>
                 <li>Templates for presentations or communications</li>
+                <li>Social media templates in AU's design platform of choice</li>
               </ul>
               <div className="aub__deliverable-callout">
                 <span className="aub__callout-label">Deliverable</span>

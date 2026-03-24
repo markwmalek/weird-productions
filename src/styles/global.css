@@ -8,6 +8,22 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: 'Butter And Crumb Script';
+  src: url('/fonts/ButterAndCrumbScript-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Butter And Crumb Caps';
+  src: url('/fonts/ButterAndCrumbCaps-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 :root {
   /* ── WAP Design Tokens ── */
   --color-bg: #ffffff;
@@ -25,6 +41,8 @@
   --color-hover-bg: #f0f0f0;
 
   --font-display: 'TAY WaffleCone', cursive;
+  --font-script: 'Butter And Crumb Script', cursive;
+  --font-caps: 'Butter And Crumb Caps', cursive;
   --font-body: 'Sora', sans-serif;
 
   --max-width: 1500px;
@@ -104,6 +122,11 @@ input, textarea, select {
    h2-h6 stay in the body font unless a page explicitly opts in via font-family. */
 h1 {
   font-family: var(--font-display);
+  font-weight: normal;
+}
+
+h3, h4, h5 {
+  font-family: var(--font-script);
   font-weight: normal;
 }
 
