@@ -288,7 +288,7 @@ export default function AUBranding() {
           <div className="aub__invest-card">
             <div className="aub__invest-top">
               <p className="aub__invest-scope">Creative Direction &amp; Brand Identity Development</p>
-              <p className="aub__invest-total">$35,000</p>
+              <p className="aub__invest-total">$25,000</p>
             </div>
             <div className="aub__invest-divider" />
             <p className="aub__invest-schedule-label">Payment Schedule</p>
