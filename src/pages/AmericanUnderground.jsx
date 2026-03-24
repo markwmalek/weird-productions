@@ -22,7 +22,7 @@ export default function AmericanUnderground() {
           <p className="au__hero-sub">Interior Design &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; 2026</p>
         </div>
         <div className="au__hero-img">
-          <Placeholder aspect="21/9" />
+          <img src="/images/au/au-hero.png" alt="American Underground interior" />
         </div>
       </section>
 
@@ -74,11 +74,11 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <Placeholder fill />
+              <img src="/images/au/au-hublo-1.png" alt="The HUB Lounge" />
             </div>
             <div className="au__pspace-collage-stack">
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
+              <img src="/images/au/au-hublo-2.png" alt="The HUB Lounge detail" />
+              <img src="/images/au/au-hublo-3.png" alt="The HUB Lounge detail" />
             </div>
           </div>
 
@@ -119,11 +119,11 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <Placeholder fill />
+              <img src="/images/au/au-hubco-1.png" alt="The HUB Coworking" />
             </div>
             <div className="au__pspace-collage-stack">
-              <Placeholder aspect="4/3" />
-              <Placeholder aspect="4/3" />
+              <img src="/images/au/au-hubco-2.png" alt="The HUB Coworking detail" />
+              <img src="/images/au/au-hubco-3.png" alt="The HUB Coworking detail" />
             </div>
           </div>
 
@@ -164,10 +164,10 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <Placeholder fill />
+              <img src="/images/au/au-co-2.png" alt="Coworking Space 2nd Floor" />
             </div>
             <div className="au__pspace-collage-stack">
-              <Placeholder aspect="4/3" />
+              <img src="/images/au/au-co-3.png" alt="Coworking Space 2nd Floor detail" />
               <Placeholder aspect="4/3" />
             </div>
           </div>
