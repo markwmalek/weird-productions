@@ -25,15 +25,17 @@
   white-space: nowrap;
 }
 
-/* Logo — WaffleCone display font */
+/* Logo — Butter And Crumb Caps */
 .header-logo {
-  font-family: var(--font-display);
+  font-family: var(--font-caps);
   font-size: 24px;
   font-weight: 400;
   color: #000000;
   text-decoration: none;
   line-height: 1;
   flex-shrink: 0;
+  position: relative;
+  top: -2px;
 }
 
 /* Thin vertical divider between logo and links */

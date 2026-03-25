@@ -1,0 +1,10 @@
+/* Webfont: ButterAndCrumbScript-Regular */@font-face {
+    font-family: 'ButterAndCrumbScript';
+    src: url('ButterAndCrumbScript-Regular.woff') format('woff'), /* Modern Browsers */
+         url('ButterAndCrumbScript-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('ButterAndCrumbScript-Regular.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -20,8 +20,8 @@
 }
 
 .sd-title {
-  font-family: var(--font-display);
-  font-size: clamp(10px, 8vw, 180px);
+  font-family: var(--font-caps);
+  font-size: clamp(16px, 12.5vw, 281px);
   font-weight: 400;
   line-height: 0.9;
   color: #000000;
@@ -39,15 +39,15 @@
 }
 
 .sd-meta {
-  font-family: var(--font-script);
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-family: var(--font-caps);
+  font-size: clamp(31px, 3.44vw, 44px);
   color: rgba(0, 0, 0, 0.5);
 }
 
 /* ── SECTION HEADING ── */
 .sd-section-heading {
-  font-family: var(--font-display);
-  font-size: clamp(32px, 3vw, 48px);
+  font-family: var(--font-caps);
+  font-size: clamp(50px, 4.7vw, 75px);
   font-weight: 400;
   line-height: 0.9;
   color: #000000;

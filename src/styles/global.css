@@ -10,7 +10,9 @@
 
 @font-face {
   font-family: 'Butter And Crumb Script';
-  src: url('/fonts/ButterAndCrumbScript-Regular.otf') format('opentype');
+  src: url('/fonts/ButterAndCrumb-webfonts/Script/ButterAndCrumbScript-Regular/ButterAndCrumbScript-Regular.woff2') format('woff2'),
+       url('/fonts/ButterAndCrumb-webfonts/Script/ButterAndCrumbScript-Regular/ButterAndCrumbScript-Regular.woff') format('woff'),
+       url('/fonts/ButterAndCrumb-webfonts/Script/ButterAndCrumbScript-Regular/ButterAndCrumbScript-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -18,7 +20,9 @@
 
 @font-face {
   font-family: 'Butter And Crumb Caps';
-  src: url('/fonts/ButterAndCrumbCaps-Regular.otf') format('opentype');
+  src: url('/fonts/ButterAndCrumb-webfonts/Caps/ButterAndCrumbCaps-Regular/ButterAndCrumbCaps-Regular.woff2') format('woff2'),
+       url('/fonts/ButterAndCrumb-webfonts/Caps/ButterAndCrumbCaps-Regular/ButterAndCrumbCaps-Regular.woff') format('woff'),
+       url('/fonts/ButterAndCrumb-webfonts/Caps/ButterAndCrumbCaps-Regular/ButterAndCrumbCaps-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -118,23 +122,15 @@ input, textarea, select {
 }
 
 /* ── HEADINGS ── */
-/* TAY WaffleCone on h1 (big page heroes).
-   h3 uses script at a larger size; h4–h5 script; h2/h6 follow body unless a page overrides. */
-h1 {
-  font-family: var(--font-display);
+/* Butter And Crumb Caps on all headings. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-caps);
   font-weight: normal;
 }
 
 h3 {
-  font-family: var(--font-script);
-  font-weight: normal;
-  font-size: clamp(22px, 2.6vw, 32px);
+  font-size: clamp(34px, 4.1vw, 50px);
   line-height: 1.2;
-}
-
-h4, h5 {
-  font-family: var(--font-script);
-  font-weight: normal;
 }
 
 /* ── LAYOUT ── */

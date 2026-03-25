@@ -23,7 +23,7 @@
 }
 
 .aub__section-title {
-  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-size: clamp(2.344rem, 3.9vw, 3.5rem);
   line-height: 1.2;
   max-width: 700px;
 }
@@ -50,7 +50,7 @@
 }
 
 .aub__hero h1 {
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(6.25rem, 12.5vw, 12.5rem);
   line-height: 1;
   margin-bottom: 0.25rem;
 }
@@ -61,8 +61,8 @@
 }
 
 .aub__hero-byline {
-  font-family: var(--font-script);
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-family: var(--font-caps);
+  font-size: clamp(31px, 3.44vw, 44px);
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -108,7 +108,7 @@
 
 .aub__deliverables-header .aub__section-title {
   color: #ffffff;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2.344rem, 4.7vw, 3.9rem);
   max-width: 100%;
 }
 
@@ -143,7 +143,7 @@
 }
 
 .aub__deliverable-title {
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
   line-height: 1.1;
 }
 
@@ -423,7 +423,7 @@
   }
 
   .aub__hero h1 {
-    font-size: clamp(2.5rem, 10vw, 4rem);
+    font-size: clamp(3.9rem, 15.625vw, 6.25rem);
   }
 
   .aub__deliverable-header {

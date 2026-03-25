@@ -1,0 +1,10 @@
+/* Webfont: ButterAndCrumbCaps-ObOutline2 */@font-face {
+    font-family: 'ButterAndCrumbCapsOutline2';
+    src: url('ButterAndCrumbCaps-Outline2Slant.woff') format('woff'), /* Modern Browsers */
+         url('ButterAndCrumbCaps-Outline2Slant.woff2') format('woff2'), /* Modern Browsers */
+         url('ButterAndCrumbCaps-Outline2Slant.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

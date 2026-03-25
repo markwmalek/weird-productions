@@ -37,7 +37,7 @@
 }
 
 .au__hero h1 {
-  font-size: clamp(4rem, 9vw, 9rem);
+  font-size: clamp(6.25rem, 14.1vw, 14.1rem);
   line-height: 0.95;
   letter-spacing: -0.02em;
 }
@@ -169,7 +169,7 @@
 }
 
 .au__pspace-name {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(3.125rem, 6.25vw, 5.47rem);
   line-height: 1;
   letter-spacing: -0.01em;
 }
@@ -320,8 +320,8 @@
 }
 
 .au__credits-names {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: var(--font-caps);
+  font-size: clamp(3.125rem, 7.8vw, 6.25rem);
   color: var(--color-white);
   line-height: 1;
 }
@@ -368,7 +368,7 @@
   }
 
   .au__hero h1 {
-    font-size: clamp(3rem, 12vw, 5rem);
+    font-size: clamp(4.7rem, 18.75vw, 7.8rem);
   }
 
   .au__pspace-inner {

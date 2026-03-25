@@ -11,8 +11,8 @@
 }
 
 .portfolio-title {
-  font-family: var(--font-display);
-  font-size: clamp(48px, 6vw, 96px);
+  font-family: var(--font-caps);
+  font-size: clamp(75px, 9.375vw, 150px);
   font-weight: 400;
   color: #000000;
   line-height: 1;
@@ -52,8 +52,8 @@
 }
 
 .portfolio-card-title {
-  font-family: var(--font-display);
-  font-size: clamp(24px, 2.4vw, 36px);
+  font-family: var(--font-caps);
+  font-size: clamp(37.5px, 3.75vw, 56px);
   font-weight: 400;
   line-height: 1;
   margin-bottom: 4px;
