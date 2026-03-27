@@ -84,7 +84,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-cream);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
