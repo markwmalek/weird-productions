@@ -35,7 +35,7 @@ export default function AmericanUnderground() {
           </div>
           <div className="au__meta-item">
             <span className="au__meta-label">Scope</span>
-            <span className="au__meta-value">Interior Design &amp; Art Curation</span>
+            <span className="au__meta-value">Interior Design</span>
           </div>
           <div className="au__meta-item">
             <span className="au__meta-label">Spaces</span>
@@ -56,7 +56,7 @@ export default function AmericanUnderground() {
       <section className="au__statement">
         <div className="au__statement-inner">
           <p className="au__statement-text">
-            American Underground came to us with one brief: make the new space feel warm, lived-in, and unmistakably Durham. We curated five distinct spaces across two floors — layering vintage furniture, hand-sourced rugs, local art, custom lighting, and commissioned pieces from Durham artists to build an environment that reflects the community-driven spirit AU was built on.
+            American Underground came to us with one brief: make the new space feel warm, lived-in, and unmistakably Durham. We designed five distinct spaces across two floors — layering vintage furniture, hand-sourced rugs, custom lighting, and sourced objects to build an environment that reflects the community-driven spirit AU was built on.
           </p>
         </div>
       </section>
@@ -86,23 +86,6 @@ export default function AmericanUnderground() {
             <p>The first thing you feel walking into the HUB Lounge is that someone actually cared. A thrifted leather chair anchors one corner, a 14-foot oriental runner leads you through the front door, and warm spotlights make the whole space feel like late afternoon even at noon. This is where people linger — between meetings, between ideas, between the city outside and the work inside.</p>
           </div>
 
-          <div className="au__pspace-art">
-            <p className="au__pspace-art-label">Art</p>
-            <div className="au__pspace-art-grid">
-              <div className="au__pspace-art-item">
-                <img src="/images/au/p8_1.png" alt="Bright Orange Abstract Painting" />
-                <p>Bright Orange Abstract Painting</p>
-              </div>
-              <div className="au__pspace-art-item">
-                <img src="/images/au/p8_0.png" alt="Custom Mural by Christian Smith" />
-                <p>Custom Mural — Christian Smith</p>
-              </div>
-              <div className="au__pspace-art-item">
-                <img src="/images/au/p8_2.png" alt="Road Sign Sculpture" />
-                <p>Road Sign Sculpture</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -131,23 +114,6 @@ export default function AmericanUnderground() {
             <p>The coworking floor needed to feel productive without feeling corporate. Three salvaged credenzas divide the open plan into distinct zones, topped with books, plants, and objects that give the eye somewhere to rest. Flags from Durham's history hang alongside custom graphic panels — a reminder that this building sits at the intersection of community and ambition.</p>
           </div>
 
-          <div className="au__pspace-art">
-            <p className="au__pspace-art-label">Art</p>
-            <div className="au__pspace-art-grid">
-              <div className="au__pspace-art-item">
-                <img src="/images/au/p11_0.jpeg" alt="Flags" />
-                <p>Flags — Durham, Pride, Vote &amp; more</p>
-              </div>
-              <div className="au__pspace-art-item">
-                <img src="/images/au/p11_2.png" alt="Custom Panels by Weird" />
-                <p>Custom Panels — Weird</p>
-              </div>
-              <div className="au__pspace-art-item">
-                <img src="/images/au/p11_1.png" alt="Custom Mural by Weird" />
-                <p>Custom Mural — Weird</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -176,15 +142,6 @@ export default function AmericanUnderground() {
             <p>Upstairs, the second floor needed to feel like a different world — calmer, more focused, but no less alive. Room dividers carve out quiet corners without closing them off. Two large oriental rugs ground the space and soften the sound. Zeus Alexander's custom paintings bring the walls to life, bold enough to inspire without pulling focus from the work in front of you.</p>
           </div>
 
-          <div className="au__pspace-art">
-            <p className="au__pspace-art-label">Art</p>
-            <div className="au__pspace-art-grid">
-              <div className="au__pspace-art-item">
-                <img src="/images/au/p14_0.png" alt="Custom Paintings by Zeus Alexander" />
-                <p>Custom Paintings — Zeus Alexander</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -195,8 +152,6 @@ export default function AmericanUnderground() {
           <p className="au__credits-names">Weird &amp; American Underground</p>
           <div className="au__credits-meta">
             <span>Interior Design</span>
-            <span>·</span>
-            <span>Art Curation</span>
             <span>·</span>
             <span>Durham, NC</span>
             <span>·</span>
