@@ -106,7 +106,7 @@ export default function AmericanUnderground() {
             </div>
             <div className="au__pspace-collage-stack">
               <img src="/images/au/au-hubco-3.png" alt="The HUB Coworking detail" />
-              <Placeholder aspect="4/3" />
+              <img src="/images/au/au-hubco-1.png" alt="The HUB Coworking detail" />
             </div>
           </div>
 
