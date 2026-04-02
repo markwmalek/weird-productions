@@ -141,9 +141,7 @@
 }
 
 .au__pspace-header {
-  display: flex;
-  align-items: baseline;
-  gap: 2rem;
+  position: relative;
   margin-bottom: 2.5rem;
 }
 
@@ -152,8 +150,10 @@
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   color: var(--color-border-light);
   line-height: 1;
-  flex-shrink: 0;
   user-select: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .au__pspace-title-group {
