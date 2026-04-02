@@ -56,7 +56,7 @@ export default function AmericanUnderground() {
           </div>
           <div className="au__meta-item">
             <span className="au__meta-label">Spaces</span>
-            <span className="au__meta-value">5 across 2 floors</span>
+            <span className="au__meta-value">3 across 2 floors</span>
           </div>
           <div className="au__meta-item">
             <span className="au__meta-label">Location</span>
