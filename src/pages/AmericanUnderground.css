@@ -48,12 +48,6 @@
   margin-top: 0.5rem;
 }
 
-.au__hero-img {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--gutter) 0;
-}
-
 /* ─── Project Meta ──────────────────────────────────────────────────────── */
 
 .au__meta {
@@ -182,7 +176,24 @@
   letter-spacing: 0.06em;
 }
 
-/* Hero image */
+/* Hero slideshow */
+.au__hero-slideshow {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Hero image (bottom collage) */
+.au__hero-img {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
 .au__hero-img img {
   width: 100%;
   display: block;

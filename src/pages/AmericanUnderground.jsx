@@ -1,4 +1,19 @@
 import './AmericanUnderground.css';
+import RapidSlideshow from '../components/RapidSlideshow';
+
+const AU_IMAGES = [
+  '/images/au/au-hero.png',
+  '/images/au/au-hublo-1.png',
+  '/images/au/au-hublo-2.png',
+  '/images/au/au-hublo-3.png',
+  '/images/au/au-hubco-1.png',
+  '/images/au/au-hubco-2.png',
+  '/images/au/au-hubco-3.png',
+  '/images/au/au-co-1.png',
+  '/images/au/au-co-2.png',
+  '/images/au/au-co-3.png',
+  '/images/au/p4_7.jpeg',
+];
 
 function Placeholder({ aspect, fill = false }) {
   return (
@@ -21,8 +36,8 @@ export default function AmericanUnderground() {
           <h1>American<br />Underground</h1>
           <p className="au__hero-sub">Interior Design &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; 2026</p>
         </div>
-        <div className="au__hero-img">
-          <img src="/images/au/au-hero.png" alt="American Underground interior" />
+        <div className="au__hero-slideshow">
+          <RapidSlideshow images={AU_IMAGES} interval={700} />
         </div>
       </section>
 
@@ -144,6 +159,11 @@ export default function AmericanUnderground() {
 
         </div>
       </section>
+
+      {/* ─── Hero Collage ─────────────────────────────────────────────────── */}
+      <div className="au__hero-img">
+        <img src="/images/au/au-hero.png" alt="American Underground interior" />
+      </div>
 
       {/* ─── Credits ──────────────────────────────────────────────────────── */}
       <section className="au__credits">
