@@ -194,7 +194,7 @@
 .au__hero-img {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding: 0 var(--gutter) 5rem;
 }
 
 .au__hero-img img {
