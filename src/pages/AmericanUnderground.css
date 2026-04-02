@@ -181,6 +181,9 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--gutter);
+}
+
+.au__hero-slideshow-inner {
   position: relative;
   aspect-ratio: 16/9;
   border-radius: 16px;

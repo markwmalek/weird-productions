@@ -37,7 +37,9 @@ export default function AmericanUnderground() {
           <p className="au__hero-sub">Interior Design &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; 2026</p>
         </div>
         <div className="au__hero-slideshow">
-          <RapidSlideshow images={AU_IMAGES} interval={700} />
+          <div className="au__hero-slideshow-inner">
+            <RapidSlideshow images={AU_IMAGES} interval={700} />
+          </div>
         </div>
       </section>
 
