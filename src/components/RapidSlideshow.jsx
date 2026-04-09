@@ -13,14 +13,19 @@ function shuffle(arr) {
 export default function RapidSlideshow({ images, interval = 600 }) {
   const [shuffled] = useState(() => shuffle(images));
   const [index, setIndex] = useState(0);
-  const intervalRef = useRef(null);
+  const loadedRef = useRef(new Set());
+  const indexRef = useRef(0);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setIndex(i => (i + 1) % shuffled.length);
+    const id = setInterval(() => {
+      const nextIndex = (indexRef.current + 1) % shuffled.length;
+      if (loadedRef.current.has(shuffled[nextIndex])) {
+        indexRef.current = nextIndex;
+        setIndex(nextIndex);
+      }
     }, interval);
-    return () => clearInterval(intervalRef.current);
-  }, [shuffled.length, interval]);
+    return () => clearInterval(id);
+  }, [shuffled, interval]);
 
   return (
     <div className="rapid-slideshow">
@@ -31,6 +36,7 @@ export default function RapidSlideshow({ images, interval = 600 }) {
           alt=""
           aria-hidden="true"
           className={`rapid-frame ${i === index ? 'active' : ''}`}
+          onLoad={() => loadedRef.current.add(src)}
         />
       ))}
     </div>

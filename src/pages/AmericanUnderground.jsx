@@ -73,8 +73,7 @@ export default function AmericanUnderground() {
       <section className="au__statement">
         <div className="au__statement-inner">
           <p className="au__statement-text">
-            American Underground came to us with one brief: make the new space feel warm, lived-in, and unmistakably Durham. We designed five distinct spaces across two floors — layering vintage furniture, hand-sourced rugs, custom lighting, and sourced objects to build an environment that reflects the community-driven spirit AU was built on.
-          </p>
+            AU brought us in as collaborators, not just decorators. We worked side by side with their team to make the new ATC feel like home. We scoured Nomadic Trading, Gibson Girl, and a dozen other local spots for furniture with character, and commissioned 4 art installations paying out over $3,000 to local artists.          </p>
         </div>
       </section>
 
@@ -100,7 +99,7 @@ export default function AmericanUnderground() {
           </div>
 
           <div className="au__pspace-desc">
-            <p>The first thing you feel walking into the HUB Lounge is that someone actually cared. A thrifted leather chair anchors one corner, a 14-foot oriental runner leads you through the front door, and warm spotlights make the whole space feel like late afternoon even at noon. This is where people linger — between meetings, between ideas, between the city outside and the work inside.</p>
+            <p>The first thing you feel walking in is that someone actually cared. A thrifted leather chair from Gibson Girl anchors one corner, a vintage runner from Nomadic Trading leads you through the door, and curated art gives the walls real weight. This is where members linger: between meetings, between ideas.</p>
           </div>
 
         </div>
@@ -128,7 +127,7 @@ export default function AmericanUnderground() {
           </div>
 
           <div className="au__pspace-desc">
-            <p>The coworking floor needed to feel productive without feeling corporate. Three salvaged credenzas divide the open plan into distinct zones, topped with books, plants, and objects that give the eye somewhere to rest. Flags from Durham's history hang alongside custom graphic panels — a reminder that this building sits at the intersection of community and ambition.</p>
+            <p>Productive without feeling corporate. Salvaged credenzas and local finds divide the open plan into distinct zones, topped with books, plants, and objects that give the eye somewhere to rest. We commissioned original art for this floor as part of $3,000+ paid directly to local artists.</p>
           </div>
 
         </div>
@@ -156,7 +155,7 @@ export default function AmericanUnderground() {
           </div>
 
           <div className="au__pspace-desc">
-            <p>Upstairs, the second floor needed to feel like a different world — calmer, more focused, but no less alive. Room dividers carve out quiet corners without closing them off. Two large oriental rugs ground the space and soften the sound. Zeus Alexander's custom paintings bring the walls to life, bold enough to inspire without pulling focus from the work in front of you.</p>
+            <p>Calmer, more focused, but no less alive. Room dividers carve out quiet corners, rugs soften the sound, and the walls carry commissioned installations from local artists. The kind of depth that makes a space feel earned. Members have made it their own, which was the whole point.</p>
           </div>
 
         </div>
