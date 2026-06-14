@@ -9,6 +9,7 @@ export default function ContactCard() {
             src="/logo-sticker.png"
             alt="Weird Productions sticker"
             className="contact-card__sticker-img"
+            loading="lazy"
           />
         </div>
         <h2>Get in Touch</h2>

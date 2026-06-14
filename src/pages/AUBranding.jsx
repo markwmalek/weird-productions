@@ -102,7 +102,7 @@ export default function AUBranding() {
             </div>
           </div>
           <div className="aub__deliverable-img-wrap">
-            <img src="/images/au-brand/aub-workshop.png" alt="Brand Discovery Workshop" className="aub__deliverable-img" />
+            <img src="/images/au-brand/aub-workshop.png" alt="Brand Discovery Workshop" className="aub__deliverable-img" loading="lazy" />
           </div>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function AUBranding() {
             </div>
           </div>
           <div className="aub__deliverable-img-wrap">
-            <img src="/images/au-brand/aub-package.png" alt="Visual Identity Package" className="aub__deliverable-img" />
+            <img src="/images/au-brand/aub-package.png" alt="Visual Identity Package" className="aub__deliverable-img" loading="lazy" />
           </div>
         </div>
       </section>
@@ -161,7 +161,7 @@ export default function AUBranding() {
             </div>
           </div>
           <div className="aub__deliverable-img-wrap">
-            <img src="/images/au-brand/aub-enviornment.jpg" alt="Environmental Brand Integration" className="aub__deliverable-img" />
+            <img src="/images/au-brand/aub-enviornment.jpg" alt="Environmental Brand Integration" className="aub__deliverable-img" loading="lazy" />
           </div>
         </div>
       </section>
@@ -222,7 +222,7 @@ export default function AUBranding() {
             </div>
           </div>
           <div className="aub__deliverable-img-wrap">
-            <img src="/images/au-brand/aub-website.png" alt="Website" className="aub__deliverable-img" />
+            <img src="/images/au-brand/aub-website.png" alt="Website" className="aub__deliverable-img" loading="lazy" />
           </div>
         </div>
       </section>

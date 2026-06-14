@@ -207,7 +207,7 @@ export default function Parrish() {
         <div className="parrish__art-track">
           {artworks.map((art, i) => (
             <a href={art.link} target="_blank" rel="noopener noreferrer" className="parrish__art-item" key={i}>
-              <img src={art.image} alt={art.title} />
+              <img src={art.image} alt={art.title} loading="lazy" />
               <div className="parrish__art-info">
                 <span className="parrish__art-title">{art.title}</span>
                 <span className="parrish__art-artist">by {art.artist}</span>
@@ -354,7 +354,7 @@ export default function Parrish() {
       <section className="parrish__categories">
         {categories.map((cat, i) => (
           <div className="parrish__category" key={i}>
-            <img src={cat.image} alt={cat.label} />
+            <img src={cat.image} alt={cat.label} loading="lazy" />
             <span className="parrish__category-label">{cat.label}</span>
           </div>
         ))}
@@ -375,7 +375,7 @@ export default function Parrish() {
         <div className="parrish__sponsor-logos">
           {sponsors.map((sponsor, i) => (
             <div className="parrish__sponsor" key={i}>
-              <img src={sponsor.logo} alt={sponsor.name} />
+              <img src={sponsor.logo} alt={sponsor.name} loading="lazy" />
             </div>
           ))}
         </div>

@@ -69,10 +69,10 @@ export default function WeirdPotParty() {
       <section className="wpp__event-images">
         <div className="wpp__event-images-inner">
           <div className="wpp__event-col">
-            <img src="/images/pot-party/Event Poster.png" alt="Weird Pot Party poster" />
+            <img src="/images/pot-party/Event Poster.png" alt="Weird Pot Party poster" loading="lazy" />
           </div>
           <div className="wpp__event-col">
-            <img src="/images/pot-party/Pot Hero.jpg" alt="Weird Pot Party event" />
+            <img src="/images/pot-party/Pot Hero.jpg" alt="Weird Pot Party event" loading="lazy" />
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function WeirdPotParty() {
           <div className="wpp__bento-grid">
             {potImages.map((pot, index) => (
               <div className="wpp__bento-item" key={index}>
-                <img src={pot.src} alt={pot.alt} />
+                <img src={pot.src} alt={pot.alt} loading="lazy" />
               </div>
             ))}
           </div>

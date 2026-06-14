@@ -90,11 +90,11 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <img src="/images/au/au-hublo-1.png" alt="The HUB Lounge" />
+              <img src="/images/au/au-hublo-1.png" alt="The HUB Lounge" loading="lazy" />
             </div>
             <div className="au__pspace-collage-stack">
-              <img src="/images/au/au-hublo-2.png" alt="The HUB Lounge detail" />
-              <img src="/images/au/au-hublo-3.png" alt="The HUB Lounge detail" />
+              <img src="/images/au/au-hublo-2.png" alt="The HUB Lounge detail" loading="lazy" />
+              <img src="/images/au/au-hublo-3.png" alt="The HUB Lounge detail" loading="lazy" />
             </div>
           </div>
 
@@ -118,11 +118,11 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <img src="/images/au/au-hubco-2.png" alt="The HUB Coworking" />
+              <img src="/images/au/au-hubco-2.png" alt="The HUB Coworking" loading="lazy" />
             </div>
             <div className="au__pspace-collage-stack">
-              <img src="/images/au/au-hubco-3.png" alt="The HUB Coworking detail" />
-              <img src="/images/au/au-hubco-1.png" alt="The HUB Coworking detail" />
+              <img src="/images/au/au-hubco-3.png" alt="The HUB Coworking detail" loading="lazy" />
+              <img src="/images/au/au-hubco-1.png" alt="The HUB Coworking detail" loading="lazy" />
             </div>
           </div>
 
@@ -146,11 +146,11 @@ export default function AmericanUnderground() {
 
           <div className="au__pspace-collage">
             <div className="au__pspace-collage-main">
-              <img src="/images/au/au-co-1.png" alt="Coworking Space 2nd Floor" />
+              <img src="/images/au/au-co-1.png" alt="Coworking Space 2nd Floor" loading="lazy" />
             </div>
             <div className="au__pspace-collage-stack">
-              <img src="/images/au/au-co-2.png" alt="Coworking Space 2nd Floor detail" />
-              <img src="/images/au/au-co-3.png" alt="Coworking Space 2nd Floor detail" />
+              <img src="/images/au/au-co-2.png" alt="Coworking Space 2nd Floor detail" loading="lazy" />
+              <img src="/images/au/au-co-3.png" alt="Coworking Space 2nd Floor detail" loading="lazy" />
             </div>
           </div>
 
@@ -163,7 +163,7 @@ export default function AmericanUnderground() {
 
       {/* ─── Hero Collage ─────────────────────────────────────────────────── */}
       <div className="au__hero-img">
-        <img src="/images/au/au-hero.png" alt="American Underground interior" />
+        <img src="/images/au/au-hero.png" alt="American Underground interior" loading="lazy" />
       </div>
 
       {/* ─── Credits ──────────────────────────────────────────────────────── */}

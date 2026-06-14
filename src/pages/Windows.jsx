@@ -140,7 +140,7 @@ export default function Windows() {
             </div>
 
             <div className="windows__window-image">
-              <img src={w.image} alt={w.title} />
+              <img src={w.image} alt={w.title} loading="lazy" />
             </div>
 
             <div className="windows__window-desc">

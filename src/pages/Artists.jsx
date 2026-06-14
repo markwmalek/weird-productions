@@ -128,7 +128,7 @@ export default function Artists() {
       {/* VIP dark section */}
       <section className="artists-vip">
         <div className="artists-vip-bg">
-          <img src="/images/artists-gallery3.jpg" alt="Artists at Weird Productions" />
+          <img src="/images/artists-gallery3.jpg" alt="Artists at Weird Productions" loading="lazy" />
         </div>
         <div className="artists-vip-overlay page-wrap">
           <div className="artists-vip-content">

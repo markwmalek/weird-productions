@@ -207,7 +207,7 @@ export default function WorkWithWeird() {
           <div className="www-partners-logos">
             {partners.map((p, i) => (
               <div key={i} className="www-partner-logo">
-                <img src={p.src} alt={p.alt} />
+                <img src={p.src} alt={p.alt} loading="lazy" />
               </div>
             ))}
           </div>
@@ -230,7 +230,7 @@ export default function WorkWithWeird() {
             {boardMembers.map((member) => (
               <div key={member.name} className="www-board-member">
                 <div className="www-board-img-wrap">
-                  <img src={member.image} alt={member.name} className="www-board-img" />
+                  <img src={member.image} alt={member.name} className="www-board-img" loading="lazy" />
                 </div>
                 <h3 className="www-board-name">{member.name}</h3>
                 <p className="www-board-title">{member.title}</p>
