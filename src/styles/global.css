@@ -63,8 +63,8 @@
   --font-sans: var(--font-body);
   --font-mono: var(--font-body);
 
-  /* Floating pill nav sits fixed at bottom — no flow offset needed */
-  --header-height: 0px;
+  /* Floating header sits fixed at top — keep content offset from the toolbar */
+  --header-height: 86px;
   --page-padding: var(--gutter);
 }
 

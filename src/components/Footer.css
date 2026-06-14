@@ -1,6 +1,6 @@
 .site-footer {
   border-top: 1px solid #000000;
-  padding: 16px 48px 96px; /* extra bottom padding clears the floating pill nav */
+  padding: 28px 48px 96px; /* extra bottom padding clears the floating pill nav */
   background: #EFEEEA;
 }
 
@@ -12,34 +12,6 @@
   flex-wrap: wrap;
 }
 
-.footer-nonprofit {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 0;
-  margin-bottom: 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.12);
-  text-decoration: none;
-  color: #000000;
-  transition: opacity 0.15s ease;
-}
-
-.footer-nonprofit:hover {
-  opacity: 0.65;
-}
-
-.footer-nonprofit-logo {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.footer-nonprofit-text {
-  font-family: 'Sora', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-}
 
 .footer-left,
 .footer-right {
@@ -51,7 +23,7 @@
 
 @media (max-width: 600px) {
   .site-footer {
-    padding: 16px 24px 96px;
+    padding: 28px 24px 96px;
   }
 
   .footer-inner {

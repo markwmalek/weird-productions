@@ -106,9 +106,6 @@ export default function Home() {
         <div className="home-slideshow-box">
           <RapidSlideshow />
         </div>
-        <p className="home-slideshow-caption">
-          Follow for creative people, parties, &amp; experiences.
-        </p>
       </section>
 
       {/* ── WHAT WE DO ── */}
@@ -127,7 +124,7 @@ export default function Home() {
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
-                <img src="/images/wwww-gallery2.jpg" alt="Events" loading="lazy" />
+                <img src="/images/work-with-us/gallery2.jpg" alt="Events" loading="lazy" />
               </div>
               <h3 className="home-wwd-label">Events</h3>
               <p className="home-wwd-desc">The kind of night people bring up for months.</p>
@@ -142,6 +139,21 @@ export default function Home() {
           </div>
 
 
+        </div>
+      </section>
+
+      {/* ── NON-PROFIT ── */}
+      <section className="home-nonprofit">
+        <div className="home-nonprofit-inner">
+          <div className="home-nonprofit-img">
+            <img src="/images/pot-party/Hero Image.png" alt="Weird Art Projects — live painting activation at CCB Plaza" loading="lazy" />
+          </div>
+          <div className="home-nonprofit-text">
+            <p className="home-nonprofit-eyebrow">Non-Profit Arm</p>
+            <h2 className="home-nonprofit-heading">Weird Art Projects</h2>
+            <p className="home-nonprofit-body">A registered 501(c)(3) solving community problems through art. We fund local artists, run public activations, and prove that creativity belongs at the center of Durham's story.</p>
+            <a href="https://weirdprojects.art" target="_blank" rel="noopener noreferrer" className="home-nonprofit-link">Learn more ↗</a>
+          </div>
         </div>
       </section>
 

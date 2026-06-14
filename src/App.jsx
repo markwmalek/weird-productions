@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import FloatingButton from './components/FloatingButton';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import About from './pages/About';
@@ -18,6 +17,9 @@ import SpeedHouse from './pages/SpeedHouse';
 import SalonDurham from './pages/SalonDurham';
 import AUBranding from './pages/AUBranding';
 import FilmDurham from './pages/FilmDurham';
+import Parrish from './pages/Parrish';
+import Windows from './pages/Windows';
+import WeirdPotParty from './pages/WeirdPotParty';
 import './App.css';
 import './styles/global.css';
 
@@ -34,7 +36,6 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Header />
-      <FloatingButton />
       {/* page-wrapper clips horizontal overflow without trapping the fixed pill nav */}
       <div className="page-wrapper">
         <Routes>
@@ -54,6 +55,9 @@ export default function App() {
           <Route path="/salondurham" element={<SalonDurham />} />
           <Route path="/american-underground-branding" element={<AUBranding />} />
           <Route path="/film-durham" element={<FilmDurham />} />
+          <Route path="/parrish" element={<Parrish />} />
+          <Route path="/windows" element={<Windows />} />
+          <Route path="/weird-pot-party" element={<WeirdPotParty />} />
         </Routes>
         <Footer />
       </div>

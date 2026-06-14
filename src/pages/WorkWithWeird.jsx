@@ -3,12 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import './WorkWithWeird.css';
 
 const GALLERY_IMAGES = [
-  '/images/wwww-gallery1.jpg',
-  '/images/wwww-gallery2.jpg',
-  '/images/wwww-gallery3.jpg',
-  '/images/wwww-gallery4.jpg',
-  '/images/wwww-gallery5.jpg',
-  '/images/wwww-gallery6.jpg',
+  '/images/work-with-us/gallery1.jpg',
+  '/images/work-with-us/gallery2.jpg',
+  '/images/work-with-us/gallery3.jpg',
+  '/images/work-with-us/gallery4.jpg',
+  '/images/work-with-us/gallery5.jpg',
+  '/images/work-with-us/gallery6.jpg',
 ];
 
 function WorldSlideshow() {
@@ -66,12 +66,57 @@ const whyWeird = [
 
 
 const partners = [
-  { src: '/images/wwww-logo-hubrtp.png', alt: 'HUB RTP' },
-  { src: '/images/wwww-logo-layer1.png', alt: 'Partner' },
-  { src: '/images/wwww-promo1.png', alt: 'Durham Art Guild' },
-  { src: '/images/wwww-promo2.png', alt: '21c Museum Hotel' },
-  { src: '/images/wwww-promo4.png', alt: 'Night' },
-  { src: '/images/wwww-promo5.png', alt: 'American Underground' },
+  { src: '/images/work-with-us/logo-hubrtp.png', alt: 'HUB RTP' },
+  { src: '/images/work-with-us/logo-layer1.png', alt: 'Partner' },
+  { src: '/images/work-with-us/promo1.png', alt: 'Durham Art Guild' },
+  { src: '/images/work-with-us/promo2.png', alt: '21c Museum Hotel' },
+  { src: '/images/work-with-us/promo4.png', alt: 'Night' },
+  { src: '/images/work-with-us/promo5.png', alt: 'American Underground' },
+];
+
+const boardMembers = [
+  {
+    name: 'Lindsay Hebert',
+    title: 'Executive Director',
+    image: '/images/work-with-us/team/lindsay-hebert.png',
+    bio: 'Founder of Weird Productions and Weird Projects, bringing together a lifetime of curiosity, global experience, and a conviction that you don\'t need permission to make things happen.',
+  },
+  {
+    name: 'Jonathan Collins',
+    title: 'Board Chair',
+    image: '/images/work-with-us/team/jon-collins.png',
+    bio: 'Entrepreneur and small business advocate with lived experience building and selling local businesses in Durham.',
+  },
+  {
+    name: 'Mark Wilson Malek',
+    title: 'Creative Director, Board Member',
+    image: '/images/work-with-us/team/mark-malek.jpeg',
+    bio: 'Co-founder of Weird Productions and the creative vision behind the Weird brands. An artist with a background in product and graphic design.',
+  },
+  {
+    name: 'Jill Lederer-Hicks',
+    title: 'Board Treasurer',
+    image: '/images/work-with-us/team/jill-hicks.png',
+    bio: 'Formerly known as the "Pizza Queen" for her Domino\'s Pizza empire. Jill brings a career spent scaling businesses alongside community leadership.',
+  },
+  {
+    name: 'Joel Tesch',
+    title: 'Board Secretary',
+    image: '/images/work-with-us/team/joel-tesch.png',
+    bio: 'Full-time painter who understands the artist journey, having made the leap from corporate career to sustaining a full-time art practice.',
+  },
+  {
+    name: 'Jes Averhart',
+    title: 'Board Member',
+    image: '/images/work-with-us/team/jes-averhart.jpg',
+    bio: 'Brings a combination of excellence, generosity, and momentum. Known for showing up supportive and deeply invested in helping ideas reach their potential.',
+  },
+  {
+    name: 'Shelley McPhatter',
+    title: 'Board Member',
+    image: '/images/work-with-us/team/shelley-mcphatter.jpg',
+    bio: 'Brings decades of experience leading complex commercial construction projects across the Triangle.',
+  },
 ];
 
 export default function WorkWithWeird() {
@@ -163,6 +208,33 @@ export default function WorkWithWeird() {
             {partners.map((p, i) => (
               <div key={i} className="www-partner-logo">
                 <img src={p.src} alt={p.alt} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Non-Profit */}
+      <section className="www-nonprofit">
+        <div className="page-wrap">
+          <h2 className="www-section-heading">WEIRD ART PROJECTS</h2>
+          <div className="www-nonprofit-intro">
+            <p>
+              Beyond commercial work, we run <strong>Weird Art Projects</strong> — a registered 501(c)(3) non-profit dedicated to solving community problems with art.
+            </p>
+            <p>
+              We partner with Durham to create public art activations, support local artists, and prove that art can be the answer to real community challenges. From holiday window installations to live painting events and public-facing art experiences, we bring creativity where it matters most.
+            </p>
+          </div>
+          <div className="www-board-grid">
+            {boardMembers.map((member) => (
+              <div key={member.name} className="www-board-member">
+                <div className="www-board-img-wrap">
+                  <img src={member.image} alt={member.name} className="www-board-img" />
+                </div>
+                <h3 className="www-board-name">{member.name}</h3>
+                <p className="www-board-title">{member.title}</p>
+                <p className="www-board-bio">{member.bio}</p>
               </div>
             ))}
           </div>

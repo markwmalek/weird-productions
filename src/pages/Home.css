@@ -31,12 +31,24 @@
   z-index: 1;
 }
 
+@keyframes bobble {
+  0%, 100% { transform: rotate(-2deg) translateY(0px); }
+  50%       { transform: rotate(2deg)  translateY(-6px); }
+}
+
+@keyframes bobble-alt {
+  0%, 100% { transform: rotate(1.5deg)  translateY(-4px); }
+  50%       { transform: rotate(-2.5deg) translateY(2px); }
+}
+
 /* Lindsay: left of W, peeking above */
 .home-hero-lindsay {
   left: 12%;
   top: 75%;
   width: 9%;
   min-width: 40px;
+  transform-origin: bottom center;
+  animation: bobble 2.8s ease-in-out infinite;
 }
 
 /* Mark: overlapping R and D on the right */
@@ -45,6 +57,8 @@
   top: 20%;
   width: 9%;
   min-width: 40px;
+  transform-origin: bottom center;
+  animation: bobble-alt 3.3s ease-in-out infinite;
 }
 
 /* Figma: TAY Waffle Cone, 400px, lh 360px, ls -16px */
@@ -235,6 +249,89 @@
   color: #000000;
   text-align: left;
   margin: 0;
+}
+
+/* ── NON-PROFIT ── */
+.home-nonprofit {
+  background: #000000;
+  padding: 48px;
+}
+
+.home-nonprofit-inner {
+  max-width: 1416px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.home-nonprofit-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.home-nonprofit-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.home-nonprofit-img:hover img {
+  transform: scale(1.03);
+}
+
+.home-nonprofit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-nonprofit-eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.home-nonprofit-heading {
+  font-family: var(--font-caps);
+  font-size: clamp(40px, 4.5vw, 70px);
+  font-weight: 400;
+  line-height: 0.9;
+  color: #ffffff;
+  margin: 0;
+}
+
+.home-nonprofit-body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.home-nonprofit-link {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  align-self: flex-start;
+  transition: opacity 0.2s;
+}
+
+.home-nonprofit-link:hover {
+  opacity: 0.5;
 }
 
 /* ── PORTFOLIO ── */
@@ -479,8 +576,14 @@
   }
 
   .home-portfolio,
-  .home-wwd {
+  .home-wwd,
+  .home-nonprofit {
     padding: 40px 24px;
+  }
+
+  .home-nonprofit-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .home-cta-split {

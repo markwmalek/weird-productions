@@ -2,25 +2,31 @@
 
 .site-header {
   position: fixed;
-  bottom: calc(28px + env(safe-area-inset-bottom));
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 100;
+  padding-top: calc(env(safe-area-inset-top) + 18px);
   pointer-events: none; /* let clicks pass through the wrapper */
+  display: flex;
+  justify-content: center;
 }
 
 /* The pill itself */
 .pill-nav {
+  width: min(1040px, calc(100% - 48px));
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
   padding: 14px 28px;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.55);
   pointer-events: all;
   white-space: nowrap;
 }
@@ -55,7 +61,7 @@
 
 .nav-link {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   color: #000000;
   text-decoration: none;
@@ -271,14 +277,17 @@
 /* ── MOBILE ── */
 @media (max-width: 640px) {
   .site-header {
-    bottom: calc(20px + env(safe-area-inset-bottom));
-    width: calc(100% - 40px);
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    padding-top: calc(env(safe-area-inset-top) + 14px);
   }
 
   .pill-nav {
+    width: min(100%, calc(100% - 32px));
     justify-content: center;
     padding: 12px 20px;
-    border-radius: 50px;
+    border-radius: 999px;
     gap: 10px;
   }
 

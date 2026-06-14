@@ -12,4 +12,5 @@
 .page-wrapper {
   overflow-x: hidden;
   max-width: 100%;
+  padding-top: var(--header-height);
 }
