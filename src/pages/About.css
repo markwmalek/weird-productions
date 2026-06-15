@@ -7,7 +7,13 @@
 }
 
 .portfolio-page .portfolio-header {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
+}
+
+.portfolio-sub{
+  font-family: var(--font-caps);
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .portfolio-title {
@@ -22,7 +28,7 @@
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 32px;
+  gap: 48px;
 }
 
 /* ── CARD ── */
@@ -94,6 +100,6 @@
 
   .portfolio-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 48px;
   }
 }
