@@ -102,9 +102,6 @@ export default function Header() {
             Weird
           </Link>
 
-          {/* Divider */}
-          <span className="pill-divider" aria-hidden="true" />
-
           {/* Desktop links */}
           <div className="pill-links">
             <NavLink to="/portfolio" className="nav-link" onClick={() => setMenuOpen(false)}>
@@ -113,7 +110,7 @@ export default function Header() {
             <NavLink to="/work-with-weird" className="nav-link" onClick={() => setMenuOpen(false)}>
               Work With Us
             </NavLink>
-            <button type="button" className="nav-link nav-button" onClick={openChat}>
+            <button type="button" className="nav-link nav-button nav-cta" onClick={openChat}>
               DM us
             </button>
           </div>

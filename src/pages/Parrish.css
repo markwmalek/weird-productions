@@ -645,40 +645,16 @@
   gap: 0.75rem;
 }
 
-/* Categories */
-.parrish__categories {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+/* Slideshow */
+.parrish__slideshow-section {
   padding: 3rem var(--gutter);
-  max-width: var(--max-width);
-  margin: 0 auto;
 }
 
-.parrish__category {
+.parrish__slideshow-box {
   position: relative;
-  height: 450px;
-  border-radius: 12px;
+  height: clamp(320px, 50vw, 680px);
   overflow: hidden;
-}
-
-.parrish__category img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.parrish__category-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1.5rem;
-  color: #ffffff;
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  text-transform: uppercase;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  border-radius: 16px;
 }
 
 /* Sponsors */
@@ -746,10 +722,6 @@
 
   .parrish__cal-detail {
     padding: 1.5rem;
-  }
-
-  .parrish__categories {
-    grid-template-columns: 1fr;
   }
 
   .parrish__sponsor-logos {

@@ -100,7 +100,7 @@
 
 .www-services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
@@ -334,11 +334,20 @@
   font-weight: 600;
 }
 
+.www-board-subheader {
+  font-family: var(--font-caps);
+  font-size: clamp(2.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  margin-top: 48px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
 .www-board-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 32px;
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
 .www-board-member {

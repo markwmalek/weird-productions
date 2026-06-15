@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import Marquee from '../components/Marquee';
-import ContactCard from '../components/ContactCard';
+import RapidSlideshow from '../components/RapidSlideshow';
 import './Parrish.css';
 
 const events = [
@@ -33,10 +32,10 @@ function getEventsForDay(day) {
   return events.filter(e => e.day === day);
 }
 
-const categories = [
-  { label: 'Live Painting', image: '/images/parrish/live-painting.png' },
-  { label: 'Puppetry', image: '/images/parrish/puppetry.png' },
-  { label: 'Art', image: '/images/parrish/art-category.png' },
+const categoryImages = [
+  '/images/parrish/live-painting.png',
+  '/images/parrish/puppetry.png',
+  '/images/parrish/art-category.png',
 ];
 
 const artworks = [
@@ -351,24 +350,11 @@ export default function Parrish() {
         )}
       </section>
 
-      <section className="parrish__categories">
-        {categories.map((cat, i) => (
-          <div className="parrish__category" key={i}>
-            <img src={cat.image} alt={cat.label} loading="lazy" />
-            <span className="parrish__category-label">{cat.label}</span>
-          </div>
-        ))}
+      <section className="parrish__slideshow-section">
+        <div className="parrish__slideshow-box">
+          <RapidSlideshow images={categoryImages} />
+        </div>
       </section>
-
-      <Marquee
-        items={[
-          'A collaboration between Weird Productions and Amos Cooper Jr. of Black Robin Ventures',
-          'Honoring Black Wall Street'
-        ]}
-        dark={true}
-        speed={35}
-        separatorIcon="/images/lindsay.svg"
-      />
 
       <section className="parrish__sponsors">
         <h2>Our Sponsors</h2>
@@ -380,8 +366,6 @@ export default function Parrish() {
           ))}
         </div>
       </section>
-
-      <ContactCard />
     </div>
   );
 }

@@ -261,7 +261,7 @@ h3 {
 @media (max-width: 768px) {
   :root {
     --gutter: 5vw;
-    --header-height: 0px;
+    --header-height: 72px;
   }
   .section { padding: 56px 0; }
 }

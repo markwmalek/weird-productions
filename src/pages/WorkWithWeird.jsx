@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import './WorkWithWeird.css';
 
@@ -127,17 +126,6 @@ export default function WorkWithWeird() {
       <section className="www-hero">
         <div className="page-wrap">
           <h1 className="www-hero-title">WORK WITH US</h1>
-          <p className="www-hero-sub">
-            We partner with companies and communities who want more than what's expected.
-          </p>
-          <a
-            href="https://instagram.com/weirdproductions.art"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="www-hero-dm"
-          >
-            DM us
-          </a>
         </div>
       </section>
 
@@ -226,6 +214,7 @@ export default function WorkWithWeird() {
               We partner with Durham to create public art activations, support local artists, and prove that art can be the answer to real community challenges. From holiday window installations to live painting events and public-facing art experiences, we bring creativity where it matters most.
             </p>
           </div>
+          <h2 className="www-board-subheader">Weird Art Projects Board</h2>
           <div className="www-board-grid">
             {boardMembers.map((member) => (
               <div key={member.name} className="www-board-member">

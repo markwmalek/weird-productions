@@ -1,5 +1,4 @@
 import Marquee from '../components/Marquee';
-import ContactCard from '../components/ContactCard';
 import WindowsMap from '../components/WindowsMap';
 import './Windows.css';
 
@@ -82,13 +81,6 @@ export default function Windows() {
           <p className="windows__eyebrow">Weird × Holiday Season</p>
           <h1>Weird<br />Windows</h1>
           <p className="windows__hero-sub">Holiday Window Displays &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; December 2025</p>
-        </div>
-        <div className="windows__hero-media">
-          <img
-            src="/images/windows/artist-jordan-owens.png"
-            alt="Jordan Owens artwork"
-            className="windows__hero-img"
-          />
         </div>
       </section>
 
@@ -177,7 +169,6 @@ export default function Windows() {
         </div>
       </section>
 
-      <ContactCard />
     </div>
   );
 }

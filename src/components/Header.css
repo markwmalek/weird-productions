@@ -1,4 +1,15 @@
-/* ── FLOATING PILL NAV ── */
+/* ── SITE HEADER ── */
+
+@keyframes nav-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .site-header {
   position: fixed;
@@ -7,49 +18,40 @@
   right: 0;
   width: 100%;
   z-index: 100;
-  padding-top: calc(env(safe-area-inset-top) + 18px);
-  pointer-events: none; /* let clicks pass through the wrapper */
+  pointer-events: none;
   display: flex;
   justify-content: center;
+  animation: nav-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* The pill itself */
+/* Content-width dark bar with rounded bottom corners */
 .pill-nav {
-  width: min(1040px, calc(100% - 48px));
+  width: fit-content;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
-  padding: 14px 28px;
-  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  gap: 40px;
+  background: #131314;
+  border-radius: 0 0 24px 24px;
+  padding: 24px 48px;
   pointer-events: all;
   white-space: nowrap;
 }
 
-/* Logo — Butter And Crumb Caps */
+/* Logo */
 .header-logo {
   font-family: var(--font-caps);
   font-size: 24px;
-  font-weight: 400;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
-  line-height: 1;
+  line-height: 0.8;
   flex-shrink: 0;
-  position: relative;
-  top: -2px;
+    opacity: 0.6;
+  transition: opacity 0.15s;
 }
 
-/* Thin vertical divider between logo and links */
+/* Hidden — not needed in the bar layout */
 .pill-divider {
-  width: 1px;
-  height: 18px;
-  background: rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
+  display: none;
 }
 
 /* Desktop link group */
@@ -60,13 +62,14 @@
 }
 
 .nav-link {
-  font-family: var(--font-body);
-  font-size: 17px;
-  font-weight: 400;
-  color: #000000;
+  font-family: var(--font-caps);
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
   text-decoration: none;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 0.8;
+  opacity: 0.6;
   transition: opacity 0.15s;
 }
 
@@ -77,15 +80,28 @@
   cursor: pointer;
 }
 
-.nav-link:hover {
-  opacity: 0.45;
-}
-
+.nav-link:hover,
 .nav-link.active {
-  opacity: 0.45;
+  opacity: 1;
 }
 
-/* Hamburger (hidden on desktop) */
+/* "DM us" CTA pill button */
+.nav-cta {
+  background: #ffffff;
+  color: #000000 !important;
+  opacity: 1 !important;
+  border-radius: 999px;
+  padding: 2px 16px 8px 16px;
+  font-size: 24px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-cta:hover {
+  background: rgba(255, 255, 255, 0.85);
+  opacity: 1 !important;
+}
+
+/* Hamburger (mobile only, hidden on desktop) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -104,45 +120,55 @@
 .hamburger .bottom-bun {
   display: block;
   width: 20px;
-  height: 1.5px;
-  background: #000000;
+  height: 2px;
+  background: #888888;
+  border-radius: 10px;
   transition: transform 0.25s ease, opacity 0.2s ease;
   transform-origin: center;
 }
 
-.hamburger.open .top-bun    { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open .top-bun    { transform: translateY(7px) rotate(45deg); background: #ffffff; }
 .hamburger.open .patty      { opacity: 0; transform: scaleX(0); }
-.hamburger.open .bottom-bun { transform: translateY(-6.5px) rotate(-45deg); }
+.hamburger.open .bottom-bun { transform: translateY(-7px) rotate(-45deg); background: #ffffff; }
 
-/* ── MOBILE FULL-SCREEN OVERLAY ── */
+/* ── MOBILE MENU OVERLAY ── */
+
+@keyframes mobile-menu-open {
+  from { clip-path: inset(0 0 calc(100% - 54px) 0 round 0 0 18px 18px); }
+  to   { clip-path: inset(0 0 0 0 round 0 0 18px 18px); }
+}
+
 .mobile-overlay {
   position: fixed;
-  inset: 0;
-  background: #EFEEEA;
+  top: 0;
+  left: 16px;
+  right: 16px;
+  background: #000000;
+  border-radius: 0 0 24px 24px;
   z-index: 99;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
-  padding: 48px 32px;
-  gap: 0;
+  justify-content: flex-start;
+  padding: 96px 48px 48px 48px;
+  animation: mobile-menu-open 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .mobile-link {
-  font-family: var(--font-display);
-  font-size: 2.4rem;
-  font-weight: 400;
-  color: #000000;
+  font-family: var(--font-caps);
+  font-size: 24px;
+  color: #ffffff;
   text-decoration: none;
-  padding: 20px 0;
+  padding: 18px 0;
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   line-height: 1;
+  opacity: 0.6;
   transition: opacity 0.15s;
 }
 
 .mobile-link:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .mobile-link-button {
@@ -153,9 +179,10 @@
 
 .mobile-link:hover,
 .mobile-link.active {
-  opacity: 0.5;
+  opacity: 1;
 }
 
+/* ── CHAT MODAL ── */
 .chat-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -276,36 +303,23 @@
 
 /* ── MOBILE ── */
 @media (max-width: 640px) {
-  .site-header {
-    top: 0;
-    width: 100%;
-    justify-content: center;
-    padding-top: calc(env(safe-area-inset-top) + 14px);
-  }
-
   .pill-nav {
-    width: min(100%, calc(100% - 32px));
-    justify-content: center;
-    padding: 12px 20px;
-    border-radius: 999px;
-    gap: 10px;
+    width: calc(100% - 32px);
+    padding: 14px 20px;
+    justify-content: space-between;
   }
 
   .header-logo {
-    font-size: 18px;
+    font-size: 32px;
   }
 
+  /* Links hidden on mobile — hamburger takes over */
   .pill-links {
-    gap: 14px;
-  }
-
-  .nav-link {
-    font-size: 12px;
-  }
-
-  /* hamburger stays hidden — links are shown directly */
-  .hamburger {
     display: none;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .chat-modal {
