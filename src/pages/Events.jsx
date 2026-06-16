@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Text from '../components/Typography';
 import './Events.css';
 
 const upcomingEvents = [
@@ -72,43 +73,45 @@ export default function Events() {
 
       {/* Page heading */}
       <div className="events-header page-wrap">
-        <h1 className="events-title">
+        <Text as="h1" variant="h1" className="events-title">
           <span className="anim-underline">
             Mark your calendar.
             <svg viewBox="0 0 260 12" preserveAspectRatio="none" aria-hidden="true">
               <path d="M2,9 Q65,3 130,8 Q195,13 258,7" />
             </svg>
           </span>
-        </h1>
-        <p className="events-sub">unusual art parties — Durham, NC</p>
+        </Text>
+        <Text as="p" variant="eyebrow" className="events-sub">unusual art parties — Durham, NC</Text>
       </div>
 
       {/* Upcoming events */}
       <section className="events-section page-wrap">
-        <p className="events-label">Upcoming</p>
+        <Text as="p" variant="label" className="events-label">Upcoming</Text>
         <div className="events-list">
           {upcomingEvents.map((event) => (
             <div key={event.id} className="event-row">
-              <span className="event-date">{event.date}</span>
+              <Text as="span" variant="bodySm" className="event-date">{event.date}</Text>
               <div className="event-main">
-                <span className="event-name">{event.name}</span>
+                <Text as="span" variant="body" className="event-name">{event.name}</Text>
                 {event.time && (
-                  <span className="event-time">{event.time}</span>
+                  <Text as="span" variant="bodySm" className="event-time">{event.time}</Text>
                 )}
-                <span className="event-location">{event.location}</span>
+                <Text as="span" variant="bodySm" className="event-location">{event.location}</Text>
               </div>
               <div className="event-action">
                 {event.ticketUrl ? (
-                  <a
+                  <Text
+                    as="a"
                     href={event.ticketUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    variant="body"
                     className="btn btn-filled event-ticket-btn"
                   >
                     Tickets
-                  </a>
+                  </Text>
                 ) : (
-                  <span className="event-tba">TBA</span>
+                  <Text as="span" variant="label" className="event-tba">TBA</Text>
                 )}
               </div>
             </div>
@@ -118,19 +121,19 @@ export default function Events() {
 
       {/* CTA strip */}
       <div className="events-cta-strip page-wrap">
-        <p className="events-cta-text">Don't miss the next one.</p>
-        <Link to="/subscribe" className="btn btn-filled">Get on the list</Link>
+        <Text as="p" variant="h5" className="events-cta-text">Don't miss the next one.</Text>
+        <Text as={Link} to="/subscribe" variant="body" className="btn btn-filled">Get on the list</Text>
       </div>
 
       {/* Past events */}
       <section className="events-section page-wrap">
-        <p className="events-label events-label--past">Past Events</p>
+        <Text as="p" variant="label" className="events-label events-label--past">Past Events</Text>
         <div className="events-list events-list--past">
           {pastEvents.map((event) => (
             <div key={event.id} className="event-row event-row--past">
-              <span className="event-date">{event.date}</span>
+              <Text as="span" variant="bodySm" className="event-date">{event.date}</Text>
               <div className="event-main">
-                <span className="event-name">{event.name}</span>
+                <Text as="span" variant="body" className="event-name">{event.name}</Text>
               </div>
             </div>
           ))}
@@ -139,17 +142,19 @@ export default function Events() {
 
       {/* Bottom CTA */}
       <section className="events-bottom page-wrap">
-        <p className="events-bottom-text">
+        <Text as="p" variant="body" className="events-bottom-text">
           Follow for announcements and calls for art.
-        </p>
-        <a
+        </Text>
+        <Text
+          as="a"
           href="https://instagram.com/weirdproductions.art"
           target="_blank"
           rel="noopener noreferrer"
+          variant="body"
           className="btn"
         >
           @weirdproductions.art ↗
-        </a>
+        </Text>
       </section>
 
     </main>

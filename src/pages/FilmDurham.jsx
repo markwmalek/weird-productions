@@ -1,3 +1,4 @@
+import Text from '../components/Typography';
 import './FilmDurham.css';
 
 export default function FilmDurham() {
@@ -7,9 +8,9 @@ export default function FilmDurham() {
       {/* Hero */}
       <section className="fd__hero">
         <div className="fd__hero-text">
-          <p className="fd__eyebrow">Weird × Film Durham</p>
-          <h1>Brand<br />Guidelines</h1>
-          <p className="fd__hero-sub">Brand Guidelines for a Local Film Festival</p>
+          <Text as="p" variant="eyebrow" className="fd__eyebrow">Weird × Film Durham</Text>
+          <Text as="h1" variant="h1">Brand<br />Guidelines</Text>
+          <Text as="p" variant="bodyLg" className="fd__hero-sub">Brand Guidelines for a Local Film Festival</Text>
         </div>
         <img
           src="/images/film-durham/film-durham-hero.png"
@@ -22,16 +23,16 @@ export default function FilmDurham() {
       <section className="fd__meta">
         <div className="fd__meta-inner">
           <div className="fd__meta-item">
-            <span className="fd__meta-label">Date</span>
-            <span className="fd__meta-value">May 21, 2025</span>
+            <Text as="span" variant="label" className="fd__meta-label">Date</Text>
+            <Text as="span" variant="body" className="fd__meta-value">May 21, 2025</Text>
           </div>
           <div className="fd__meta-item">
-            <span className="fd__meta-label">Role</span>
-            <span className="fd__meta-value">Brand Designer</span>
+            <Text as="span" variant="label" className="fd__meta-label">Role</Text>
+            <Text as="span" variant="body" className="fd__meta-value">Brand Designer</Text>
           </div>
           <div className="fd__meta-item">
-            <span className="fd__meta-label">Tools</span>
-            <span className="fd__meta-value">Adobe Illustrator, Adobe InDesign, Figma</span>
+            <Text as="span" variant="label" className="fd__meta-label">Tools</Text>
+            <Text as="span" variant="body" className="fd__meta-value">Adobe Illustrator, Adobe InDesign, Figma</Text>
           </div>
         </div>
       </section>
@@ -39,9 +40,9 @@ export default function FilmDurham() {
       {/* Intro */}
       <section className="fd__intro">
         <div className="fd__section-inner">
-          <p className="fd__section-label">Overview</p>
-          <p className="fd__intro-text">A distinctive visual identity for a local film festival, balancing artistic expression with professional polish through research, creative development, and iterative refinement.</p>
-          <p className="fd__intro-body">The Film Durham branding initiative emphasized developing a distinctive visual identity suited to the festival's character while appealing to diverse audiences.</p>
+          <Text as="p" variant="eyebrow" className="fd__section-label">Overview</Text>
+          <Text as="p" variant="bodyLg" className="fd__intro-text">A distinctive visual identity for a local film festival, balancing artistic expression with professional polish through research, creative development, and iterative refinement.</Text>
+          <Text as="p" variant="body" className="fd__intro-body">The Film Durham branding initiative emphasized developing a distinctive visual identity suited to the festival's character while appealing to diverse audiences.</Text>
         </div>
       </section>
 
@@ -54,10 +55,10 @@ export default function FilmDurham() {
       <section className="fd__section fd__section--alt">
         <div className="fd__section-inner fd__section-inner--split">
           <div className="fd__split-label">
-            <p className="fd__section-label">Research &amp; Strategy</p>
+            <Text as="p" variant="eyebrow" className="fd__section-label">Research &amp; Strategy</Text>
           </div>
           <div className="fd__split-body">
-            <p>The team investigated the festival's core mission, organizational principles, and Durham's regional film landscape to inform the visual direction.</p>
+            <Text as="p" variant="bodyLg">The team investigated the festival's core mission, organizational principles, and Durham's regional film landscape to inform the visual direction.</Text>
           </div>
         </div>
       </section>
@@ -71,10 +72,10 @@ export default function FilmDurham() {
       <section className="fd__section">
         <div className="fd__section-inner fd__section-inner--split">
           <div className="fd__split-label">
-            <p className="fd__section-label">Creative Development</p>
+            <Text as="p" variant="eyebrow" className="fd__section-label">Creative Development</Text>
           </div>
           <div className="fd__split-body">
-            <p>Brainstorming sessions produced visual concepts reflecting the festival's essence, followed by mood board creation establishing color palettes and typography that balanced artistic expression with professional polish.</p>
+            <Text as="p" variant="bodyLg">Brainstorming sessions produced visual concepts reflecting the festival's essence, followed by mood board creation establishing color palettes and typography that balanced artistic expression with professional polish.</Text>
           </div>
         </div>
       </section>
@@ -92,8 +93,8 @@ export default function FilmDurham() {
       {/* Community Impact */}
       <section className="fd__impact">
         <div className="fd__section-inner">
-          <p className="fd__section-label">Community Impact</p>
-          <h2 className="fd__impact-text">The resulting branding strengthened audience recognition and fostered connection among filmmakers and festival participants.</h2>
+          <Text as="p" variant="eyebrow" className="fd__section-label">Community Impact</Text>
+          <Text as="h2" variant="h3" className="fd__impact-text">The resulting branding strengthened audience recognition and fostered connection among filmmakers and festival participants.</Text>
         </div>
       </section>
 

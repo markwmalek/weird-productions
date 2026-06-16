@@ -1,4 +1,5 @@
 import RapidSlideshow from '../components/RapidSlideshow';
+import Text from '../components/Typography';
 import './SalonDurham.css';
 
 const speakers = [
@@ -49,30 +50,37 @@ export default function SalonDurham() {
       {/* Hero */}
       <section className="sd-hero">
         <div className="page-wrap">
-          <p className="sd-eyebrow">Women's Event — Durham, NC</p>
-          <h1 className="sd-title">THE<br />SALON</h1>
-          <p className="sd-tagline">The Triangle's premier women's event. Celebrating creativity, leadership, and community.</p>
-          <p className="sd-meta">310 E Main St, Durham, NC · March 11, 2025</p>
+          <Text as="p" variant="eyebrow" className="sd-eyebrow">Women's Event — Durham, NC</Text>
+          <Text as="h1" variant="display" className="sd-title">THE<br />SALON</Text>
+          <Text as="p" variant="bodyLg" className="sd-tagline">The Triangle's premier women's event. Celebrating creativity, leadership, and community.</Text>
+          <Text as="p" variant="script" className="sd-meta">310 E Main St, Durham, NC · March 11, 2025</Text>
         </div>
       </section>
 
       {/* About */}
       <section className="sd-about">
         <div className="page-wrap sd-about-inner">
-          <h2 className="sd-section-heading">About</h2>
+          <Text as="h2" variant="h2" className="sd-section-heading">About</Text>
           <div className="sd-about-body">
-            <p>
+            <Text as="p" variant="bodyLg">
               Curated for intentional collisions. An evening of keynote, fireside conversation, chef's potluck, original art, and connection — brought together by Weird Productions.
-            </p>
+            </Text>
             <ul className="sd-inclusions">
-              <li>Keynote address</li>
-              <li>Fireside chat panel</li>
-              <li>Chef's potluck</li>
-              <li>Art collection showcase</li>
-              <li>Drinks &amp; hors d'oeuvres</li>
-              <li>DJ spinning all night</li>
+              <li><Text as="span" variant="body">Keynote address</Text></li>
+              <li><Text as="span" variant="body">Fireside chat panel</Text></li>
+              <li><Text as="span" variant="body">Chef's potluck</Text></li>
+              <li><Text as="span" variant="body">Art collection showcase</Text></li>
+              <li><Text as="span" variant="body">Drinks &amp; hors d'oeuvres</Text></li>
+              <li><Text as="span" variant="body">DJ spinning all night</Text></li>
             </ul>
           </div>
+        </div>
+      </section>
+
+            {/* Slideshow */}
+      <section className="sd-slideshow-section">
+        <div className="sd-slideshow-box">
+          <RapidSlideshow images={images} />
         </div>
       </section>
 
@@ -80,64 +88,58 @@ export default function SalonDurham() {
       <section className="sd-people">
         <div className="page-wrap sd-people-inner">
           <div className="sd-people-col">
-            <h2 className="sd-section-heading">Keynote</h2>
+            <Text as="h2" variant="h2" className="sd-section-heading">Keynote</Text>
             <ul className="sd-person-list">
               {speakers.map((s, i) => (
                 <li key={i} className="sd-person-item">
-                  <span className="sd-person-name">{s.name}</span>
-                  <span className="sd-person-label">{s.label}</span>
+                  <Text as="span" variant="h6" className="sd-person-name">{s.name}</Text>
+                  <Text as="span" variant="bodySm" className="sd-person-label">{s.label}</Text>
                 </li>
               ))}
             </ul>
-            <h2 className="sd-section-heading sd-section-heading--spaced">Fireside Chat</h2>
+            <Text as="h2" variant="h2" className="sd-section-heading sd-section-heading--spaced">Fireside Chat</Text>
             <ul className="sd-person-list">
               {panelists.map((p, i) => (
                 <li key={i} className="sd-person-item">
-                  <span className="sd-person-name">{p.name}</span>
-                  <span className="sd-person-label">{p.label}</span>
+                  <Text as="span" variant="h6" className="sd-person-name">{p.name}</Text>
+                  <Text as="span" variant="bodySm" className="sd-person-label">{p.label}</Text>
                 </li>
               ))}
             </ul>
           </div>
           <div className="sd-people-col">
-            <h2 className="sd-section-heading">Chef's Potluck</h2>
+            <Text as="h2" variant="h2" className="sd-section-heading">Chef's Potluck</Text>
             <ul className="sd-person-list">
               {chefs.map((c, i) => (
                 <li key={i} className="sd-person-item">
-                  <span className="sd-person-name">{c.name}</span>
-                  <span className="sd-person-label">{c.label}</span>
+                  <Text as="span" variant="h6" className="sd-person-name">{c.name}</Text>
+                  <Text as="span" variant="bodySm" className="sd-person-label">{c.label}</Text>
                 </li>
               ))}
             </ul>
-            <h2 className="sd-section-heading sd-section-heading--spaced">Art Collection</h2>
+            <Text as="h2" variant="h2" className="sd-section-heading sd-section-heading--spaced">Art Collection</Text>
             <ul className="sd-artist-list">
               {artists.map((a, i) => (
-                <li key={i}>{a}</li>
+                <li key={i}><Text as="span" variant="body">{a}</Text></li>
               ))}
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Slideshow */}
-      <section className="sd-slideshow-section">
-        <div className="sd-slideshow-box">
-          <RapidSlideshow images={images} />
-        </div>
-      </section>
 
       {/* Production */}
       <section className="sd-production">
         <div className="page-wrap sd-production-inner">
-          <h2 className="sd-section-heading">Production</h2>
+          <Text as="h2" variant="h2" className="sd-section-heading">Production</Text>
           <ul className="sd-person-list">
             <li className="sd-person-item">
-              <span className="sd-person-name">DJ Uymami</span>
-              <span className="sd-person-label">Music by Eleazar Yisrael</span>
+              <Text as="span" variant="h6" className="sd-person-name">DJ Uymami</Text>
+              <Text as="span" variant="bodySm" className="sd-person-label">Music by Eleazar Yisrael</Text>
             </li>
             <li className="sd-person-item">
-              <span className="sd-person-name">Cowboy Collective</span>
-              <span className="sd-person-label">Video &amp; photo production</span>
+              <Text as="span" variant="h6" className="sd-person-name">Cowboy Collective</Text>
+              <Text as="span" variant="bodySm" className="sd-person-label">Video &amp; photo production</Text>
             </li>
           </ul>
         </div>

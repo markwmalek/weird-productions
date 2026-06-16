@@ -1,5 +1,6 @@
 import Marquee from '../components/Marquee';
 import WindowsMap from '../components/WindowsMap';
+import Text from '../components/Typography';
 import './Windows.css';
 
 const windows = [
@@ -78,9 +79,9 @@ export default function Windows() {
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="windows__hero">
         <div className="windows__hero-text">
-          <p className="windows__eyebrow">Weird × Holiday Season</p>
-          <h1>Weird<br />Windows</h1>
-          <p className="windows__hero-sub">Holiday Window Displays &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; December 2025</p>
+          <Text as="p" variant="eyebrow" className="windows__eyebrow">Weird × Holiday Season</Text>
+          <Text as="h1" variant="h1">Weird<br />Windows</Text>
+          <Text as="p" variant="script" className="windows__hero-sub">Holiday Window Displays &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; December 2025</Text>
         </div>
       </section>
 
@@ -88,24 +89,24 @@ export default function Windows() {
       <section className="windows__meta">
         <div className="windows__meta-inner">
           <div className="windows__meta-item">
-            <span className="windows__meta-label">Partner</span>
-            <span className="windows__meta-value">Downtown Durham Inc</span>
+            <Text as="span" variant="label" className="windows__meta-label">Partner</Text>
+            <Text as="span" variant="body" className="windows__meta-value">Downtown Durham Inc</Text>
           </div>
           <div className="windows__meta-item">
-            <span className="windows__meta-label">Format</span>
-            <span className="windows__meta-value">Window Displays</span>
+            <Text as="span" variant="label" className="windows__meta-label">Format</Text>
+            <Text as="span" variant="body" className="windows__meta-value">Window Displays</Text>
           </div>
           <div className="windows__meta-item">
-            <span className="windows__meta-label">Locations</span>
-            <span className="windows__meta-value">7 Downtown Storefronts</span>
+            <Text as="span" variant="label" className="windows__meta-label">Locations</Text>
+            <Text as="span" variant="body" className="windows__meta-value">7 Downtown Storefronts</Text>
           </div>
           <div className="windows__meta-item">
-            <span className="windows__meta-label">Location</span>
-            <span className="windows__meta-value">Durham, NC</span>
+            <Text as="span" variant="label" className="windows__meta-label">Location</Text>
+            <Text as="span" variant="body" className="windows__meta-value">Durham, NC</Text>
           </div>
           <div className="windows__meta-item">
-            <span className="windows__meta-label">Date</span>
-            <span className="windows__meta-value">December 2025</span>
+            <Text as="span" variant="label" className="windows__meta-label">Date</Text>
+            <Text as="span" variant="body" className="windows__meta-value">December 2025</Text>
           </div>
         </div>
       </section>
@@ -113,9 +114,9 @@ export default function Windows() {
       {/* ─── Project Statement ────────────────────────────────────────────── */}
       <section className="windows__statement">
         <div className="windows__statement-inner">
-          <p className="windows__statement-text">
+          <Text as="p" variant="bodyLg" className="windows__statement-text">
             Our Weird spin on Macy's holiday windows. We invited seven extraordinary artists to transform downtown Durham storefronts into holiday displays, celebrating the creativity and spirit of our local community.
-          </p>
+          </Text>
         </div>
       </section>
 
@@ -124,10 +125,10 @@ export default function Windows() {
         <section key={i} className={`windows__window ${i % 2 === 1 ? 'windows__window--alt' : ''}`}>
           <div className="windows__window-inner">
             <div className="windows__window-header">
-              <span className="windows__window-num">{String(i + 1).padStart(2, '0')}</span>
+              <Text as="span" variant="displaySm" className="windows__window-num">{String(i + 1).padStart(2, '0')}</Text>
               <div className="windows__window-title-group">
-                <h2 className="windows__window-name">{w.title}</h2>
-                <p className="windows__window-location">{w.location} · {w.handle}</p>
+                <Text as="h2" variant="h2" className="windows__window-name">{w.title}</Text>
+                <Text as="p" variant="label" className="windows__window-location">{w.location} · {w.handle}</Text>
               </div>
             </div>
 
@@ -136,7 +137,7 @@ export default function Windows() {
             </div>
 
             <div className="windows__window-desc">
-              <p>{w.description}</p>
+              <Text as="p" variant="bodyLg">{w.description}</Text>
             </div>
           </div>
         </section>
@@ -146,9 +147,9 @@ export default function Windows() {
       <section className="windows__map-section" id="map">
         <div className="windows__map-section-inner">
           <div className="windows__map-header">
-            <span className="windows__map-label">Explore</span>
-            <h2>Find the Windows on the Map</h2>
-            <p>All 7 displays are within walking distance in downtown Durham. Click a marker to see details and get directions.</p>
+            <Text as="span" variant="label" className="windows__map-label">Explore</Text>
+            <Text as="h2" variant="h2">Find the Windows on the Map</Text>
+            <Text as="p" variant="body">All 7 displays are within walking distance in downtown Durham. Click a marker to see details and get directions.</Text>
           </div>
           <WindowsMap />
         </div>
@@ -157,14 +158,14 @@ export default function Windows() {
       {/* ─── Credits ──────────────────────────────────────────────────────── */}
       <section className="windows__credits">
         <div className="windows__credits-inner">
-          <p className="windows__credits-collab">A collaboration between</p>
-          <p className="windows__credits-names">Weird &amp; Downtown Durham</p>
+          <Text as="p" variant="label" className="windows__credits-collab">A collaboration between</Text>
+          <Text as="p" variant="h1" className="windows__credits-names">Weird &amp; Downtown Durham</Text>
           <div className="windows__credits-meta">
-            <span>Holiday Window Displays</span>
-            <span>·</span>
-            <span>Durham, NC</span>
-            <span>·</span>
-            <span>December 2025</span>
+            <Text as="span" variant="bodySm">Holiday Window Displays</Text>
+            <Text as="span" variant="bodySm">·</Text>
+            <Text as="span" variant="bodySm">Durham, NC</Text>
+            <Text as="span" variant="bodySm">·</Text>
+            <Text as="span" variant="bodySm">December 2025</Text>
           </div>
         </div>
       </section>

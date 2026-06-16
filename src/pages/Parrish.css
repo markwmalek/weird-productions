@@ -20,10 +20,6 @@
 }
 
 .parrish__eyebrow {
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--color-text-muted);
 }
 
@@ -34,7 +30,6 @@
 }
 
 .parrish__hero-sub {
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   color: var(--color-text-muted);
   margin-top: 0.5rem;
 }
@@ -69,17 +64,11 @@
 }
 
 .parrish__meta-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--color-text-muted);
 }
 
 .parrish__meta-value {
-  font-size: 0.95rem;
   color: var(--color-text);
-  line-height: 1.4;
 }
 
 /* ─── Project Statement ─────────────────────────────────────────────────── */
@@ -109,8 +98,6 @@
 }
 
 .parrish__statement-text {
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
-  line-height: 1.75;
   color: var(--color-text);
   max-width: 680px;
 }
@@ -144,15 +131,11 @@
 }
 
 .parrish__metrics-heading {
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
   color: #ffffff;
-  line-height: 1;
 }
 
 .parrish__metrics-sub {
-  font-size: 0.95rem;
   color: rgba(255,255,255,0.55);
-  line-height: 1.6;
   max-width: 320px;
 }
 
@@ -172,26 +155,17 @@
 
 .parrish__metric-num {
   grid-row: 1 / 3;
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 5vw, 4.5rem);
   color: #ffffff;
-  line-height: 1;
-  text-transform: uppercase;
 }
 
 .parrish__metric-label {
-  font-size: 0.75rem;
   color: rgba(255,255,255,0.45);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   align-self: end;
   padding-bottom: 0.1rem;
 }
 
 .parrish__metric-desc {
-  font-size: 0.875rem;
   color: rgba(255,255,255,0.6);
-  line-height: 1.6;
   margin-top: 0.25rem;
 }
 
@@ -264,9 +238,6 @@
 }
 
 .parrish__art-see-all {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 500;
   color: var(--color-text-muted);
   text-decoration: underline;
   transition: color 0.2s;
@@ -317,16 +288,11 @@
 
 .parrish__art-title {
   color: #ffffff;
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  text-transform: uppercase;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .parrish__art-artist {
   color: #ffffff;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
@@ -352,7 +318,6 @@
 }
 
 .parrish__section-title {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
   text-align: center;
 }
 
@@ -364,9 +329,6 @@
 }
 
 .parrish__view-btn {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 500;
   padding: 0.4rem 1.25rem;
   border-radius: 8px;
   color: var(--color-text-subtle);
@@ -396,11 +358,7 @@
 
 .parrish__cal-dow {
   text-align: center;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 500;
   color: var(--color-text-subtle);
-  text-transform: uppercase;
   padding: 0.5rem 0;
   background: var(--color-card-bg);
   border-radius: 8px;
@@ -465,27 +423,12 @@
   color: var(--color-white);
 }
 
-.parrish__cal-day {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  line-height: 1;
-}
-
 .parrish__cal-event-count {
-  font-family: var(--font-body);
-  font-size: 0.55rem;
-  font-weight: 600;
-  text-transform: uppercase;
   color: var(--color-blue);
-  line-height: 1;
 }
 
 .parrish__cal-open-label {
-  font-family: var(--font-body);
-  font-size: 0.55rem;
-  font-weight: 500;
-  text-transform: uppercase;
   color: var(--color-text-subtle);
-  line-height: 1;
 }
 
 .parrish__cal-detail-wrapper {
@@ -505,22 +448,16 @@
 }
 
 .parrish__cal-detail-hint {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
   color: var(--color-text-subtle);
 }
 
 .parrish__cal-detail-date {
-  font-size: clamp(1.4rem, 3vw, 2rem);
   margin-bottom: 1.25rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-border-light);
 }
 
 .parrish__cal-open-hours {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 500;
   color: var(--color-text-muted);
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-border-light);
@@ -541,7 +478,6 @@
 }
 
 .parrish__cal-event-time {
-  font-size: 0.85rem;
   color: var(--color-text-muted);
   margin-bottom: 0.5rem;
   display: flex;
@@ -552,16 +488,11 @@
 .parrish__cal-event-admission {
   background: var(--color-black);
   color: var(--color-white);
-  font-size: 0.7rem;
-  font-weight: 600;
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
-  text-transform: uppercase;
 }
 
 .parrish__cal-event-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
   color: var(--color-text-muted);
 }
 
@@ -574,8 +505,6 @@
 .parrish__cal-event-link {
   display: inline-block;
   margin-top: 0.5rem;
-  font-size: 0.85rem;
-  font-weight: 600;
   color: var(--color-blue);
   text-decoration: none;
 }
@@ -613,17 +542,7 @@
 }
 
 .parrish__list-dow {
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 500;
-  text-transform: uppercase;
   color: var(--color-text-subtle);
-}
-
-.parrish__list-day {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  line-height: 1;
 }
 
 .parrish__list-info {
@@ -636,8 +555,6 @@
 }
 
 .parrish__list-meta {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
   color: var(--color-text-muted);
   margin-bottom: 0.5rem;
   display: flex;
@@ -714,10 +631,6 @@
 @media (max-width: 768px) {
   .parrish__cal-cell {
     border-radius: 8px;
-  }
-
-  .parrish__cal-day {
-    font-size: 1rem;
   }
 
   .parrish__cal-detail {

@@ -41,11 +41,7 @@
 }
 
 .artists-hero-title {
-  font-size: clamp(48px, 8vw, 120px);
-  font-weight: normal;
-  line-height: 1;
   margin-bottom: 16px;
-  text-transform: uppercase;
 }
 
 /* Circle highlight SVG on hero heading */
@@ -77,8 +73,6 @@
 }
 
 .artists-hero-sub {
-  font-size: clamp(14px, 1.8vw, 18px);
-  font-weight: 300;
   opacity: 0.85;
   margin-bottom: 8px;
 }
@@ -97,12 +91,8 @@
 }
 
 .artists-pitch-heading {
-  font-size: clamp(28px, 4vw, 52px);
-  font-weight: 300;
   font-style: italic;
-  font-family: var(--font-body);
   margin-bottom: 28px;
-  line-height: 1.1;
 }
 
 .artists-benefits {
@@ -124,17 +114,12 @@
 }
 
 .artists-not-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
   color: var(--gray-mid);
   margin-bottom: 6px;
 }
 
 .artists-not-list {
-  font-size: 14px;
   color: var(--gray-mid);
-  line-height: 1.6;
 }
 
 /* Signup block */
@@ -144,18 +129,13 @@
 }
 
 .artists-signup-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
   color: var(--gray-mid);
   margin-bottom: 8px;
 }
 
 .artists-signup-sub {
-  font-size: 15px;
   color: var(--gray-dark);
   margin-bottom: 24px;
-  line-height: 1.5;
 }
 
 .artists-form {
@@ -190,7 +170,6 @@
 }
 
 .artists-signup-ig {
-  font-size: 13px;
   color: var(--gray-mid);
 }
 
@@ -240,25 +219,16 @@
 }
 
 .vip-tag {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
   color: var(--accent-yellow);
   margin-bottom: 20px;
 }
 
 .vip-heading {
-  font-size: clamp(28px, 4vw, 52px);
-  font-weight: 300;
   font-style: italic;
-  font-family: var(--font-body);
-  line-height: 1.2;
   margin-bottom: 28px;
 }
 
 .vip-body {
-  font-size: 16px;
-  line-height: 1.6;
   opacity: 0.85;
   margin-bottom: 8px;
 }
@@ -300,9 +270,6 @@
 }
 
 .testimonials-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
   color: var(--gray-mid);
   margin-bottom: 40px;
 }
@@ -319,18 +286,12 @@
 }
 
 .testimonial-quote {
-  font-size: 17px;
-  line-height: 1.65;
   font-style: italic;
-  font-family: var(--font-body);
-  font-weight: 300;
   color: var(--black);
   margin-bottom: 16px;
 }
 
 .testimonial-name {
-  font-size: 13px;
-  font-weight: 500;
   color: var(--gray-mid);
 }
 
@@ -346,19 +307,13 @@
 }
 
 .artists-cta-text {
-  font-size: clamp(32px, 4.5vw, 60px);
-  font-weight: 300;
   font-style: italic;
-  font-family: var(--font-body);
-  line-height: 1.15;
   margin-bottom: 16px;
 }
 
 .artists-cta-sub {
-  font-size: 16px;
   color: var(--gray-dark);
   margin-bottom: 32px;
-  line-height: 1.5;
 }
 
 .artists-cta-btns {

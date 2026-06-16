@@ -10,18 +10,8 @@
   margin-bottom: 48px;
 }
 
-.portfolio-sub{
-  font-family: var(--font-caps);
-  font-size: 24px;
-  font-weight: 400;
-}
-
 .portfolio-title {
-  font-family: var(--font-caps);
-  font-size: clamp(75px, 9.375vw, 150px);
-  font-weight: 400;
   color: #000000;
-  line-height: 1;
 }
 
 /* ── GRID ── */
@@ -58,19 +48,11 @@
 }
 
 .portfolio-card-title {
-  font-family: var(--font-caps);
-  font-size: clamp(37.5px, 3.75vw, 56px);
-  font-weight: 400;
-  line-height: 1;
   margin-bottom: 4px;
 }
 
 .portfolio-card-desc {
-  font-family: var(--font-caps);
-  font-size: 22px;
-  font-weight: 400;
   color: #555555;
-  line-height: 1.5;
   margin-bottom: 12px;
 }
 
@@ -82,10 +64,6 @@
 
 .portfolio-card-tag {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   padding: 6px 12px;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 20px;

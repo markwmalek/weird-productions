@@ -11,44 +11,26 @@
 }
 
 .rl-eyebrow {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
   color: rgba(0, 0, 0, 0.45);
   margin-bottom: 16px;
 }
 
 .rl-title {
-  font-family: var(--font-caps);
-  font-size: clamp(16px, 12.5vw, 281px);
-  font-weight: 400;
-  line-height: 0.9;
   color: #000000;
   margin-bottom: 24px;
 }
 
 .rl-tagline {
-  font-family: var(--font-body);
-  font-size: clamp(18px, 2vw, 28px);
-  font-weight: 400;
   color: #000000;
-  line-height: 1.4;
   margin-bottom: 12px;
 }
 
 .rl-meta {
-  font-family: var(--font-caps);
-  font-size: clamp(31px, 3.44vw, 44px);
   color: rgba(0, 0, 0, 0.5);
 }
 
 /* ── SECTION HEADING ── */
 .rl-section-heading {
-  font-family: var(--font-caps);
-  font-size: clamp(50px, 4.7vw, 75px);
-  font-weight: 400;
-  line-height: 0.9;
   color: #000000;
   margin-bottom: 20px;
 }
@@ -95,17 +77,12 @@
 }
 
 .rl-schedule-time {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 600;
   color: rgba(0, 0, 0, 0.4);
   min-width: 80px;
   flex-shrink: 0;
 }
 
 .rl-schedule-desc {
-  font-family: var(--font-body);
-  font-size: 15px;
   color: #000000;
 }
 
@@ -143,15 +120,10 @@
 }
 
 .rl-designer-name {
-  font-family: var(--font-body);
-  font-size: 18px;
-  font-weight: 600;
   color: #000000;
 }
 
 .rl-designer-label {
-  font-family: var(--font-body);
-  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
 

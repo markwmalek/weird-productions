@@ -1,4 +1,5 @@
 import RapidSlideshow from '../components/RapidSlideshow';
+import Text from '../components/Typography';
 import './Smash.css';
 
 const chefs = [
@@ -38,15 +39,15 @@ const images = [
 function CompetitorGroup({ title, people }) {
   return (
     <div className="sm-competitor-group">
-      <h3 className="sm-competitor-label">{title}</h3>
+      <Text as="h3" variant="label" className="sm-competitor-label">{title}</Text>
       <div className="sm-competitor-grid">
         {people.map((p, i) => (
           <div key={i} className="sm-competitor">
             <div className="sm-competitor-img">
               <img src={p.img} alt={p.name} loading="lazy" />
             </div>
-            <p className="sm-competitor-name">{p.name}</p>
-            {p.venue && <p className="sm-competitor-venue">{p.venue}</p>}
+            <Text as="p" variant="body" className="sm-competitor-name">{p.name}</Text>
+            {p.venue && <Text as="p" variant="bodySm" className="sm-competitor-venue">{p.venue}</Text>}
           </div>
         ))}
       </div>
@@ -61,26 +62,26 @@ export default function Smash() {
       {/* Hero */}
       <section className="sm-hero">
         <div className="page-wrap">
-          <p className="sm-eyebrow">Event — Durham, NC</p>
-          <h1 className="sm-title">SMASH<br />&amp; SLAM</h1>
-          <p className="sm-tagline">Smash burgers, slam poets, classic Durm.</p>
-          <p className="sm-meta">Sunday, October 6 · 2PM · PS37</p>
+          <Text as="p" variant="eyebrow" className="sm-eyebrow">Event — Durham, NC</Text>
+          <Text as="h1" variant="display" className="sm-title">SMASH<br />&amp; SLAM</Text>
+          <Text as="p" variant="bodyLg" className="sm-tagline">Smash burgers, slam poets, classic Durm.</Text>
+          <Text as="p" variant="script" className="sm-meta">Sunday, October 6 · 2PM · PS37</Text>
         </div>
       </section>
 
       {/* About */}
       <section className="sm-about">
         <div className="page-wrap sm-about-inner">
-          <h2 className="sm-section-heading">About the event</h2>
+          <Text as="h2" variant="h2" className="sm-section-heading">About the event</Text>
           <div className="sm-about-body">
-            <p>
+            <Text as="p" variant="bodyLg">
               A culinary and poetry competition unlike anything Durham had seen — three chefs
               competed in a smash burger showdown while three poets performed slam sets as their backdrop.
-            </p>
-            <p>
+            </Text>
+            <Text as="p" variant="bodyLg">
               Your ticket included a slider from each chef, a drink, and the show. A portion of
               every ticket sale went directly to Western NC arts community disaster relief.
-            </p>
+            </Text>
           </div>
         </div>
       </section>
@@ -88,7 +89,7 @@ export default function Smash() {
       {/* Competitors */}
       <section className="sm-competitors">
         <div className="page-wrap">
-          <h2 className="sm-section-heading">The lineup</h2>
+          <Text as="h2" variant="h2" className="sm-section-heading">The lineup</Text>
           <div className="sm-competitors-inner">
             <CompetitorGroup title="Chefs" people={chefs} />
             <CompetitorGroup title="Poets" people={poets} />

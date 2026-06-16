@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Text from '../components/Typography';
 import './Home.css';
 
 const SLIDESHOW_IMAGES = [
@@ -95,9 +96,9 @@ export default function Home() {
         <div className="home-hero-title-wrap">
           <img src="/images/hero-lindsay.png" alt="" className="home-hero-char home-hero-lindsay" aria-hidden="true" />
           <img src="/images/hero-mark.png"    alt="" className="home-hero-char home-hero-mark"    aria-hidden="true" />
-          <h1 className="home-hero-title">Weird</h1>
+          <Text as="h1" variant="display" className="home-hero-title">Weird</Text>
         </div>
-        <p className="home-hero-sub">A Creative Studio</p>
+        <Text as="p" variant="script" className="home-hero-sub">A Creative Studio</Text>
         <div className="home-hero-arrow" />
       </section>
 
@@ -111,30 +112,30 @@ export default function Home() {
       {/* ── WHAT WE DO ── */}
       <section className="home-wwd">
         <div className="home-wwd-inner">
-          <h2 className="home-wwd-heading">What we do</h2>
-          <p className="home-wwd-sub">We partner with people who want more than what's expected — curating artists, chefs, performers, and creatives from our expansive network.</p>
+          <Text as="h2" variant="h2" className="home-wwd-heading">What we do</Text>
+          <Text as="p" variant="body" className="home-wwd-sub">We partner with people who want more than what's expected — curating artists, chefs, performers, and creatives from our expansive network.</Text>
 
           <div className="home-wwd-grid">
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/au/p4_7.jpeg" alt="Interiors" loading="lazy" />
               </div>
-              <h3 className="home-wwd-label">Interiors</h3>
-              <p className="home-wwd-desc">Art that earns its place on the wall.</p>
+              <Text as="h3" variant="h3" className="home-wwd-label">Interiors</Text>
+              <Text as="p" variant="body" className="home-wwd-desc">Art that earns its place on the wall.</Text>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/work-with-us/gallery2.jpg" alt="Events" loading="lazy" />
               </div>
-              <h3 className="home-wwd-label">Events</h3>
-              <p className="home-wwd-desc">The kind of night people bring up for months.</p>
+              <Text as="h3" variant="h3" className="home-wwd-label">Events</Text>
+              <Text as="p" variant="body" className="home-wwd-desc">The kind of night people bring up for months.</Text>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/wwd-branding.png" alt="Branding" loading="lazy" />
               </div>
-              <h3 className="home-wwd-label">Branding</h3>
-              <p className="home-wwd-desc">A look people stop scrolling for.</p>
+              <Text as="h3" variant="h3" className="home-wwd-label">Branding</Text>
+              <Text as="p" variant="body" className="home-wwd-desc">A look people stop scrolling for.</Text>
             </div>
           </div>
 
@@ -149,10 +150,10 @@ export default function Home() {
             <img src="/images/pot-party/Hero Image.png" alt="Weird Art Projects — live painting activation at CCB Plaza" loading="lazy" />
           </div>
           <div className="home-nonprofit-text">
-            <p className="home-nonprofit-eyebrow">Non-Profit Arm</p>
-            <h2 className="home-nonprofit-heading">Weird Art Projects</h2>
-            <p className="home-nonprofit-body">A registered 501(c)(3) solving community problems through art. We fund local artists, run public activations, and prove that creativity belongs at the center of Durham's story.</p>
-            <a href="https://weirdprojects.art" target="_blank" rel="noopener noreferrer" className="home-nonprofit-link">Learn more ↗</a>
+            <Text as="p" variant="eyebrow" className="home-nonprofit-eyebrow">Non-Profit Arm</Text>
+            <Text as="h2" variant="h2" className="home-nonprofit-heading">Weird Art Projects</Text>
+            <Text as="p" variant="body" className="home-nonprofit-body">A registered 501(c)(3) solving community problems through art. We fund local artists, run public activations, and prove that creativity belongs at the center of Durham's story.</Text>
+            <Text as="a" href="https://weirdprojects.art" target="_blank" rel="noopener noreferrer" variant="body" className="home-nonprofit-link">Learn more ↗</Text>
           </div>
         </div>
       </section>
@@ -160,37 +161,37 @@ export default function Home() {
       {/* ── PORTFOLIO ── */}
       <section className="home-portfolio">
         <div className="home-portfolio-inner">
-          <h2 className="home-portfolio-heading">Portfolio</h2>
+          <Text as="h2" variant="h2" className="home-portfolio-heading">Portfolio</Text>
           <div className="home-portfolio-grid">
             {portfolioItems.map((item) => (
               <Link key={item.to} to={item.to} className="home-portfolio-card">
                 <div className="home-portfolio-card-img">
                   <img src={item.img} alt={item.alt} loading="lazy" />
                 </div>
-                <p className="home-portfolio-card-title">{item.title}</p>
-                <p className="home-portfolio-card-desc">{item.desc}</p>
+                <Text as="p" variant="h3" className="home-portfolio-card-title">{item.title}</Text>
+                <Text as="p" variant="body" className="home-portfolio-card-desc">{item.desc}</Text>
               </Link>
             ))}
           </div>
-          <Link to="/portfolio" className="home-portfolio-see-all">See all</Link>
+          <Text as={Link} to="/portfolio" variant="body" className="home-portfolio-see-all">See all</Text>
         </div>
       </section>
 
       {/* ── WORK WITH US + GET ON THE LIST (2 columns desktop) ── */}
       <section className="home-cta-split" aria-label="Work with us and get on the list">
         <div className="home-cta-col home-cta-col--work">
-          <h2 className="home-wwu-heading">WORK WITH US</h2>
-          <p className="home-wwu-body">
+          <Text as="h2" variant="h2" className="home-wwu-heading">WORK WITH US</Text>
+          <Text as="p" variant="body" className="home-wwu-body">
             Weird blends artistic direction and strategic vision to create unforgettable experiences.<br />
             We don't do cookie-cutter.
-          </p>
-          <Link to="/work-with-weird" className="home-wwu-dm">
+          </Text>
+          <Text as={Link} to="/work-with-weird" variant="body" className="home-wwu-dm">
             Work with us
-          </Link>
+          </Text>
         </div>
         <div className="home-cta-col home-cta-col--subscribe">
-          <h2 className="home-gol-heading">GET ON THE LIST</h2>
-          <p className="home-gol-sub">Cool events. Calls for art. Be the first to know.</p>
+          <Text as="h2" variant="h2" className="home-gol-heading">GET ON THE LIST</Text>
+          <Text as="p" variant="body" className="home-gol-sub">Cool events. Calls for art. Be the first to know.</Text>
           <form onSubmit={handleSubmit}>
             <input
               type="email"

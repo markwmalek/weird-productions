@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import Text from '../components/Typography';
 import './WorkWithWeird.css';
 
 const GALLERY_IMAGES = [
@@ -125,22 +126,22 @@ export default function WorkWithWeird() {
       {/* Hero */}
       <section className="www-hero">
         <div className="page-wrap">
-          <h1 className="www-hero-title">WORK WITH US</h1>
+          <Text as="h1" variant="h1" className="www-hero-title">WORK WITH US</Text>
         </div>
       </section>
 
       {/* Pitch */}
       <section className="www-pitch">
         <div className="page-wrap www-pitch-inner">
-          <h2 className="www-pitch-heading">Who we are</h2>
+          <Text as="h2" variant="h2" className="www-pitch-heading">Who we are</Text>
           <div className="www-pitch-body">
-            <p>
+            <Text as="p" variant="bodyLg">
               Weird Productions is a creative studio working at the intersection of events, interiors, and branding.
               We partner with businesses and organizations who want more than what's expected — and aren't afraid to be a little weird about it.
-            </p>
-            <p>
+            </Text>
+            <Text as="p" variant="bodyLg">
               Whether you're throwing an event, furnishing a space with art, or building a brand identity from scratch — we bring the same thing to all of it: intention, taste, and a network of genuinely talented people.
-            </p>
+            </Text>
           </div>
         </div>
       </section>
@@ -148,15 +149,15 @@ export default function WorkWithWeird() {
       {/* Services */}
       <section className="www-services">
         <div className="page-wrap">
-          <h2 className="www-section-heading">WHAT WE DO</h2>
+          <Text as="h2" variant="h2" className="www-section-heading">WHAT WE DO</Text>
           <div className="www-services-grid">
             {services.map((s, i) => (
               <div key={i} className="www-service">
-                <h3 className="www-service-title">{s.title}</h3>
-                <p className="www-service-desc">{s.description}</p>
+                <Text as="h3" variant="h3" className="www-service-title">{s.title}</Text>
+                <Text as="p" variant="body" className="www-service-desc">{s.description}</Text>
                 <ul className="www-service-list">
                   {s.offerings.map((o, j) => (
-                    <li key={j}>{o}</li>
+                    <li key={j}><Text as="span" variant="bodySm">{o}</Text></li>
                   ))}
                 </ul>
               </div>
@@ -168,12 +169,12 @@ export default function WorkWithWeird() {
       {/* Why Weird */}
       <section className="www-why">
         <div className="page-wrap">
-          <h2 className="www-section-heading">WHY WEIRD</h2>
+          <Text as="h2" variant="h2" className="www-section-heading">WHY WEIRD</Text>
           <div className="www-why-list">
             {whyWeird.map((item, i) => (
               <div key={i} className="www-why-item">
-                <span className="www-why-num">0{i + 1}</span>
-                <p className="www-why-text">{item}</p>
+                <Text as="span" variant="label" className="www-why-num">0{i + 1}</Text>
+                <Text as="p" variant="body" className="www-why-text">{item}</Text>
               </div>
             ))}
           </div>
@@ -183,7 +184,7 @@ export default function WorkWithWeird() {
       {/* Portfolio */}
       <section className="www-portfolio">
         <div className="page-wrap">
-          <h2 className="www-section-heading">WEIRD IN THE WORLD</h2>
+          <Text as="h2" variant="h2" className="www-section-heading">WEIRD IN THE WORLD</Text>
           <WorldSlideshow />
         </div>
       </section>
@@ -191,7 +192,7 @@ export default function WorkWithWeird() {
       {/* Partners */}
       <section className="www-partners">
         <div className="page-wrap">
-          <h2 className="www-section-heading">PARTNERS &amp; COLLABORATORS</h2>
+          <Text as="h2" variant="h2" className="www-section-heading">PARTNERS &amp; COLLABORATORS</Text>
           <div className="www-partners-logos">
             {partners.map((p, i) => (
               <div key={i} className="www-partner-logo">
@@ -205,25 +206,25 @@ export default function WorkWithWeird() {
       {/* Non-Profit */}
       <section className="www-nonprofit">
         <div className="page-wrap">
-          <h2 className="www-section-heading">WEIRD ART PROJECTS</h2>
+          <Text as="h2" variant="h2" className="www-section-heading">WEIRD ART PROJECTS</Text>
           <div className="www-nonprofit-intro">
-            <p>
+            <Text as="p" variant="bodyLg">
               Beyond commercial work, we run <strong>Weird Art Projects</strong> — a registered 501(c)(3) non-profit dedicated to solving community problems with art.
-            </p>
-            <p>
+            </Text>
+            <Text as="p" variant="bodyLg">
               We partner with Durham to create public art activations, support local artists, and prove that art can be the answer to real community challenges. From holiday window installations to live painting events and public-facing art experiences, we bring creativity where it matters most.
-            </p>
+            </Text>
           </div>
-          <h2 className="www-board-subheader">Weird Art Projects Board</h2>
+          <Text as="h2" variant="h2" className="www-board-subheader">Weird Art Projects Board</Text>
           <div className="www-board-grid">
             {boardMembers.map((member) => (
               <div key={member.name} className="www-board-member">
                 <div className="www-board-img-wrap">
                   <img src={member.image} alt={member.name} className="www-board-img" loading="lazy" />
                 </div>
-                <h3 className="www-board-name">{member.name}</h3>
-                <p className="www-board-title">{member.title}</p>
-                <p className="www-board-bio">{member.bio}</p>
+                <Text as="h3" variant="h6" className="www-board-name">{member.name}</Text>
+                <Text as="p" variant="label" className="www-board-title">{member.title}</Text>
+                <Text as="p" variant="bodySm" className="www-board-bio">{member.bio}</Text>
               </div>
             ))}
           </div>
@@ -233,16 +234,18 @@ export default function WorkWithWeird() {
       {/* CTA */}
       <section className="www-cta">
         <div className="page-wrap www-cta-inner">
-          <h2 className="www-cta-heading">READY TO MAKE SOMETHING WEIRD?</h2>
-          <p className="www-cta-sub">Tell us about your project and let's figure out how we can help.</p>
-          <a
+          <Text as="h2" variant="h1" className="www-cta-heading">READY TO MAKE SOMETHING WEIRD?</Text>
+          <Text as="p" variant="bodyLg" className="www-cta-sub">Tell us about your project and let's figure out how we can help.</Text>
+          <Text
+            as="a"
+            variant="body"
             href="https://instagram.com/weirdproductions.art"
             target="_blank"
             rel="noopener noreferrer"
             className="www-cta-dm"
           >
             DM us
-          </a>
+          </Text>
         </div>
       </section>
 

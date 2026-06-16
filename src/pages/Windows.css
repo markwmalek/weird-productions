@@ -20,10 +20,6 @@
 }
 
 .windows__eyebrow {
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--color-text-muted);
 }
 
@@ -34,7 +30,6 @@
 }
 
 .windows__hero-sub {
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   color: var(--color-text-muted);
   margin-top: 0.5rem;
 }
@@ -69,17 +64,11 @@
 }
 
 .windows__meta-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--color-text-muted);
 }
 
 .windows__meta-value {
-  font-size: 0.95rem;
   color: var(--color-text);
-  line-height: 1.4;
 }
 
 /* ─── Project Statement ─────────────────────────────────────────────────── */
@@ -109,8 +98,6 @@
 }
 
 .windows__statement-text {
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
-  line-height: 1.75;
   color: var(--color-text);
   max-width: 680px;
 }
@@ -137,10 +124,7 @@
 }
 
 .windows__window-num {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
   color: var(--color-border-light);
-  line-height: 1;
   user-select: none;
   position: absolute;
   top: 0;
@@ -153,18 +137,8 @@
   gap: 0.4rem;
 }
 
-.windows__window-name {
-  font-size: clamp(3.125rem, 6.25vw, 5.47rem);
-  line-height: 1;
-  letter-spacing: -0.01em;
-}
-
 .windows__window-location {
-  font-size: 0.88rem;
   color: var(--color-text-muted);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .windows__window-image {
@@ -228,10 +202,6 @@
 }
 
 .windows__map-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--color-text-muted);
   padding-top: 0.2rem;
 }
@@ -268,18 +238,11 @@
 }
 
 .windows__credits-collab {
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.4);
 }
 
 .windows__credits-names {
-  font-family: var(--font-caps);
-  font-size: clamp(3.125rem, 7.8vw, 6.25rem);
   color: var(--color-white);
-  line-height: 1;
 }
 
 .windows__credits-meta {

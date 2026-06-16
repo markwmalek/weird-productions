@@ -1,3 +1,4 @@
+import Text from './Typography';
 import './Marquee.css';
 
 export default function Marquee({ items, dark = false, speed = 30, separatorIcon }) {
@@ -17,9 +18,9 @@ export default function Marquee({ items, dark = false, speed = 30, separatorIcon
   return (
     <div className={`marquee ${dark ? 'marquee--dark' : ''}`} style={style}>
       <div className="marquee__track">
-        <span className="marquee__content">{content}{sep || ' \u2727 '}</span>
-        <span className="marquee__content">{content}{sep || ' \u2727 '}</span>
-        <span className="marquee__content">{content}{sep || ' \u2727 '}</span>
+        <Text as="span" variant="displaySm" className="marquee__content">{content}{sep || ' \u2727 '}</Text>
+        <Text as="span" variant="displaySm" className="marquee__content">{content}{sep || ' \u2727 '}</Text>
+        <Text as="span" variant="displaySm" className="marquee__content">{content}{sep || ' \u2727 '}</Text>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import RapidSlideshow from '../components/RapidSlideshow';
+import Text from '../components/Typography';
 import './SpeedHouse.css';
 
 const artists = [
@@ -45,32 +46,32 @@ export default function SpeedHouse() {
       {/* Hero */}
       <section className="sh-hero">
         <div className="page-wrap">
-          <p className="sh-eyebrow">Art Salon — Durham, NC</p>
-          <h1 className="sh-title">FAST &amp;<br />LOOSE</h1>
-          <p className="sh-tagline">Private art show, DJ spinning vinyl, Mad Men vibes.</p>
-          <p className="sh-meta">Speed House · January 25, 2025</p>
+          <Text as="p" variant="eyebrow" className="sh-eyebrow">Art Salon — Durham, NC</Text>
+          <Text as="h1" variant="display" className="sh-title">FAST &amp;<br />LOOSE</Text>
+          <Text as="p" variant="bodyLg" className="sh-tagline">Private art show, DJ spinning vinyl, Mad Men vibes.</Text>
+          <Text as="p" variant="h4" className="sh-meta">Speed House · January 25, 2025</Text>
         </div>
       </section>
 
       {/* About */}
       <section className="sh-about">
         <div className="page-wrap sh-about-inner">
-          <h2 className="sh-section-heading">The deets</h2>
+          <Text as="h2" variant="h2" className="sh-section-heading">The deets</Text>
           <div className="sh-about-body">
-            <p>
+            <Text as="p" variant="bodyLg">
               A private art exhibition featuring five local artists at Speed House in downtown Durham.
               Mad Men-inspired vibes with dinner club hors d'oeuvres, Mad Men era cocktails, and a DJ spinning vinyl all night.
-            </p>
+            </Text>
             <ul className="sh-inclusions">
-              <li>Private art exhibition by five local artists</li>
-              <li>Dinner club hors d'oeuvres</li>
-              <li>Mad Men era beverages</li>
-              <li>DJ spinning vinyl records</li>
-              <li>Dress code: Don / Peggy / Joan, Marlboro Man, Italian Grand Prix</li>
+              <Text as="li" variant="bodySm">Private art exhibition by five local artists</Text>
+              <Text as="li" variant="bodySm">Dinner club hors d'oeuvres</Text>
+              <Text as="li" variant="bodySm">Mad Men era beverages</Text>
+              <Text as="li" variant="bodySm">DJ spinning vinyl records</Text>
+              <Text as="li" variant="bodySm">Dress code: Don / Peggy / Joan, Marlboro Man, Italian Grand Prix</Text>
             </ul>
-            <p className="sh-venue-line">
+            <Text as="p" variant="bodySm" className="sh-venue-line">
               <strong>Venue:</strong> Speed House, 505 N Mangum St, Durham, NC
-            </p>
+            </Text>
           </div>
         </div>
       </section>
@@ -85,12 +86,12 @@ export default function SpeedHouse() {
       {/* Artists */}
       <section className="sh-artists">
         <div className="page-wrap sh-artists-inner">
-          <h2 className="sh-section-heading">Artists</h2>
+          <Text as="h2" variant="h2" className="sh-section-heading">Artists</Text>
           <ul className="sh-artist-list">
             {artists.map((a, i) => (
               <li key={i} className="sh-artist-item">
-                <span className="sh-artist-name">{a.name}</span>
-                <span className="sh-artist-handle">{a.handle}</span>
+                <Text as="span" variant="body" className="sh-artist-name">{a.name}</Text>
+                <Text as="span" variant="bodySm" className="sh-artist-handle">{a.handle}</Text>
               </li>
             ))}
           </ul>

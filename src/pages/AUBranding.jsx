@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Text from '../components/Typography';
 import './AUBranding.css';
 import RapidSlideshow from '../components/RapidSlideshow';
 
@@ -31,8 +32,8 @@ export default function AUBranding() {
       {!unlocked && (
         <div className="au-gate">
           <div className="au-gate__inner">
-            <h1 className="au-gate__title">American Underground</h1>
-            <p className="au-gate__sub">This page is private. Enter the password to continue.</p>
+            <Text as="h1" variant="h3" className="au-gate__title">American Underground</Text>
+            <Text as="p" variant="body" className="au-gate__sub">This page is private. Enter the password to continue.</Text>
             <form className="au-gate__form" onSubmit={handleSubmit}>
               <input
                 type="password"
@@ -42,9 +43,9 @@ export default function AUBranding() {
                 onChange={(e) => setInput(e.target.value)}
                 autoFocus
               />
-              <button type="submit" className="au-gate__btn">Enter</button>
+              <Text as="button" variant="label" type="submit" className="au-gate__btn">Enter</Text>
             </form>
-            {error && <p className="au-gate__error">Incorrect password</p>}
+            {error && <Text as="p" variant="bodySm" className="au-gate__error">Incorrect password</Text>}
           </div>
         </div>
       )}
@@ -52,21 +53,21 @@ export default function AUBranding() {
       {/* Hero */}
       <section className="aub__hero">
         <div className="aub__hero-text">
-          <p className="aub__eyebrow">Weird × American Underground</p>
-          <h1>Brand Identity<br />Proposal</h1>
-          <p className="aub__hero-sub">Branding Proposal — March 2026</p>
-          <p className="aub__hero-byline">Lindsay &amp; Mark</p>
+          <Text as="p" variant="eyebrow" className="aub__eyebrow">Weird × American Underground</Text>
+          <Text as="h1" variant="display">Brand Identity<br />Proposal</Text>
+          <Text as="p" variant="bodyLg" className="aub__hero-sub">Branding Proposal — March 2026</Text>
+          <Text as="p" variant="h4" className="aub__hero-byline">Lindsay &amp; Mark</Text>
         </div>
       </section>
 
       {/* Intro */}
       <section className="aub__intro">
         <div className="aub__intro-inner">
-          <p className="aub__section-label">Overview</p>
+          <Text as="p" variant="label" className="aub__section-label">Overview</Text>
           <div className="aub__intro-body">
-            <p>Following the design direction established through the American Underground interior project, we see an opportunity to evolve the organization's visual identity to reflect the energy, creativity, and cultural presence of the space.</p>
-            <p>Our goal would be to translate the spirit of the physical environment into a cohesive brand system that can live across digital platforms, physical spaces, communications, and future programming.</p>
-            <p>Rather than a simple logo update, this process would develop a visual language and creative direction that reflects American Underground's role as a hub for innovation, creativity, and community in Durham.</p>
+            <Text as="p" variant="bodyLg">Following the design direction established through the American Underground interior project, we see an opportunity to evolve the organization's visual identity to reflect the energy, creativity, and cultural presence of the space.</Text>
+            <Text as="p" variant="bodyLg">Our goal would be to translate the spirit of the physical environment into a cohesive brand system that can live across digital platforms, physical spaces, communications, and future programming.</Text>
+            <Text as="p" variant="bodyLg">Rather than a simple logo update, this process would develop a visual language and creative direction that reflects American Underground's role as a hub for innovation, creativity, and community in Durham.</Text>
           </div>
         </div>
       </section>
@@ -74,8 +75,8 @@ export default function AUBranding() {
       {/* Deliverables Header */}
       <section className="aub__deliverables-header">
         <div className="aub__section-inner">
-          <p className="aub__section-label">Scope of Work</p>
-          <h2 className="aub__section-title">Five deliverables, one cohesive system.</h2>
+          <Text as="p" variant="label" className="aub__section-label">Scope of Work</Text>
+          <Text as="h2" variant="h2" className="aub__section-title">Five deliverables, one cohesive system.</Text>
         </div>
       </section>
 
@@ -84,8 +85,8 @@ export default function AUBranding() {
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
-              <span className="aub__deliverable-num">01</span>
-              <h2 className="aub__deliverable-title">Brand Discovery Workshop</h2>
+              <Text as="span" variant="displaySm" className="aub__deliverable-num">01</Text>
+              <Text as="h2" variant="h2" className="aub__deliverable-title">Brand Discovery Workshop</Text>
             </div>
             <div className="aub__deliverable-body">
               <ul className="aub__list">
@@ -96,8 +97,8 @@ export default function AUBranding() {
                 <li>Presentation of a clear visual direction</li>
               </ul>
               <div className="aub__deliverable-callout">
-                <span className="aub__callout-label">Deliverable</span>
-                <span className="aub__callout-value">Creative Direction Presentation</span>
+                <Text as="span" variant="label" className="aub__callout-label">Deliverable</Text>
+                <Text as="span" variant="bodySm" className="aub__callout-value">Creative Direction Presentation</Text>
               </div>
             </div>
           </div>
@@ -112,8 +113,8 @@ export default function AUBranding() {
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
-              <span className="aub__deliverable-num">02</span>
-              <h2 className="aub__deliverable-title">Visual Identity Package</h2>
+              <Text as="span" variant="displaySm" className="aub__deliverable-num">02</Text>
+              <Text as="h2" variant="h2" className="aub__deliverable-title">Visual Identity Package</Text>
             </div>
             <div className="aub__deliverable-body">
               <ul className="aub__list">
@@ -126,8 +127,8 @@ export default function AUBranding() {
                 <li>Selection of one visual direction from three options, with one round of follow-up edits included</li>
               </ul>
               <div className="aub__deliverable-callout">
-                <span className="aub__callout-label">Deliverable</span>
-                <span className="aub__callout-value">Three Distinct Visual Directions to Choose From</span>
+                <Text as="span" variant="label" className="aub__callout-label">Deliverable</Text>
+                <Text as="span" variant="bodySm" className="aub__callout-value">Three Distinct Visual Directions to Choose From</Text>
               </div>
             </div>
           </div>
@@ -142,11 +143,11 @@ export default function AUBranding() {
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
-              <span className="aub__deliverable-num">03</span>
-              <h2 className="aub__deliverable-title">Environmental Brand Integration</h2>
+              <Text as="span" variant="displaySm" className="aub__deliverable-num">03</Text>
+              <Text as="h2" variant="h2" className="aub__deliverable-title">Environmental Brand Integration</Text>
             </div>
             <div className="aub__deliverable-body">
-              <p className="aub__deliverable-desc">American Underground lives both physically and digitally, so the identity system extends to the building environment.</p>
+              <Text as="p" variant="body" className="aub__deliverable-desc">American Underground lives both physically and digitally, so the identity system extends to the building environment.</Text>
               <ul className="aub__list">
                 <li>Signage and wayfinding</li>
                 <li>Wall graphics</li>
@@ -155,8 +156,8 @@ export default function AUBranding() {
                 <li>Visual consistency between the physical space and brand materials</li>
               </ul>
               <div className="aub__deliverable-callout">
-                <span className="aub__callout-label">Deliverable</span>
-                <span className="aub__callout-value">Environmental Brand Concepts</span>
+                <Text as="span" variant="label" className="aub__callout-label">Deliverable</Text>
+                <Text as="span" variant="bodySm" className="aub__callout-value">Environmental Brand Concepts</Text>
               </div>
             </div>
           </div>
@@ -171,8 +172,8 @@ export default function AUBranding() {
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
-              <span className="aub__deliverable-num">04</span>
-              <h2 className="aub__deliverable-title">Brand Toolkit</h2>
+              <Text as="span" variant="displaySm" className="aub__deliverable-num">04</Text>
+              <Text as="h2" variant="h2" className="aub__deliverable-title">Brand Toolkit</Text>
             </div>
             <div className="aub__deliverable-body">
               <ul className="aub__list">
@@ -183,8 +184,8 @@ export default function AUBranding() {
                 <li>Social media templates in AU's design platform of choice</li>
               </ul>
               <div className="aub__deliverable-callout">
-                <span className="aub__callout-label">Deliverable</span>
-                <span className="aub__callout-value">Brand Toolkit &amp; Guidelines</span>
+                <Text as="span" variant="label" className="aub__callout-label">Deliverable</Text>
+                <Text as="span" variant="bodySm" className="aub__callout-value">Brand Toolkit &amp; Guidelines</Text>
               </div>
             </div>
           </div>
@@ -201,12 +202,12 @@ export default function AUBranding() {
         <div className="aub__section-inner aub__deliverable-layout">
           <div className="aub__deliverable-content">
             <div className="aub__deliverable-header">
-              <span className="aub__deliverable-num">05</span>
-              <h2 className="aub__deliverable-title">Website</h2>
+              <Text as="span" variant="displaySm" className="aub__deliverable-num">05</Text>
+              <Text as="h2" variant="h2" className="aub__deliverable-title">Website</Text>
             </div>
             <div className="aub__deliverable-body">
-              <p className="aub__deliverable-desc">Embodies the same creative energy and visual identity as the physical space, communicating the organization's role as a hub for founders, creators, and innovators.</p>
-              <p className="aub__deliverable-scope-label">Scope may include:</p>
+              <Text as="p" variant="body" className="aub__deliverable-desc">Embodies the same creative energy and visual identity as the physical space, communicating the organization's role as a hub for founders, creators, and innovators.</Text>
+              <Text as="p" variant="label" className="aub__deliverable-scope-label">Scope may include:</Text>
               <ul className="aub__list">
                 <li>Website structure and page architecture</li>
                 <li>Homepage design and visual storytelling</li>
@@ -216,8 +217,8 @@ export default function AUBranding() {
                 <li>Tech stack agreement (platform, CMS, and hosting decisions made collaboratively)</li>
               </ul>
               <div className="aub__deliverable-callout">
-                <span className="aub__callout-label">Deliverable</span>
-                <span className="aub__callout-value">Website</span>
+                <Text as="span" variant="label" className="aub__callout-label">Deliverable</Text>
+                <Text as="span" variant="bodySm" className="aub__callout-value">Website</Text>
               </div>
             </div>
           </div>
@@ -230,52 +231,52 @@ export default function AUBranding() {
       {/* Timeline */}
       <section className="aub__timeline">
         <div className="aub__section-inner">
-          <p className="aub__section-label">Timeline</p>
-          <h2 className="aub__section-title">Estimated timeline: 4–6 weeks</h2>
+          <Text as="p" variant="label" className="aub__section-label">Timeline</Text>
+          <Text as="h2" variant="h2" className="aub__section-title">Estimated timeline: 4–6 weeks</Text>
           <div className="aub__timeline-steps">
             <div className="aub__timeline-step">
               <div className="aub__step-left">
-                <span className="aub__step-num">1</span>
+                <Text as="span" variant="displaySm" className="aub__step-num">1</Text>
                 <div className="aub__timeline-connector" />
               </div>
               <div>
-                <p className="aub__step-title">Discovery Workshop</p>
-                <p className="aub__step-date">Date TBD</p>
+                <Text as="p" variant="bodySm" className="aub__step-title">Discovery Workshop</Text>
+                <Text as="p" variant="caption" className="aub__step-date">Date TBD</Text>
               </div>
             </div>
             <div className="aub__timeline-step">
               <div className="aub__step-left">
-                <span className="aub__step-num">2</span>
+                <Text as="span" variant="displaySm" className="aub__step-num">2</Text>
                 <div className="aub__timeline-connector" />
               </div>
               <div>
-                <p className="aub__step-title">Visual Identity Package</p>
+                <Text as="p" variant="bodySm" className="aub__step-title">Visual Identity Package</Text>
               </div>
             </div>
             <div className="aub__timeline-step">
               <div className="aub__step-left">
-                <span className="aub__step-num">3</span>
+                <Text as="span" variant="displaySm" className="aub__step-num">3</Text>
                 <div className="aub__timeline-connector" />
               </div>
               <div>
-                <p className="aub__step-title">Environmental Brand Integration</p>
+                <Text as="p" variant="bodySm" className="aub__step-title">Environmental Brand Integration</Text>
               </div>
             </div>
             <div className="aub__timeline-step">
               <div className="aub__step-left">
-                <span className="aub__step-num">4</span>
+                <Text as="span" variant="displaySm" className="aub__step-num">4</Text>
                 <div className="aub__timeline-connector" />
               </div>
               <div>
-                <p className="aub__step-title">Brand Toolkit &amp; Guidelines</p>
+                <Text as="p" variant="bodySm" className="aub__step-title">Brand Toolkit &amp; Guidelines</Text>
               </div>
             </div>
             <div className="aub__timeline-step">
               <div className="aub__step-left">
-                <span className="aub__step-num">5</span>
+                <Text as="span" variant="displaySm" className="aub__step-num">5</Text>
               </div>
               <div>
-                <p className="aub__step-title">Website</p>
+                <Text as="p" variant="bodySm" className="aub__step-title">Website</Text>
               </div>
             </div>
           </div>
@@ -285,22 +286,22 @@ export default function AUBranding() {
       {/* Investment */}
       <section className="aub__investment">
         <div className="aub__section-inner">
-          <p className="aub__section-label">Investment</p>
+          <Text as="p" variant="label" className="aub__section-label">Investment</Text>
           <div className="aub__invest-card">
             <div className="aub__invest-top">
-              <p className="aub__invest-scope">Creative Direction &amp; Brand Identity Development</p>
-              <p className="aub__invest-total">$28,000</p>
+              <Text as="p" variant="bodyLg" className="aub__invest-scope">Creative Direction &amp; Brand Identity Development</Text>
+              <Text as="p" variant="displaySm" className="aub__invest-total">$28,000</Text>
             </div>
             <div className="aub__invest-divider" />
-            <p className="aub__invest-schedule-label">Payment Schedule</p>
+            <Text as="p" variant="label" className="aub__invest-schedule-label">Payment Schedule</Text>
             <div className="aub__invest-payments">
               <div className="aub__invest-payment">
-                <span className="aub__invest-pct">50%</span>
-                <span className="aub__invest-note">Deposit upon project start</span>
+                <Text as="span" variant="displaySm" className="aub__invest-pct">50%</Text>
+                <Text as="span" variant="bodySm" className="aub__invest-note">Deposit upon project start</Text>
               </div>
               <div className="aub__invest-payment">
-                <span className="aub__invest-pct">50%</span>
-                <span className="aub__invest-note">Upon delivery of final brand assets</span>
+                <Text as="span" variant="displaySm" className="aub__invest-pct">50%</Text>
+                <Text as="span" variant="bodySm" className="aub__invest-note">Upon delivery of final brand assets</Text>
               </div>
             </div>
           </div>

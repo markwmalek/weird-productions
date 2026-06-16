@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import Text from './Typography';
 import './WindowsMap.css';
 
 // Window locations with coordinates (downtown Durham)
@@ -133,10 +134,10 @@ export default function WindowsMap() {
       <div className="windows-map__legend">
         {locations.map((loc) => (
           <div className="windows-map__legend-item" key={loc.id}>
-            <span className="windows-map__legend-number">{loc.id}</span>
+            <Text as="span" variant="displaySm" className="windows-map__legend-number">{loc.id}</Text>
             <div className="windows-map__legend-info">
-              <strong>{loc.artist}</strong>
-              <span>{loc.address}</span>
+              <Text as="strong" variant="displaySm">{loc.artist}</Text>
+              <Text as="span" variant="body">{loc.address}</Text>
             </div>
           </div>
         ))}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Text from '../components/Typography';
 import './Contact.css';
 
 export default function Contact() {
@@ -21,15 +22,15 @@ export default function Contact() {
 
       {/* Page heading */}
       <div className="contact-header page-wrap">
-        <h1 className="contact-title">
+        <Text as="h1" variant="h1" className="contact-title">
           <span className="anim-underline">
             CONTACT WEIRD
             <svg viewBox="0 0 280 12" preserveAspectRatio="none" aria-hidden="true">
               <path d="M2,9 Q70,3 140,8 Q210,13 278,7" />
             </svg>
           </span>
-        </h1>
-        <p className="contact-sub">let's make something together</p>
+        </Text>
+        <Text as="p" variant="eyebrow" className="contact-sub">let's make something together</Text>
       </div>
 
       {/* Contact body */}
@@ -37,11 +38,11 @@ export default function Contact() {
 
         {/* Left — info */}
         <div className="contact-info">
-          <p className="contact-info-heading">Wanna collaborate on an event?</p>
-          <p className="contact-info-body">
+          <Text as="p" variant="h5" className="contact-info-heading">Wanna collaborate on an event?</Text>
+          <Text as="p" variant="body" className="contact-info-body">
             Have some art you want to share? Looking to partner on a project?
             Drop us a message and we'll get back to you as soon as we can.
-          </p>
+          </Text>
 
           <div className="contact-channels">
             <a
@@ -52,15 +53,15 @@ export default function Contact() {
             >
               <span className="contact-channel-icon">😘</span>
               <div>
-                <p className="contact-channel-label">DM us on Instagram</p>
-                <p className="contact-channel-value">@weirdproductions.art</p>
+                <Text as="p" variant="label" className="contact-channel-label">DM us on Instagram</Text>
+                <Text as="p" variant="body" className="contact-channel-value">@weirdproductions.art</Text>
               </div>
             </a>
             <div className="contact-channel">
               <span className="contact-channel-icon">📍</span>
               <div>
-                <p className="contact-channel-label">Based in</p>
-                <p className="contact-channel-value">Durham, NC</p>
+                <Text as="p" variant="label" className="contact-channel-label">Based in</Text>
+                <Text as="p" variant="body" className="contact-channel-value">Durham, NC</Text>
               </div>
             </div>
           </div>
@@ -70,14 +71,14 @@ export default function Contact() {
         <div className="contact-form-wrap">
           {submitted ? (
             <div className="contact-success">
-              <p className="contact-success-check">✓</p>
-              <h3>Thank you!</h3>
-              <p>We'll get back to you as soon as we can.</p>
+              <Text as="p" variant="h3" className="contact-success-check">✓</Text>
+              <Text as="h3" variant="h4">Thank you!</Text>
+              <Text as="p" variant="body">We'll get back to you as soon as we can.</Text>
             </div>
           ) : (
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               <div className="contact-field-group">
-                <label htmlFor="name" className="contact-label">Name</label>
+                <Text as="label" htmlFor="name" variant="label" className="contact-label">Name</Text>
                 <input
                   type="text"
                   id="name"
@@ -90,7 +91,7 @@ export default function Contact() {
                 />
               </div>
               <div className="contact-field-group">
-                <label htmlFor="email" className="contact-label">Email</label>
+                <Text as="label" htmlFor="email" variant="label" className="contact-label">Email</Text>
                 <input
                   type="email"
                   id="email"
@@ -103,7 +104,7 @@ export default function Contact() {
                 />
               </div>
               <div className="contact-field-group">
-                <label htmlFor="message" className="contact-label">Message</label>
+                <Text as="label" htmlFor="message" variant="label" className="contact-label">Message</Text>
                 <textarea
                   id="message"
                   name="message"
@@ -115,9 +116,9 @@ export default function Contact() {
                   className="contact-field contact-field--textarea"
                 />
               </div>
-              <button type="submit" className="btn btn-filled contact-submit">
+              <Text as="button" type="submit" variant="body" className="btn btn-filled contact-submit">
                 Send
-              </button>
+              </Text>
             </form>
           )}
         </div>

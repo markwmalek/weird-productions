@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, NavLink } from 'react-router-dom';
+import Text from './Typography';
 import './Header.css';
 
 export default function Header() {
@@ -98,21 +99,21 @@ export default function Header() {
         <nav className="pill-nav">
 
           {/* Logo */}
-          <Link to="/" className="header-logo" onClick={() => setMenuOpen(false)}>
+          <Text as={Link} to="/" variant="h5" className="header-logo" onClick={() => setMenuOpen(false)}>
             Weird
-          </Link>
+          </Text>
 
           {/* Desktop links */}
           <div className="pill-links">
-            <NavLink to="/portfolio" className="nav-link" onClick={() => setMenuOpen(false)}>
+            <Text as={NavLink} to="/portfolio" variant="h5" className="nav-link" onClick={() => setMenuOpen(false)}>
               Portfolio
-            </NavLink>
-            <NavLink to="/work-with-weird" className="nav-link" onClick={() => setMenuOpen(false)}>
+            </Text>
+            <Text as={NavLink} to="/work-with-weird" variant="h5" className="nav-link" onClick={() => setMenuOpen(false)}>
               Work With Us
-            </NavLink>
-            <button type="button" className="nav-link nav-button nav-cta" onClick={openChat}>
+            </Text>
+            <Text as="button" type="button" variant="h5" className="nav-link nav-button nav-cta" onClick={openChat}>
               DM us
-            </button>
+            </Text>
           </div>
 
           {/* Hamburger (mobile only) */}
@@ -133,15 +134,15 @@ export default function Header() {
       {/* Mobile full-screen overlay */}
       {menuOpen && (
         <div className="mobile-overlay">
-          <NavLink to="/portfolio" className="mobile-link" onClick={() => setMenuOpen(false)}>
+          <Text as={NavLink} to="/portfolio" variant="h5" className="mobile-link" onClick={() => setMenuOpen(false)}>
             Portfolio
-          </NavLink>
-          <NavLink to="/work-with-weird" className="mobile-link" onClick={() => setMenuOpen(false)}>
+          </Text>
+          <Text as={NavLink} to="/work-with-weird" variant="h5" className="mobile-link" onClick={() => setMenuOpen(false)}>
             Work With Us
-          </NavLink>
-          <button type="button" className="mobile-link mobile-link-button" onClick={openChat}>
+          </Text>
+          <Text as="button" type="button" variant="h5" className="mobile-link mobile-link-button" onClick={openChat}>
             DM us
-          </button>
+          </Text>
         </div>
       )}
 
@@ -162,12 +163,12 @@ export default function Header() {
             >
               ×
             </button>
-            <h2 id="chat-modal-title" className="chat-title">Send us a message</h2>
-            <p className="chat-subtitle">
+            <Text as="h2" id="chat-modal-title" variant="displaySm" className="chat-title">Send us a message</Text>
+            <Text as="p" variant="bodySm" className="chat-subtitle">
               Your message will be sent directly as an email to <strong>lindsay@weirdproductions.art</strong>.
-            </p>
+            </Text>
             <form className="chat-form" onSubmit={handleChatSubmit}>
-              <label htmlFor="chat-name" className="chat-label">Your name (optional)</label>
+              <Text as="label" htmlFor="chat-name" variant="bodySm" className="chat-label">Your name (optional)</Text>
               <input
                 id="chat-name"
                 type="text"
@@ -177,7 +178,7 @@ export default function Header() {
                 onChange={(event) => setName(event.target.value)}
                 maxLength={120}
               />
-              <label htmlFor="chat-email" className="chat-label">Your email</label>
+              <Text as="label" htmlFor="chat-email" variant="bodySm" className="chat-label">Your email</Text>
               <input
                 id="chat-email"
                 type="email"
@@ -199,7 +200,7 @@ export default function Header() {
                 value={website}
                 onChange={(event) => setWebsite(event.target.value)}
               />
-              <label htmlFor="chat-message" className="chat-label">Message</label>
+              <Text as="label" htmlFor="chat-message" variant="bodySm" className="chat-label">Message</Text>
               <textarea
                 id="chat-message"
                 className="chat-textarea"
@@ -209,26 +210,28 @@ export default function Header() {
                 rows={5}
                 required
               />
-              <button
+              <Text
+                as="button"
                 type="submit"
+                variant="bodySm"
                 className="chat-submit"
                 disabled={isSending || retryAfterSeconds > 0}
               >
                 {isSending ? 'Sending...' : 'Send Message'}
-              </button>
+              </Text>
               {sendStatus === 'sent' && (
-                <p className="chat-feedback success">Message sent. We will reply soon.</p>
+                <Text as="p" variant="bodySm" className="chat-feedback success">Message sent. We will reply soon.</Text>
               )}
               {sendStatus === 'error' && (
-                <p className="chat-feedback error">Could not send right now. Please try again.</p>
+                <Text as="p" variant="bodySm" className="chat-feedback error">Could not send right now. Please try again.</Text>
               )}
               {sendStatus === 'rate_limited' && (
-                <p className="chat-feedback error">
+                <Text as="p" variant="bodySm" className="chat-feedback error">
                   Too many tries. Please wait {retryAfterSeconds}s and try again.
-                </p>
+                </Text>
               )}
               {sendStatus === 'invalid' && (
-                <p className="chat-feedback error">Please enter a valid email and message.</p>
+                <Text as="p" variant="bodySm" className="chat-feedback error">Please enter a valid email and message.</Text>
               )}
             </form>
           </div>

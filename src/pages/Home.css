@@ -168,21 +168,13 @@
   gap: 20px;
 }
 
-
 .home-wwd-heading {
-  font-family: var(--font-caps);
-  font-size: clamp(56px, 5vw, 75px);
-  font-weight: 400;
-  line-height: 0.9;
   color: #000000;
   text-align: left;
   margin: 0;
 }
 
-/* Figma: Sora 24px weight 400, centered */
 .home-wwd-sub {
-  font-family: var(--font-body);
-  font-size: 16px;
   color: #000000;
   text-align: left;
   margin: 0;
@@ -192,7 +184,7 @@
 .home-wwd-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 8px;
   width: 100%;
   padding: 8px 0;
 }
@@ -204,9 +196,10 @@
   gap: 4px;
 }
 
+/* Figma: image 450.67×400px, border-radius 16px */
 .home-wwd-img {
   width: 100%;
-  aspect-ratio: 400 / 400;
+  aspect-ratio: 450.67 / 400;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -229,14 +222,9 @@
   margin: 12px 0 0;
 }
 
-/* Figma: Sora 16px weight 400 */
 .home-wwd-desc {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: #000000;
   margin: 0;
-  line-height: 1.5;
 }
 
 /* Figma: Sora 24px weight 400, centered */
@@ -290,37 +278,21 @@
 }
 
 .home-nonprofit-eyebrow {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.45);
   margin: 0;
 }
 
 .home-nonprofit-heading {
-  font-family: var(--font-caps);
-  font-size: clamp(40px, 4.5vw, 70px);
-  font-weight: 400;
-  line-height: 0.9;
   color: #ffffff;
   margin: 0;
 }
 
 .home-nonprofit-body {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.65;
   margin: 0;
 }
 
 .home-nonprofit-link {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -348,10 +320,6 @@
 }
 
 .home-portfolio-heading {
-  font-family: var(--font-caps);
-  font-size: clamp(56px, 5vw, 75px);
-  font-weight: 400;
-  line-height: 0.9;
   color: #000000;
   margin: 0;
   text-align: left;
@@ -393,27 +361,16 @@
 }
 
 .home-portfolio-card-title {
-  font-family: var(--font-caps);
-  font-size: clamp(34px, 4.1vw, 50px);
-  font-weight: normal;
-  line-height: 1.2;
   color: #000000;
   margin: 12px 0 0;
 }
 
 .home-portfolio-card-desc {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: rgba(0, 0, 0, 0.5);
   margin: 0;
-  line-height: 1.5;
 }
 
 .home-portfolio-see-all {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: #000000;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -471,31 +428,17 @@
   border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* Figma: TAY Waffle Cone 48px, ls -1.92px */
 .home-wwu-heading {
-  font-family: var(--font-caps);
-  font-size: clamp(56px, 5vw, 75px);
-  font-weight: 400;
-  line-height: 0.9;
   color: #ffffff;
   margin: 0;
 }
 
-/* Figma: Sora 24px weight 400, centered */
 .home-wwu-body {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: #ffffff;
-  line-height: 1.6;
   margin: 0;
 }
 
-/* Figma: "DM us" — same text style, treated as link */
 .home-wwu-dm {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -506,21 +449,12 @@
   opacity: 0.5;
 }
 
-/* Figma: TAY Waffle Cone 48px, #fff, ls -1.92px */
 .home-gol-heading {
-  font-family: var(--font-caps);
-  font-size: clamp(56px, 5vw, 75px);
-  font-weight: 400;
-  line-height: 0.9;
   color: #FFFFFF;
   margin: 0;
 }
 
-/* Figma: Sora 24px weight 400, #fff, centered */
 .home-gol-sub {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
   color: #FFFFFF;
   margin: 0;
 }

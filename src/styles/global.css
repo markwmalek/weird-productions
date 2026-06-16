@@ -47,7 +47,7 @@
   --font-display: 'TAY WaffleCone', cursive;
   --font-script: 'Butter And Crumb Script', cursive;
   --font-caps: 'Butter And Crumb Caps', cursive;
-  --font-body: 'Sora', sans-serif;
+  --font-body: 'Butter And Crumb Caps', cursive;
 
   --max-width: 1500px;
   --gutter: 4vw;
@@ -82,10 +82,10 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-caps);
   color: var(--color-text);
   background-color: #EFEEEA;
-  line-height: 1.6;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* overflow-x is on .page-wrapper so it never traps the fixed pill nav */

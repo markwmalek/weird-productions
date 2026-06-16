@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import RapidSlideshow from '../components/RapidSlideshow';
+import Text from '../components/Typography';
 import './Parrish.css';
 
 const events = [
@@ -126,9 +127,9 @@ export default function Parrish() {
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <section className="parrish__hero">
         <div className="parrish__hero-text">
-          <p className="parrish__eyebrow">Weird × February Programming</p>
-          <h1>Parties on<br />Parrish</h1>
-          <p className="parrish__hero-sub">Artist Activation &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; February 2026</p>
+          <Text as="p" variant="eyebrow" className="parrish__eyebrow">Weird × February Programming</Text>
+          <Text as="h1" variant="h1">Parties on<br />Parrish</Text>
+          <Text as="p" variant="body" className="parrish__hero-sub">Artist Activation &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; February 2026</Text>
         </div>
       </section>
 
@@ -136,24 +137,24 @@ export default function Parrish() {
       <section className="parrish__meta">
         <div className="parrish__meta-inner">
           <div className="parrish__meta-item">
-            <span className="parrish__meta-label">Location</span>
-            <span className="parrish__meta-value">104 W Parrish St</span>
+            <Text as="span" variant="label" className="parrish__meta-label">Location</Text>
+            <Text as="span" variant="body" className="parrish__meta-value">104 W Parrish St</Text>
           </div>
           <div className="parrish__meta-item">
-            <span className="parrish__meta-label">Format</span>
-            <span className="parrish__meta-value">Month-Long Programming</span>
+            <Text as="span" variant="label" className="parrish__meta-label">Format</Text>
+            <Text as="span" variant="body" className="parrish__meta-value">Month-Long Programming</Text>
           </div>
           <div className="parrish__meta-item">
-            <span className="parrish__meta-label">Events</span>
-            <span className="parrish__meta-value">19 Total</span>
+            <Text as="span" variant="label" className="parrish__meta-label">Events</Text>
+            <Text as="span" variant="body" className="parrish__meta-value">19 Total</Text>
           </div>
           <div className="parrish__meta-item">
-            <span className="parrish__meta-label">City</span>
-            <span className="parrish__meta-value">Durham, NC</span>
+            <Text as="span" variant="label" className="parrish__meta-label">City</Text>
+            <Text as="span" variant="body" className="parrish__meta-value">Durham, NC</Text>
           </div>
           <div className="parrish__meta-item">
-            <span className="parrish__meta-label">Date</span>
-            <span className="parrish__meta-value">February 2026</span>
+            <Text as="span" variant="label" className="parrish__meta-label">Date</Text>
+            <Text as="span" variant="body" className="parrish__meta-value">February 2026</Text>
           </div>
         </div>
       </section>
@@ -161,55 +162,57 @@ export default function Parrish() {
       {/* ─── Project Statement ────────────────────────────────────────────── */}
       <section className="parrish__statement">
         <div className="parrish__statement-inner">
-          <p className="parrish__statement-text">
+          <Text as="p" variant="bodyLg" className="parrish__statement-text">
             For the month of February on historic Black Wall Street, Durham creatives take over 104 W Parrish St, using art, poetry, puppetry, storytelling, food, music, and science to tell the city's stories through collaborative events and activations.
-          </p>
+          </Text>
         </div>
       </section>
 
       <section className="parrish__metrics">
         <div className="parrish__metrics-intro">
-          <h2 className="parrish__metrics-heading">One month.<br />One block.<br />A lot of weird.</h2>
-          <p className="parrish__metrics-sub">Here's what Durham showed up for at 104 W Parrish St this February.</p>
+          <Text as="h2" variant="h2" className="parrish__metrics-heading">One month.<br />One block.<br />A lot of weird.</Text>
+          <Text as="p" variant="body" className="parrish__metrics-sub">Here's what Durham showed up for at 104 W Parrish St this February.</Text>
         </div>
         <div className="parrish__metrics-stats">
           <div className="parrish__metric">
-            <span className="parrish__metric-num">19</span>
-            <span className="parrish__metric-label">Parties</span>
-            <span className="parrish__metric-desc">From live podcast recordings to poetry workshops, paint nights to puppet shows — Durham creatives filled every week.</span>
+            <Text as="span" variant="displaySm" className="parrish__metric-num">19</Text>
+            <Text as="span" variant="label" className="parrish__metric-label">Parties</Text>
+            <Text as="span" variant="bodySm" className="parrish__metric-desc">From live podcast recordings to poetry workshops, paint nights to puppet shows — Durham creatives filled every week.</Text>
           </div>
           <div className="parrish__metric">
-            <span className="parrish__metric-num">25+</span>
-            <span className="parrish__metric-label">Artists</span>
-            <span className="parrish__metric-desc">Painters, photographers, poets, musicians, filmmakers, and more — all rooted in Durham's creative community.</span>
+            <Text as="span" variant="displaySm" className="parrish__metric-num">25+</Text>
+            <Text as="span" variant="label" className="parrish__metric-label">Artists</Text>
+            <Text as="span" variant="bodySm" className="parrish__metric-desc">Painters, photographers, poets, musicians, filmmakers, and more — all rooted in Durham's creative community.</Text>
           </div>
           <div className="parrish__metric">
-            <span className="parrish__metric-num">6+</span>
-            <span className="parrish__metric-label">Art Pieces Sold</span>
-            <span className="parrish__metric-desc">Original works found new homes — and the month isn't even over yet.</span>
+            <Text as="span" variant="displaySm" className="parrish__metric-num">6+</Text>
+            <Text as="span" variant="label" className="parrish__metric-label">Art Pieces Sold</Text>
+            <Text as="span" variant="bodySm" className="parrish__metric-desc">Original works found new homes — and the month isn't even over yet.</Text>
           </div>
         </div>
       </section>
 
       <section className="parrish__art-scroll">
         <div className="parrish__art-heading-row">
-          <h2 className="parrish__art-heading">Buy Art</h2>
-          <a
+          <Text as="h2" variant="h2" className="parrish__art-heading">Buy Art</Text>
+          <Text
+            as="a"
+            variant="bodySm"
             href="https://fa7b88-3.myshopify.com/collections/parties-on-parrish?page=1"
             target="_blank"
             rel="noopener noreferrer"
             className="parrish__art-see-all"
           >
             See All
-          </a>
+          </Text>
         </div>
         <div className="parrish__art-track">
           {artworks.map((art, i) => (
             <a href={art.link} target="_blank" rel="noopener noreferrer" className="parrish__art-item" key={i}>
               <img src={art.image} alt={art.title} loading="lazy" />
               <div className="parrish__art-info">
-                <span className="parrish__art-title">{art.title}</span>
-                <span className="parrish__art-artist">by {art.artist}</span>
+                <Text as="span" variant="h5" className="parrish__art-title">{art.title}</Text>
+                <Text as="span" variant="bodySm" className="parrish__art-artist">by {art.artist}</Text>
               </div>
             </a>
           ))}
@@ -218,20 +221,24 @@ export default function Parrish() {
 
       <section className="parrish__calendar">
         <div className="parrish__calendar-header">
-          <h2 className="parrish__section-title">February 2026</h2>
+          <Text as="h2" variant="h2" className="parrish__section-title">February 2026</Text>
           <div className="parrish__view-toggle">
-            <button
+            <Text
+              as="button"
+              variant="bodySm"
               className={`parrish__view-btn${viewMode === 'calendar' ? ' parrish__view-btn--active' : ''}`}
               onClick={() => setViewMode('calendar')}
             >
               Calendar
-            </button>
-            <button
+            </Text>
+            <Text
+              as="button"
+              variant="bodySm"
               className={`parrish__view-btn${viewMode === 'list' ? ' parrish__view-btn--active' : ''}`}
               onClick={() => setViewMode('list')}
             >
               List
-            </button>
+            </Text>
           </div>
         </div>
 
@@ -240,7 +247,7 @@ export default function Parrish() {
           <div className="parrish__cal">
             <div className="parrish__cal-header">
               {DAYS_OF_WEEK.map(d => (
-                <div key={d} className="parrish__cal-dow">{d}</div>
+                <Text as="div" variant="bodySm" key={d} className="parrish__cal-dow">{d}</Text>
               ))}
             </div>
 
@@ -259,13 +266,13 @@ export default function Parrish() {
                     className={`parrish__cal-cell${open ? ' parrish__cal-cell--open' : ' parrish__cal-cell--closed'}${isSelected ? ' parrish__cal-cell--selected' : ''}`}
                     onClick={() => setSelectedDay(isSelected ? null : day)}
                   >
-                    <span className="parrish__cal-day">{day}</span>
+                    <Text as="span" variant="h4" className="parrish__cal-day">{day}</Text>
                     {hasEvents ? (
-                      <span className="parrish__cal-event-count">
+                      <Text as="span" variant="label" className="parrish__cal-event-count">
                         {dayEvents.length} {dayEvents.length === 1 ? 'Event' : 'Events'}
-                      </span>
+                      </Text>
                     ) : open ? (
-                      <span className="parrish__cal-open-label">Open</span>
+                      <Text as="span" variant="label" className="parrish__cal-open-label">Open</Text>
                     ) : null}
                   </button>
                 );
@@ -276,24 +283,24 @@ export default function Parrish() {
           <div className="parrish__cal-detail-wrapper">
             {selectedDay ? (
               <div className="parrish__cal-detail">
-                <h3 className="parrish__cal-detail-date">February {selectedDay}</h3>
+                <Text as="h3" variant="h4" className="parrish__cal-detail-date">February {selectedDay}</Text>
                 {selectedEvents.length > 0 ? (
                   <>
-                    <div className="parrish__cal-open-hours">
+                    <Text as="div" variant="bodySm" className="parrish__cal-open-hours">
                       Open 10 AM – 3 PM
-                    </div>
+                    </Text>
                     {selectedEvents.map((event, i) => (
                       <div key={i} className="parrish__cal-event">
-                        <h4>{event.title}</h4>
-                        <p className="parrish__cal-event-time">
+                        <Text as="h4" variant="h4">{event.title}</Text>
+                        <Text as="p" variant="bodySm" className="parrish__cal-event-time">
                           {event.time}
-                          {event.admission && <span className="parrish__cal-event-admission">{event.admission}</span>}
-                        </p>
-                        <p className="parrish__cal-event-desc">{event.description}</p>
+                          {event.admission && <Text as="span" variant="label" className="parrish__cal-event-admission">{event.admission}</Text>}
+                        </Text>
+                        <Text as="p" variant="bodySm" className="parrish__cal-event-desc">{event.description}</Text>
                         {event.link && (
-                          <a href={event.link} target="_blank" rel="noopener noreferrer" className="parrish__cal-event-link">
+                          <Text as="a" variant="bodySm" href={event.link} target="_blank" rel="noopener noreferrer" className="parrish__cal-event-link">
                             More Info →
-                          </a>
+                          </Text>
                         )}
                       </div>
                     ))}
@@ -301,21 +308,21 @@ export default function Parrish() {
                 ) : isOpen(selectedDay) ? (
                   <div className="parrish__cal-open-hours">
                     Open 10 AM – 3 PM
-                    <p className="parrish__cal-event-desc" style={{ marginTop: '0.5rem' }}>
+                    <Text as="p" variant="bodySm" className="parrish__cal-event-desc" style={{ marginTop: '0.5rem' }}>
                       Stop by to explore the space and buy art! No special programming today, unless you have a great idea. Shoot us a DM to discuss!
-                    </p>
+                    </Text>
                   </div>
                 ) : (
-                  <p className="parrish__cal-event-desc">
+                  <Text as="p" variant="bodySm" className="parrish__cal-event-desc">
                     We're closed today, but{' '}
                     <a href="mailto:lindsay@weirdproductions.art">shoot us an email</a>{' '}
                     if you want to host an event!
-                  </p>
+                  </Text>
                 )}
               </div>
             ) : (
               <div className="parrish__cal-detail parrish__cal-detail--empty">
-                <p className="parrish__cal-detail-hint">Select a day to see details</p>
+                <Text as="p" variant="bodySm" className="parrish__cal-detail-hint">Select a day to see details</Text>
               </div>
             )}
           </div>
@@ -327,20 +334,20 @@ export default function Parrish() {
             return (
               <div key={i} className="parrish__list-item">
                 <div className="parrish__list-date">
-                  <span className="parrish__list-dow">{dow}</span>
-                  <span className="parrish__list-day">Feb {event.day}</span>
+                  <Text as="span" variant="label" className="parrish__list-dow">{dow}</Text>
+                  <Text as="span" variant="h5" className="parrish__list-day">Feb {event.day}</Text>
                 </div>
                 <div className="parrish__list-info">
-                  <h4>{event.title}</h4>
-                  <p className="parrish__list-meta">
+                  <Text as="h4" variant="h4">{event.title}</Text>
+                  <Text as="p" variant="bodySm" className="parrish__list-meta">
                     {event.time}
-                    {event.admission && <span className="parrish__cal-event-admission">{event.admission}</span>}
-                  </p>
-                  <p className="parrish__cal-event-desc">{event.description}</p>
+                    {event.admission && <Text as="span" variant="label" className="parrish__cal-event-admission">{event.admission}</Text>}
+                  </Text>
+                  <Text as="p" variant="bodySm" className="parrish__cal-event-desc">{event.description}</Text>
                   {event.link && (
-                    <a href={event.link} target="_blank" rel="noopener noreferrer" className="parrish__cal-event-link">
+                    <Text as="a" variant="bodySm" href={event.link} target="_blank" rel="noopener noreferrer" className="parrish__cal-event-link">
                       More Info →
-                    </a>
+                    </Text>
                   )}
                 </div>
               </div>
@@ -357,7 +364,7 @@ export default function Parrish() {
       </section>
 
       <section className="parrish__sponsors">
-        <h2>Our Sponsors</h2>
+        <Text as="h2" variant="h2">Our Sponsors</Text>
         <div className="parrish__sponsor-logos">
           {sponsors.map((sponsor, i) => (
             <div className="parrish__sponsor" key={i}>

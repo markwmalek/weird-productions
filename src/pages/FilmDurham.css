@@ -20,9 +20,6 @@
 }
 
 .fd__eyebrow {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
@@ -33,7 +30,6 @@
 }
 
 .fd__hero-sub {
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
   color: var(--color-text-muted);
   max-width: 480px;
 }
@@ -66,14 +62,10 @@
 }
 
 .fd__meta-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
 .fd__meta-value {
-  font-size: 0.9rem;
   color: var(--color-text);
 }
 
@@ -86,9 +78,6 @@
 }
 
 .fd__section-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
   color: var(--color-text-muted);
   margin-bottom: 1rem;
 }
@@ -123,16 +112,11 @@
 }
 
 .fd__intro-text {
-  font-size: clamp(1.25rem, 2.5vw, 1.9rem);
-  line-height: 1.4;
   max-width: 760px;
   margin-bottom: 1.75rem;
-  font-weight: 400;
 }
 
 .fd__intro-body {
-  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
-  line-height: 1.75;
   color: var(--color-text-muted);
   max-width: 640px;
 }
@@ -165,11 +149,8 @@
 }
 
 .fd__impact-text {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  line-height: 1.25;
   max-width: 800px;
   color: #ffffff;
-  font-weight: 400;
 }
 
 /* ─── Responsive ────────────────────────────────────────────────────────── */

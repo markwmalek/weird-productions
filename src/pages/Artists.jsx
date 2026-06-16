@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Text from '../components/Typography';
 import './Artists.css';
 
 const testimonials = [
@@ -52,18 +53,18 @@ export default function Artists() {
           <img src="/images/artists-hero1.jpg" alt="Weird Productions artist event" />
         </div>
         <div className="artists-hero-content page-wrap">
-          <h1 className="artists-hero-title">
+          <Text as="h1" variant="h1" className="artists-hero-title">
             <span className="anim-underline anim-circle">
               Weird Artists.
               <svg viewBox="0 0 220 80" preserveAspectRatio="none" aria-hidden="true" className="artists-circle-svg">
                 <ellipse cx="110" cy="40" rx="108" ry="36" />
               </svg>
             </span>
-          </h1>
-          <p className="artists-hero-sub">Do you make art? Do you like parties?</p>
-          <Link to="#artist-signup" className="btn btn-white" style={{ marginTop: '24px', display: 'inline-block' }}>
+          </Text>
+          <Text as="p" variant="bodyLg" className="artists-hero-sub">Do you make art? Do you like parties?</Text>
+          <Text as={Link} variant="body" to="#artist-signup" className="btn btn-white" style={{ marginTop: '24px', display: 'inline-block' }}>
             Join the collective
-          </Link>
+          </Text>
         </div>
       </div>
 
@@ -71,32 +72,32 @@ export default function Artists() {
       <section className="artists-pitch page-wrap" id="artist-signup">
         <div className="artists-pitch-inner">
           <div className="artists-pitch-text">
-            <h2 className="artists-pitch-heading">
+            <Text as="h2" variant="h2" className="artists-pitch-heading">
               <span className="anim-underline">
                 Artists = VIPs.
                 <svg viewBox="0 0 170 12" preserveAspectRatio="none" aria-hidden="true">
                   <path d="M2,9 Q42,3 85,8 Q128,13 168,7" />
                 </svg>
               </span>
-            </h2>
+            </Text>
             <div className="artists-benefits">
-              <p>✅ Cool creative community</p>
-              <p>✅ Always free to submit art</p>
-              <p>✅ Payment within 24 hours</p>
+              <Text as="p" variant="body">✅ Cool creative community</Text>
+              <Text as="p" variant="body">✅ Always free to submit art</Text>
+              <Text as="p" variant="body">✅ Payment within 24 hours</Text>
             </div>
             <div className="artists-not-required">
-              <p className="artists-not-label">NOT required:</p>
-              <p className="artists-not-list">
+              <Text as="p" variant="label" className="artists-not-label">NOT required:</Text>
+              <Text as="p" variant="bodySm" className="artists-not-list">
                 <em>art degrees, lots of followers, schmoozing, gallery approval, sales of even one single piece ever</em>
-              </p>
+              </Text>
             </div>
           </div>
           <div className="artists-signup-block">
-            <p className="artists-signup-eyebrow">Get on our artist list</p>
-            <p className="artists-signup-sub">We'll keep you posted on future events and calls for art.</p>
+            <Text as="p" variant="eyebrow" className="artists-signup-eyebrow">Get on our artist list</Text>
+            <Text as="p" variant="body" className="artists-signup-sub">We'll keep you posted on future events and calls for art.</Text>
             {submitted ? (
               <div className="artists-success">
-                <p>You're on the list! 🎉 We'll be in touch.</p>
+                <Text as="p" variant="body">You're on the list! 🎉 We'll be in touch.</Text>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="artists-form">
@@ -108,19 +109,21 @@ export default function Artists() {
                   required
                   className="artists-input"
                 />
-                <button type="submit" className="btn btn-filled">Sign Up</button>
+                <Text as="button" variant="body" type="submit" className="btn btn-filled">Sign Up</Text>
               </form>
             )}
-            <p className="artists-signup-ig">
+            <Text as="p" variant="caption" className="artists-signup-ig">
               Or DM us:{' '}
-              <a
+              <Text
+                as="a"
+                variant="caption"
                 href="https://instagram.com/weirdproductions.art"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 @weirdproductions.art
-              </a>
-            </p>
+              </Text>
+            </Text>
           </div>
         </div>
       </section>
@@ -132,16 +135,16 @@ export default function Artists() {
         </div>
         <div className="artists-vip-overlay page-wrap">
           <div className="artists-vip-content">
-            <p className="vip-tag">ARTISTs = VIPs</p>
-            <h2 className="vip-heading">
+            <Text as="p" variant="label" className="vip-tag">ARTISTs = VIPs</Text>
+            <Text as="h2" variant="h2" className="vip-heading">
               Built by art lovers<br />bored of art shows.
-            </h2>
-            <p className="vip-body">
+            </Text>
+            <Text as="p" variant="body" className="vip-body">
               👩‍🎤 Built by art lovers bored of art shows
-            </p>
-            <p className="vip-body">
+            </Text>
+            <Text as="p" variant="body" className="vip-body">
               🎉 Follow for creative people, parties, &amp; projects
-            </p>
+            </Text>
           </div>
         </div>
       </section>
@@ -162,12 +165,12 @@ export default function Artists() {
 
       {/* Testimonials */}
       <section className="artists-testimonials page-wrap">
-        <p className="testimonials-label">Artists Love It</p>
+        <Text as="p" variant="label" className="testimonials-label">Artists Love It</Text>
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
             <div key={i} className="testimonial">
-              <p className="testimonial-quote">"{t.quote}"</p>
-              <p className="testimonial-name">— {t.name}</p>
+              <Text as="p" variant="bodyLg" className="testimonial-quote">"{t.quote}"</Text>
+              <Text as="p" variant="bodySm" className="testimonial-name">— {t.name}</Text>
             </div>
           ))}
         </div>
@@ -176,25 +179,27 @@ export default function Artists() {
       {/* Bottom CTA */}
       <section className="artists-cta page-wrap">
         <div className="artists-cta-inner">
-          <p className="artists-cta-text">
+          <Text as="p" variant="h3" className="artists-cta-text">
             <span className="anim-underline">
               Ready to be weird?
               <svg viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true">
                 <path d="M2,7 Q50,2 100,6 Q150,10 198,5" />
               </svg>
             </span>
-          </p>
-          <p className="artists-cta-sub">Follow us on Instagram for the latest calls for art and event announcements.</p>
+          </Text>
+          <Text as="p" variant="body" className="artists-cta-sub">Follow us on Instagram for the latest calls for art and event announcements.</Text>
           <div className="artists-cta-btns">
-            <a
+            <Text
+              as="a"
+              variant="body"
               href="https://instagram.com/weirdproductions.art"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-filled"
             >
               @weirdproductions.art ↗
-            </a>
-            <Link to="/events" className="btn">See Upcoming Events</Link>
+            </Text>
+            <Text as={Link} variant="body" to="/events" className="btn">See Upcoming Events</Text>
           </div>
         </div>
       </section>

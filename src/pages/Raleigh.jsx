@@ -1,4 +1,5 @@
 import RapidSlideshow from '../components/RapidSlideshow';
+import Text from '../components/Typography';
 import './Raleigh.css';
 
 const designers = [
@@ -37,37 +38,37 @@ export default function Raleigh() {
       {/* Hero */}
       <section className="rl-hero">
         <div className="page-wrap">
-          <p className="rl-eyebrow">Fashion Show — Raleigh, NC</p>
-          <h1 className="rl-title">RALEIGH<br />RENAISSANCE</h1>
-          <p className="rl-tagline">Where would I wear this? Wear that.</p>
-          <p className="rl-meta">Photography by Aaron Oates</p>
+          <Text as="p" variant="eyebrow" className="rl-eyebrow">Fashion Show — Raleigh, NC</Text>
+          <Text as="h1" variant="display" className="rl-title">RALEIGH<br />RENAISSANCE</Text>
+          <Text as="p" variant="bodyLg" className="rl-tagline">Where would I wear this? Wear that.</Text>
+          <Text as="p" variant="h5" className="rl-meta">Photography by Aaron Oates</Text>
         </div>
       </section>
 
       {/* About */}
       <section className="rl-about">
         <div className="page-wrap rl-about-inner">
-          <h2 className="rl-section-heading">About the show</h2>
+          <Text as="h2" variant="h2" className="rl-section-heading">About the show</Text>
           <div className="rl-about-body">
-            <p>
+            <Text as="p" variant="body">
               A fashion show celebrating designers, artists, and entrepreneurs from the Triangle.
               Four designers. Eleven models. One night of wearable art in downtown Raleigh.
-            </p>
-            <p>
+            </Text>
+            <Text as="p" variant="body">
               20% of event profits were donated to support the WNC arts community.
-            </p>
+            </Text>
             <div className="rl-schedule">
               <div className="rl-schedule-item">
-                <span className="rl-schedule-time">6–7 PM</span>
-                <span className="rl-schedule-desc">Arrival + Pre-show Drinks</span>
+                <Text as="span" variant="label" className="rl-schedule-time">6–7 PM</Text>
+                <Text as="span" variant="body" className="rl-schedule-desc">Arrival + Pre-show Drinks</Text>
               </div>
               <div className="rl-schedule-item">
-                <span className="rl-schedule-time">7–8 PM</span>
-                <span className="rl-schedule-desc">Fashion Show</span>
+                <Text as="span" variant="label" className="rl-schedule-time">7–8 PM</Text>
+                <Text as="span" variant="body" className="rl-schedule-desc">Fashion Show</Text>
               </div>
               <div className="rl-schedule-item">
-                <span className="rl-schedule-time">8–9 PM</span>
-                <span className="rl-schedule-desc">Shopping, Drinking, Dancing</span>
+                <Text as="span" variant="label" className="rl-schedule-time">8–9 PM</Text>
+                <Text as="span" variant="body" className="rl-schedule-desc">Shopping, Drinking, Dancing</Text>
               </div>
             </div>
           </div>
@@ -84,12 +85,12 @@ export default function Raleigh() {
       {/* Designers */}
       <section className="rl-designers">
         <div className="page-wrap rl-designers-inner">
-          <h2 className="rl-section-heading">Designers</h2>
+          <Text as="h2" variant="h2" className="rl-section-heading">Designers</Text>
           <ul className="rl-designer-list">
             {designers.map((d, i) => (
               <li key={i} className="rl-designer-item">
-                <span className="rl-designer-name">{d.name}</span>
-                <span className="rl-designer-label">{d.label}</span>
+                <Text as="span" variant="body" className="rl-designer-name">{d.name}</Text>
+                <Text as="span" variant="bodySm" className="rl-designer-label">{d.label}</Text>
               </li>
             ))}
           </ul>
@@ -99,11 +100,11 @@ export default function Raleigh() {
       {/* Sponsors */}
       <section className="rl-sponsors">
         <div className="page-wrap rl-sponsors-inner">
-          <h2 className="rl-section-heading">Sponsors</h2>
+          <Text as="h2" variant="h2" className="rl-section-heading">Sponsors</Text>
           <ul className="rl-sponsor-list">
-            <li>Triangle Wine Company</li>
-            <li>Smoky Hollow</li>
-            <li>Crank Arm Brewing</li>
+            <li><Text as="span" variant="body">Triangle Wine Company</Text></li>
+            <li><Text as="span" variant="body">Smoky Hollow</Text></li>
+            <li><Text as="span" variant="body">Crank Arm Brewing</Text></li>
           </ul>
         </div>
       </section>

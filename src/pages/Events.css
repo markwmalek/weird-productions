@@ -12,19 +12,12 @@
 }
 
 .events-title {
-  font-size: clamp(40px, 6vw, 80px);
-  font-weight: 300;
   font-style: italic;
-  font-family: var(--font-body);
-  line-height: 1.1;
   margin-bottom: 16px;
 }
 
 .events-sub {
-  font-size: 13px;
-  text-transform: uppercase;
   color: var(--gray-mid);
-  font-weight: 400;
 }
 
 /* Section */
@@ -34,9 +27,6 @@
 }
 
 .events-label {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
   color: var(--gray-mid);
   margin-bottom: 24px;
 }
@@ -66,8 +56,6 @@
 }
 
 .event-date {
-  font-size: 13px;
-  font-weight: 500;
   color: var(--gray-mid);
   white-space: nowrap;
 }
@@ -80,18 +68,14 @@
 }
 
 .event-name {
-  font-size: 20px;
-  font-weight: 500;
   color: var(--black);
 }
 
 .event-time {
-  font-size: 13px;
   color: var(--gray-mid);
 }
 
 .event-location {
-  font-size: 13px;
   color: var(--gray-mid);
   width: 100%;
   margin-top: 2px;
@@ -102,25 +86,16 @@
 }
 
 .event-ticket-btn {
-  font-size: 12px;
   padding: 8px 18px;
 }
 
 .event-tba {
-  font-size: 11px;
-  text-transform: uppercase;
   color: var(--gray-light);
-  font-weight: 500;
 }
 
 /* Past events — more muted */
 .events-list--past .event-row {
   opacity: 0.5;
-}
-
-.events-list--past .event-name {
-  font-size: 17px;
-  font-weight: 400;
 }
 
 /* CTA strip */
@@ -137,10 +112,7 @@
 }
 
 .events-cta-text {
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-weight: 300;
   font-style: italic;
-  font-family: var(--font-body);
 }
 
 /* Bottom CTA */
@@ -154,7 +126,6 @@
 }
 
 .events-bottom-text {
-  font-size: 16px;
   color: var(--gray-dark);
 }
 
@@ -175,10 +146,6 @@
     margin-top: -8px;
   }
 
-  .event-name {
-    font-size: 17px;
-  }
-
   .events-cta-strip {
     flex-direction: column;
     align-items: flex-start;
@@ -191,10 +158,6 @@
     grid-template-columns: 1fr;
     gap: 6px;
     padding: 16px 0;
-  }
-
-  .event-date {
-    font-size: 12px;
   }
 
   .event-action {

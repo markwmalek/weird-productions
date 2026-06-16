@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Text from '../components/Typography';
 import './About.css';
 
 const ITEMS = [
@@ -32,8 +33,8 @@ export default function About() {
     <main className="portfolio-page">
 
       <div className="portfolio-header page-wrap">
-        <h1 className="portfolio-title">Portfolio</h1>
-        <p className="portfolio-sub">Events · Interiors · Branding</p>
+        <Text as="h1" variant="display" className="portfolio-title">Portfolio</Text>
+        <Text as="p" variant="h4" className="portfolio-sub">Events · Interiors · Branding</Text>
       </div>
 
       <div className="portfolio-grid page-wrap">
@@ -43,12 +44,12 @@ export default function About() {
               <img src={item.img} alt={item.alt} loading="lazy" style={item.style} />
             </div>
             <div className="portfolio-card-info">
-              <h2 className="portfolio-card-title">{item.title}</h2>
-              <p className="portfolio-card-desc">{item.desc}</p>
+              <Text as="h2" variant="h3" className="portfolio-card-title">{item.title}</Text>
+              <Text as="p" variant="h5" className="portfolio-card-desc">{item.desc}</Text>
               {item.tags && item.tags.length > 0 && (
                 <div className="portfolio-card-tags">
                   {item.tags.map((tag) => (
-                    <span key={tag} className="portfolio-card-tag">{tag}</span>
+                    <Text as="span" key={tag} variant="label" className="portfolio-card-tag">{tag}</Text>
                   ))}
                 </div>
               )}

@@ -12,18 +12,12 @@
 }
 
 .subscribe-title {
-  font-size: clamp(56px, 9.375vw, 125px);
-  font-weight: 300;
   font-style: italic;
-  font-family: var(--font-caps);
-  line-height: 1.1;
   margin-bottom: 16px;
 }
 
 .subscribe-sub {
-  font-size: 14px;
   color: var(--gray-mid);
-  font-weight: 400;
 }
 
 /* Body */
@@ -89,7 +83,6 @@
 }
 
 .subscribe-success-check {
-  font-size: 40px;
   margin-bottom: 16px;
 }
 
@@ -105,14 +98,10 @@
 
 /* Right */
 .subscribe-why-heading {
-  font-size: 20px;
-  font-weight: 500;
   margin-bottom: 20px;
 }
 
 .subscribe-why-body {
-  font-size: 15px;
-  line-height: 1.7;
   color: var(--gray-dark);
   margin-bottom: 12px;
 }
@@ -127,7 +116,6 @@
 }
 
 .subscribe-ig-text {
-  font-size: 13px;
   color: var(--gray-mid);
 }
 
@@ -146,18 +134,11 @@
 }
 
 .subscribe-strip-tag {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
   color: var(--gray-mid);
 }
 
 .subscribe-strip-text {
-  font-size: clamp(28px, 3.875vw, 44px);
-  font-weight: 300;
   font-style: italic;
-  font-family: var(--font-caps);
-  line-height: 1.4;
 }
 
 .subscribe-strip-links {
