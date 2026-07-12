@@ -91,21 +91,11 @@ export default function Home() {
   return (
     <main className="home-page">
 
-      {/* ── HERO ── */}
-      <section className="home-hero">
-        <div className="home-hero-title-wrap">
-          <img src="/images/hero-lindsay.png" alt="" className="home-hero-char home-hero-lindsay" aria-hidden="true" />
-          <img src="/images/hero-mark.png"    alt="" className="home-hero-char home-hero-mark"    aria-hidden="true" />
-          <Text as="h1" variant="display" className="home-hero-title">Weird</Text>
-        </div>
-        <Text as="p" variant="script" className="home-hero-sub">A Creative Studio</Text>
-        <div className="home-hero-arrow" />
-      </section>
-
       {/* ── SLIDESHOW ── */}
       <section className="home-slideshow">
         <div className="home-slideshow-box">
           <RapidSlideshow />
+          <Text as="h1" variant="h3" className="home-slideshow-caption-overlay">A Creative Studio</Text>
         </div>
       </section>
 
@@ -113,29 +103,25 @@ export default function Home() {
       <section className="home-wwd">
         <div className="home-wwd-inner">
           <Text as="h2" variant="h2" className="home-wwd-heading">What we do</Text>
-          <Text as="p" variant="body" className="home-wwd-sub">We partner with people who want more than what's expected — curating artists, chefs, performers, and creatives from our expansive network.</Text>
 
           <div className="home-wwd-grid">
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/au/p4_7.jpeg" alt="Interiors" loading="lazy" />
+                <Text as="h3" variant="h3" className="home-wwd-label">Interiors</Text>
               </div>
-              <Text as="h3" variant="h3" className="home-wwd-label">Interiors</Text>
-              <Text as="p" variant="body" className="home-wwd-desc">Art that earns its place on the wall.</Text>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/work-with-us/gallery2.jpg" alt="Events" loading="lazy" />
+                <Text as="h3" variant="h3" className="home-wwd-label">Events</Text>
               </div>
-              <Text as="h3" variant="h3" className="home-wwd-label">Events</Text>
-              <Text as="p" variant="body" className="home-wwd-desc">The kind of night people bring up for months.</Text>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
                 <img src="/images/wwd-branding.png" alt="Branding" loading="lazy" />
+                <Text as="h3" variant="h3" className="home-wwd-label">Branding</Text>
               </div>
-              <Text as="h3" variant="h3" className="home-wwd-label">Branding</Text>
-              <Text as="p" variant="body" className="home-wwd-desc">A look people stop scrolling for.</Text>
             </div>
           </div>
 
@@ -167,9 +153,8 @@ export default function Home() {
               <Link key={item.to} to={item.to} className="home-portfolio-card">
                 <div className="home-portfolio-card-img">
                   <img src={item.img} alt={item.alt} loading="lazy" />
+                  <Text as="h3" variant="h3" className="home-portfolio-card-title">{item.title}</Text>
                 </div>
-                <Text as="p" variant="h3" className="home-portfolio-card-title">{item.title}</Text>
-                <Text as="p" variant="body" className="home-portfolio-card-desc">{item.desc}</Text>
               </Link>
             ))}
           </div>
@@ -180,7 +165,7 @@ export default function Home() {
       {/* ── WORK WITH US + GET ON THE LIST (2 columns desktop) ── */}
       <section className="home-cta-split" aria-label="Work with us and get on the list">
         <div className="home-cta-col home-cta-col--work">
-          <Text as="h2" variant="h2" className="home-wwu-heading">WORK WITH US</Text>
+          <Text as="h2" variant="h2" className="home-wwu-heading">Work With Us</Text>
           <Text as="p" variant="body" className="home-wwu-body">
             Weird blends artistic direction and strategic vision to create unforgettable experiences.<br />
             We don't do cookie-cutter.
@@ -190,7 +175,7 @@ export default function Home() {
           </Text>
         </div>
         <div className="home-cta-col home-cta-col--subscribe">
-          <Text as="h2" variant="h2" className="home-gol-heading">GET ON THE LIST</Text>
+          <Text as="h2" variant="h2" className="home-gol-heading">Get On The List</Text>
           <Text as="p" variant="body" className="home-gol-sub">Cool events. Calls for art. Be the first to know.</Text>
           <form onSubmit={handleSubmit}>
             <input

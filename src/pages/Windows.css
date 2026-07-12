@@ -91,7 +91,6 @@
   content: 'Project';
   font-size: 0.72rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-text-muted);
   padding-top: 0.2rem;
@@ -169,7 +168,6 @@
   content: 'About';
   font-size: 0.72rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-text-muted);
   padding-top: 0.2rem;

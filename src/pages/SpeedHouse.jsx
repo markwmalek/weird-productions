@@ -47,7 +47,7 @@ export default function SpeedHouse() {
       <section className="sh-hero">
         <div className="page-wrap">
           <Text as="p" variant="eyebrow" className="sh-eyebrow">Art Salon — Durham, NC</Text>
-          <Text as="h1" variant="display" className="sh-title">FAST &amp;<br />LOOSE</Text>
+          <Text as="h1" variant="display" className="sh-title">Fast &amp;<br />Loose</Text>
           <Text as="p" variant="bodyLg" className="sh-tagline">Private art show, DJ spinning vinyl, Mad Men vibes.</Text>
           <Text as="p" variant="h4" className="sh-meta">Speed House · January 25, 2025</Text>
         </div>

@@ -4,46 +4,6 @@
   background: #EFEEEA;
 }
 
-/* ── HERO ── */
-.www-hero {
-  padding: 80px 48px 64px;
-  background: #EFEEEA;
-}
-
-.www-hero .page-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.www-hero-title {
-  color: #000000;
-}
-
-.www-hero-sub {
-  font-family: var(--font-body);
-  font-size: clamp(16px, 1.6vw, 24px);
-  font-weight: 400;
-  color: #000000;
-  max-width: 640px;
-  line-height: 1.5;
-}
-
-.www-hero-dm {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
-  color: #000000;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: opacity 0.2s;
-}
-
-.www-hero-dm:hover {
-  opacity: 0.5;
-}
-
 /* ── SECTION HEADING (shared) ── */
 .www-section-heading {
   color: #000000;
@@ -52,8 +12,7 @@
 
 /* ── PITCH ── */
 .www-pitch {
-  padding: 64px 48px;
-  border-top: 1px solid #000000;
+  padding: calc(var(--header-height) - 60px) 48px 64px;
 }
 
 .www-pitch-inner {
@@ -243,7 +202,6 @@
 .www-portfolio-cat {
   font-family: var(--font-body);
   font-size: 12px;
-  text-transform: uppercase;
   color: #555555;
   font-weight: 500;
 }
@@ -406,7 +364,6 @@
 }
 
 @media (max-width: 768px) {
-  .www-hero,
   .www-pitch,
   .www-services,
   .www-why,

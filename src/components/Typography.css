@@ -55,12 +55,11 @@
 }
 
 .text-h6 {
-  font-family: var(--font-body);
+  font-family: var(--font-caps);
   font-size: 16px;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .text-eyebrow {
@@ -69,7 +68,6 @@
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .text-body-lg {
@@ -99,7 +97,6 @@
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .text-caption {

@@ -63,7 +63,7 @@ export default function Smash() {
       <section className="sm-hero">
         <div className="page-wrap">
           <Text as="p" variant="eyebrow" className="sm-eyebrow">Event — Durham, NC</Text>
-          <Text as="h1" variant="display" className="sm-title">SMASH<br />&amp; SLAM</Text>
+          <Text as="h1" variant="display" className="sm-title">Smash<br />&amp; Slam</Text>
           <Text as="p" variant="bodyLg" className="sm-tagline">Smash burgers, slam poets, classic Durm.</Text>
           <Text as="p" variant="script" className="sm-meta">Sunday, October 6 · 2PM · PS37</Text>
         </div>

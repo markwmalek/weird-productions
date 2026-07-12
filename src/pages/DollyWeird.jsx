@@ -27,7 +27,7 @@ export default function DollyWeird() {
       <section className="dw-hero">
         <div className="page-wrap">
           <Text as="p" variant="eyebrow" className="dw-eyebrow">Art Show — Durham, NC</Text>
-          <Text as="h1" variant="display" className="dw-title">DOLLYWEIRD</Text>
+          <Text as="h1" variant="display" className="dw-title">Dollyweird</Text>
           <Text as="p" variant="bodyLg" className="dw-tagline">The party that started weird.</Text>
           <Text as="p" variant="h4" className="dw-meta">Saturday, September 23, 2023</Text>
         </div>

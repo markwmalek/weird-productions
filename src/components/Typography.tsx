@@ -99,12 +99,11 @@ export const typeScale: Record<TypographyVariant, VariantToken> = {
   h6: {
     as: 'h6',
     className: 'text-h6',
-    fontFamily: 'var(--font-body)',
+    fontFamily: 'var(--font-caps)',
     fontSize: '16px',
     fontWeight: 600,
     lineHeight: 1.3,
     letterSpacing: '0.04em',
-    textTransform: 'uppercase',
   },
   eyebrow: {
     as: 'p',
@@ -114,7 +113,6 @@ export const typeScale: Record<TypographyVariant, VariantToken> = {
     fontWeight: 600,
     lineHeight: 1.4,
     letterSpacing: '0.08em',
-    textTransform: 'uppercase',
   },
   bodyLg: {
     as: 'p',
@@ -148,7 +146,6 @@ export const typeScale: Record<TypographyVariant, VariantToken> = {
     fontWeight: 700,
     lineHeight: 1.3,
     letterSpacing: '0.08em',
-    textTransform: 'uppercase',
   },
   caption: {
     as: 'span',

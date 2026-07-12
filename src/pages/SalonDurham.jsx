@@ -51,7 +51,7 @@ export default function SalonDurham() {
       <section className="sd-hero">
         <div className="page-wrap">
           <Text as="p" variant="eyebrow" className="sd-eyebrow">Women's Event — Durham, NC</Text>
-          <Text as="h1" variant="display" className="sd-title">THE<br />SALON</Text>
+          <Text as="h1" variant="display" className="sd-title">The<br />Salon</Text>
           <Text as="p" variant="bodyLg" className="sd-tagline">The Triangle's premier women's event. Celebrating creativity, leadership, and community.</Text>
           <Text as="p" variant="script" className="sd-meta">310 E Main St, Durham, NC · March 11, 2025</Text>
         </div>

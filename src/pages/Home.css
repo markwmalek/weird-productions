@@ -4,110 +4,32 @@
   background: #EFEEEA;
 }
 
-/* ── HERO ── */
-/* Figma: 1512×533px, vertical flex, gap 32px, center-aligned */
-.home-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  padding: 24px 48px 16px;
-  background: #EFEEEA;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* Wrapper anchors characters to the h1 */
-.home-hero-title-wrap {
-  position: relative;
-  width: 100%;
-}
-
-/* Characters positioned relative to the title wrapper */
-.home-hero-char {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes bobble {
-  0%, 100% { transform: rotate(-2deg) translateY(0px); }
-  50%       { transform: rotate(2deg)  translateY(-6px); }
-}
-
-@keyframes bobble-alt {
-  0%, 100% { transform: rotate(1.5deg)  translateY(-4px); }
-  50%       { transform: rotate(-2.5deg) translateY(2px); }
-}
-
-/* Lindsay: left of W, peeking above */
-.home-hero-lindsay {
-  left: 12%;
-  top: 75%;
-  width: 9%;
-  min-width: 40px;
-  transform-origin: bottom center;
-  animation: bobble 2.8s ease-in-out infinite;
-}
-
-/* Mark: overlapping R and D on the right */
-.home-hero-mark {
-  left: 76%;
-  top: 20%;
-  width: 9%;
-  min-width: 40px;
-  transform-origin: bottom center;
-  animation: bobble-alt 3.3s ease-in-out infinite;
-}
-
-/* Figma: TAY Waffle Cone, 400px, lh 360px, ls -16px */
-.home-hero-title {
-  font-family: var(--font-caps);
-  font-size: clamp(125px, 41.25vw, 625px);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 0.9;
-  color: #000000;
-  margin: 0;
-}
-
-/* Figma: Sora 24px weight 600, ls 1.2px */
-.home-hero-sub {
-  font-family: var(--font-script);
-  font-size: clamp(31px, 6.25vw, 50px);
-  font-weight: 400;
-  color: #000000;
-  margin: 0;
-}
-
-/* Figma: VECTOR, 0×79px (vertical stroke, 2px) */
-.home-hero-arrow {
-  width: 2px;
-  height: 79px;
-  background: #000000;
-  position: relative;
-}
-
-.home-hero-arrow::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 8px solid #000000;
-}
-
 /* ── SLIDESHOW ── */
-/* Figma: 1512×758px, padding 48px, gap 32px, vertical, cream bg */
 .home-slideshow {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  padding: 16px 48px 48px;
+  padding: calc(var(--header-height) - 60px) 48px 48px;
   background: #EFEEEA;
+}
+
+/* Centered caption matching portfolio card title styling */
+.home-slideshow-caption-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 4px 24px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  pointer-events: none;
+  margin: 0;
 }
 
 /* Figma: 1416×600px, border-radius 16px, fill #000 */
@@ -174,13 +96,6 @@
   margin: 0;
 }
 
-.home-wwd-sub {
-  color: #000000;
-  text-align: left;
-  margin: 0;
-}
-
-/* Figma: horizontal, gap 8px, padding 24px */
 .home-wwd-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -189,15 +104,13 @@
   padding: 8px 0;
 }
 
-/* Figma: each column ~450×482px, gap 16px */
 .home-wwd-card {
   display: flex;
   flex-direction: column;
-  gap: 4px;
 }
 
-/* Figma: image 450.67×400px, border-radius 16px */
 .home-wwd-img {
+  position: relative;
   width: 100%;
   aspect-ratio: 450.67 / 400;
   border-radius: 16px;
@@ -216,14 +129,21 @@
   transform: scale(1.04);
 }
 
-/* Inherits h3 script sizing from global.css */
+/* Title centered on the image, matching portfolio card + slideshow caption */
 .home-wwd-label {
-  color: #000000;
-  margin: 12px 0 0;
-}
-
-.home-wwd-desc {
-  color: #000000;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 4px 24px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  pointer-events: none;
   margin: 0;
 }
 
@@ -342,6 +262,7 @@
 }
 
 .home-portfolio-card-img {
+  position: relative;
   width: 100%;
   aspect-ratio: 450.67 / 400;
   overflow: hidden;
@@ -360,13 +281,21 @@
   transform: scale(1.04);
 }
 
+/* Title centered on the image, matching the site-wide overlay pattern */
 .home-portfolio-card-title {
-  color: #000000;
-  margin: 12px 0 0;
-}
-
-.home-portfolio-card-desc {
-  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 4px 24px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  pointer-events: none;
   margin: 0;
 }
 
@@ -486,25 +415,9 @@
 
 /* ── RESPONSIVE ── */
 
-@media (max-width: 600px) {
-  .home-hero-lindsay {
-    width: 14%;
-    top: 10%;
-  }
-
-  .home-hero-mark {
-    width: 14%;
-    top: 70%;
-  }
-}
-
 @media (max-width: 900px) {
-  .home-hero {
-    padding: 60px 0 16px; /* no horizontal padding — title spans full viewport width */
-  }
-
   .home-slideshow {
-    padding: 16px 24px 40px;
+    padding: calc(var(--header-height) - 32px) 24px 40px;
   }
 
   .home-portfolio,

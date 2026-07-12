@@ -39,7 +39,7 @@ export default function Raleigh() {
       <section className="rl-hero">
         <div className="page-wrap">
           <Text as="p" variant="eyebrow" className="rl-eyebrow">Fashion Show — Raleigh, NC</Text>
-          <Text as="h1" variant="display" className="rl-title">RALEIGH<br />RENAISSANCE</Text>
+          <Text as="h1" variant="display" className="rl-title">Raleigh<br />Renaissance</Text>
           <Text as="p" variant="bodyLg" className="rl-tagline">Where would I wear this? Wear that.</Text>
           <Text as="p" variant="h5" className="rl-meta">Photography by Aaron Oates</Text>
         </div>

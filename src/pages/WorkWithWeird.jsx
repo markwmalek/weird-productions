@@ -123,13 +123,6 @@ export default function WorkWithWeird() {
   return (
     <main className="www-page">
 
-      {/* Hero */}
-      <section className="www-hero">
-        <div className="page-wrap">
-          <Text as="h1" variant="h1" className="www-hero-title">WORK WITH US</Text>
-        </div>
-      </section>
-
       {/* Pitch */}
       <section className="www-pitch">
         <div className="page-wrap www-pitch-inner">
@@ -149,7 +142,7 @@ export default function WorkWithWeird() {
       {/* Services */}
       <section className="www-services">
         <div className="page-wrap">
-          <Text as="h2" variant="h2" className="www-section-heading">WHAT WE DO</Text>
+          <Text as="h2" variant="h2" className="www-section-heading">What We Do</Text>
           <div className="www-services-grid">
             {services.map((s, i) => (
               <div key={i} className="www-service">
@@ -169,7 +162,7 @@ export default function WorkWithWeird() {
       {/* Why Weird */}
       <section className="www-why">
         <div className="page-wrap">
-          <Text as="h2" variant="h2" className="www-section-heading">WHY WEIRD</Text>
+          <Text as="h2" variant="h2" className="www-section-heading">Why Weird</Text>
           <div className="www-why-list">
             {whyWeird.map((item, i) => (
               <div key={i} className="www-why-item">
@@ -184,7 +177,7 @@ export default function WorkWithWeird() {
       {/* Portfolio */}
       <section className="www-portfolio">
         <div className="page-wrap">
-          <Text as="h2" variant="h2" className="www-section-heading">WEIRD IN THE WORLD</Text>
+          <Text as="h2" variant="h2" className="www-section-heading">Weird In The World</Text>
           <WorldSlideshow />
         </div>
       </section>
@@ -206,7 +199,7 @@ export default function WorkWithWeird() {
       {/* Non-Profit */}
       <section className="www-nonprofit">
         <div className="page-wrap">
-          <Text as="h2" variant="h2" className="www-section-heading">WEIRD ART PROJECTS</Text>
+          <Text as="h2" variant="h2" className="www-section-heading">Weird Art Projects</Text>
           <div className="www-nonprofit-intro">
             <Text as="p" variant="bodyLg">
               Beyond commercial work, we run <strong>Weird Art Projects</strong> — a registered 501(c)(3) non-profit dedicated to solving community problems with art.
@@ -234,8 +227,8 @@ export default function WorkWithWeird() {
       {/* CTA */}
       <section className="www-cta">
         <div className="page-wrap www-cta-inner">
-          <Text as="h2" variant="h1" className="www-cta-heading">READY TO MAKE SOMETHING WEIRD?</Text>
-          <Text as="p" variant="bodyLg" className="www-cta-sub">Tell us about your project and let's figure out how we can help.</Text>
+          <Text as="h2" variant="h1" className="www-cta-heading">Ready To Make Something Weird?</Text>
+          <Text as="p" variant="body" className="www-cta-sub">Tell us about your project and let's figure out how we can help.</Text>
           <Text
             as="a"
             variant="body"

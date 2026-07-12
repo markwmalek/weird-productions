@@ -94,13 +94,19 @@ export default function Header() {
   // (overflow, transform, etc.) can ever clip the fixed pill nav
   return createPortal(
     <>
-      {/* Floating pill nav */}
+      {/* Site banner — logo centered top, nav centered below */}
       <header className="site-header">
         <nav className="pill-nav">
 
           {/* Logo */}
-          <Text as={Link} to="/" variant="h5" className="header-logo" onClick={() => setMenuOpen(false)}>
-            Weird
+          <Text as={Link} to="/" variant="h1" className="header-logo" onClick={() => setMenuOpen(false)}>
+            <span className="header-head header-head-lindsay" aria-hidden="true">
+              <img src="/images/hero-lindsay.png" alt="" />
+            </span>
+            <span className="header-logo-text">Weird</span>
+            <span className="header-head header-head-mark" aria-hidden="true">
+              <img src="/images/hero-mark.png" alt="" />
+            </span>
           </Text>
 
           {/* Desktop links */}
@@ -111,7 +117,7 @@ export default function Header() {
             <Text as={NavLink} to="/work-with-weird" variant="h5" className="nav-link" onClick={() => setMenuOpen(false)}>
               Work With Us
             </Text>
-            <Text as="button" type="button" variant="h5" className="nav-link nav-button nav-cta" onClick={openChat}>
+            <Text as="button" type="button" variant="h5" className="nav-link nav-button" onClick={openChat}>
               DM us
             </Text>
           </div>
