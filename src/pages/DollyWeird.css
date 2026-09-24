@@ -6,7 +6,7 @@
 
 /* ── HERO ── */
 .dw-hero {
-  padding: 80px 48px 48px;
+  padding: 80px 48px 56px;
   border-bottom: 1px solid #000000;
 }
 
@@ -22,11 +22,60 @@
 
 .dw-tagline {
   color: #000000;
-  margin-bottom: 12px;
+  max-width: 760px;
+  margin-bottom: 24px;
 }
 
-.dw-meta {
-  color: rgba(0, 0, 0, 0.5);
+.dw-ticket-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 0 52px 3px;
+  padding: 15px 28px 13px;
+  color: #000000;
+  background: #ff5cab;
+  border: 2px solid #000000;
+  border-radius: 999px;
+  box-shadow: 4px 5px 0 #000000;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transform: rotate(-1.5deg);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.dw-ticket-button:hover {
+  background: #ff86c4;
+  box-shadow: 2px 3px 0 #000000;
+  transform: rotate(1deg) translate(3px, 3px);
+}
+
+.dw-ticket-button:focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: 5px;
+}
+
+.dw-event-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-top: 28px;
+  border-top: 1px solid #000000;
+}
+
+.dw-detail-label {
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 8px;
+}
+
+.dw-detail-value,
+.dw-detail-note {
+  color: #000000;
+}
+
+.dw-detail-note {
+  margin-top: 4px;
 }
 
 /* ── SECTION HEADING ── */
@@ -61,11 +110,185 @@
   color: #000000;
 }
 
+/* ── ARTISTS ── */
+.dw-artists {
+  padding: 72px 48px 80px;
+  background: #000000;
+  color: #EFEEEA;
+}
+
+.dw-artists-intro {
+  display: grid;
+  grid-template-columns: 0.65fr 2.5fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+.dw-artists-kicker {
+  color: rgba(239, 238, 234, 0.55);
+}
+
+.dw-artists-heading {
+  color: #EFEEEA;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.dw-artists-lede {
+  color: #EFEEEA;
+  max-width: 680px;
+}
+
+.dw-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 28px;
+  padding: 15px 28px 13px;
+  color: #000000;
+  background: #ff5cab;
+  border: 2px solid #EFEEEA;
+  border-radius: 999px;
+  box-shadow: 5px 6px 0 #EFEEEA;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transform: rotate(1.5deg);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.dw-submit-button:hover {
+  background: #ff86c4;
+  box-shadow: 2px 3px 0 #EFEEEA;
+  transform: rotate(-1deg) translate(3px, 3px);
+}
+
+.dw-submit-button:focus-visible {
+  outline: 3px solid #ff5cab;
+  outline-offset: 5px;
+}
+
+.dw-artist-dates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(239, 238, 234, 0.35);
+  border-bottom: 1px solid rgba(239, 238, 234, 0.35);
+}
+
+.dw-artist-date {
+  min-height: 210px;
+  padding: 28px;
+  border-right: 1px solid rgba(239, 238, 234, 0.35);
+}
+
+.dw-artist-date:last-child {
+  border-right: none;
+}
+
+.dw-artist-date-featured {
+  background: #ff5cab;
+  color: #000000;
+  transform: rotate(-1deg) scale(1.015);
+  border: 2px solid #000000;
+  box-shadow: 5px 6px 0 #EFEEEA;
+}
+
+.dw-artist-date-label {
+  color: rgba(239, 238, 234, 0.55);
+  margin-bottom: 18px;
+}
+
+.dw-artist-date-featured .dw-artist-date-label {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.dw-artist-date-value {
+  color: inherit;
+}
+
+.dw-artist-perk {
+  margin: 48px 0;
+  padding: 24px 28px;
+  border: 1px solid #EFEEEA;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.dw-artist-notice {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr 1.5fr;
+  gap: 48px;
+  padding: 48px;
+  background: #EFEEEA;
+  color: #000000;
+  border-radius: 16px;
+}
+
+.dw-notice-kicker {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.dw-notice-heading {
+  color: #000000;
+}
+
+.dw-notice-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dw-care-promise {
+  padding-top: 18px;
+  border-top: 2px solid #000000;
+}
+
+.dw-artist-footer {
+  display: grid;
+  grid-template-columns: 0.85fr 2fr;
+  gap: 64px;
+  align-items: end;
+  padding-top: 64px;
+}
+
+.dw-artist-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.dw-artist-link {
+  color: #EFEEEA;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.dw-artist-link:hover {
+  color: #ff86c4;
+}
+
+.dw-artist-link:focus-visible {
+  outline: 2px solid #ff5cab;
+  outline-offset: 4px;
+}
+
+.dw-artist-cta {
+  color: #EFEEEA;
+  text-align: right;
+}
+
 /* ── SLIDESHOW ── */
 .dw-slideshow-section {
   padding: 48px;
-  border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
+}
+
+.dw-gallery-label {
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
 }
 
 .dw-slideshow-box {
@@ -75,61 +298,97 @@
   border-radius: 16px;
 }
 
-/* ── PRESS ── */
-.dw-press {
-  padding: 48px;
+/* ── SIGNOFF ── */
+.dw-signoff {
+  padding: 72px 48px;
 }
 
-.dw-press-inner {
+.dw-signoff-inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 48px;
   align-items: start;
 }
 
-.dw-press-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.dw-signoff-heading {
+  color: #000000;
+  max-width: 650px;
+}
+
+.dw-signature {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.dw-press-list li {
-  font-family: var(--font-body);
-  font-size: 18px;
+  gap: 4px;
   color: #000000;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-
-.dw-press-list li:last-child {
-  border-bottom: none;
-}
-
-.dw-press-link {
-  color: #000000;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.dw-press-link:hover {
-  opacity: 0.5;
 }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .dw-hero,
   .dw-about,
-  .dw-press {
+  .dw-artists,
+  .dw-signoff {
     padding: 48px 24px;
   }
 
   .dw-about-inner,
-  .dw-press-inner {
+  .dw-signoff-inner {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .dw-event-card,
+  .dw-artists-intro,
+  .dw-artist-notice,
+  .dw-artist-footer {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .dw-artists-intro {
+    margin-bottom: 40px;
+  }
+
+  .dw-artist-dates {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+  }
+
+  .dw-artist-date {
+    min-height: 0;
+    padding: 24px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(239, 238, 234, 0.35);
+  }
+
+  .dw-artist-date-featured {
+    padding: 24px;
+  }
+
+  .dw-artist-perk {
+    margin: 40px 0;
+    border-radius: 18px;
+  }
+
+  .dw-artist-notice {
+    padding: 32px 24px;
+  }
+
+  .dw-artist-footer {
+    padding-top: 48px;
+  }
+
+  .dw-artist-cta {
+    text-align: left;
+  }
+
+  .dw-tagline {
+    margin-bottom: 24px;
+  }
+
+  .dw-ticket-button {
+    margin-bottom: 44px;
+    padding: 14px 24px 12px;
   }
 
   .dw-slideshow-section {
