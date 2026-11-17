@@ -41,6 +41,35 @@ function shuffle(arr) {
   return a;
 }
 
+function DeferredImage({ src, optimizedSrc, optimizedType = 'image/avif', alt, ...props }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const pictureRef = useRef(null);
+
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    }, { rootMargin: '120px 0px' });
+
+    if (pictureRef.current) observer.observe(pictureRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <picture ref={pictureRef} className="home-deferred-picture">
+      {isVisible && optimizedSrc && <source srcSet={optimizedSrc} type={optimizedType} />}
+      {isVisible && <img src={src} alt={alt} decoding="async" {...props} />}
+    </picture>
+  );
+}
+
 const PORTFOLIO_ITEMS = [
   { to: '/salondurham', img: '/images/salon/0810.jpeg', alt: 'The Salon Durham', title: 'The Salon', desc: "Women's event — Durham, NC, 2025" },
   { to: '/speedhouse', img: '/images/speedhouse/WP-45.jpg', alt: 'Fast & Loose Art Salon', title: 'Fast & Loose', desc: 'Art salon — Durham, NC, 2025' },
@@ -144,22 +173,19 @@ export default function Home() {
           <div className="home-wwd-grid">
             <div className="home-wwd-card">
               <div className="home-wwd-img">
-                <img src="/images/au/p4_7.jpeg" alt="Interiors" loading="lazy" />
+                <DeferredImage src="/images/au/p4_7.jpeg" alt="Interiors" />
                 <Text as="h3" variant="h3" className="home-wwd-label">Interiors</Text>
               </div>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
-                <img src="/images/work-with-us/gallery2.jpg" alt="Events" loading="lazy" />
+                <DeferredImage src="/images/work-with-us/gallery2.jpg" alt="Events" />
                 <Text as="h3" variant="h3" className="home-wwd-label">Events</Text>
               </div>
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
-                <picture>
-                  <source srcSet="/images/home/branding.avif" type="image/avif" />
-                  <img src="/images/wwd-branding.png" alt="Branding" loading="lazy" decoding="async" />
-                </picture>
+                <DeferredImage src="/images/wwd-branding.png" optimizedSrc="/images/home/branding.avif" alt="Branding" />
                 <Text as="h3" variant="h3" className="home-wwd-label">Branding</Text>
               </div>
             </div>
@@ -173,7 +199,7 @@ export default function Home() {
       <section className="home-nonprofit">
         <div className="home-nonprofit-inner">
           <div className="home-nonprofit-img">
-            <img src="/images/pot-party/Hero Image.png" alt="Weird Art Projects — live painting activation at CCB Plaza" loading="lazy" />
+            <DeferredImage src="/images/pot-party/Hero Image.png" alt="Weird Art Projects — live painting activation at CCB Plaza" />
           </div>
           <div className="home-nonprofit-text">
             <Text as="p" variant="eyebrow" className="home-nonprofit-eyebrow">Non-Profit Arm</Text>
@@ -192,7 +218,7 @@ export default function Home() {
             {portfolioItems.map((item) => (
               <Link key={item.to} to={item.to} className="home-portfolio-card">
                 <div className="home-portfolio-card-img">
-                  <img src={item.img} alt={item.alt} loading="lazy" />
+                  <DeferredImage src={item.img} alt={item.alt} />
                   <Text as="h3" variant="h3" className="home-portfolio-card-title">{item.title}</Text>
                 </div>
               </Link>
