@@ -114,6 +114,12 @@
   overflow: hidden;
 }
 
+.home-wwd-img picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .home-wwd-img img {
   width: 100%;
   height: 100%;

@@ -156,7 +156,10 @@ export default function Home() {
             </div>
             <div className="home-wwd-card">
               <div className="home-wwd-img">
-                <img src="/images/wwd-branding.png" alt="Branding" loading="lazy" />
+                <picture>
+                  <source srcSet="/images/home/branding.avif" type="image/avif" />
+                  <img src="/images/wwd-branding.png" alt="Branding" loading="lazy" decoding="async" />
+                </picture>
                 <Text as="h3" variant="h3" className="home-wwd-label">Branding</Text>
               </div>
             </div>
