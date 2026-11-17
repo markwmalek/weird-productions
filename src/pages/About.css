@@ -41,6 +41,32 @@
   transform: scale(1.03);
 }
 
+.portfolio-card-img--windows {
+  background:
+    radial-gradient(circle at 18% 22%, #ff6bda 0 13%, transparent 14%),
+    radial-gradient(circle at 78% 68%, #ffdb3d 0 18%, transparent 19%),
+    radial-gradient(circle at 70% 18%, #7b5cff 0 10%, transparent 11%),
+    linear-gradient(135deg, #ff4b2b 0%, #ef1268 46%, #1911a8 100%);
+}
+
+.portfolio-card-art {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.portfolio-card-art span:nth-child(2) {
+  align-self: flex-end;
+}
+
 .portfolio-card-title {
   position: absolute;
   inset: 0;

@@ -12,7 +12,8 @@ const ITEMS = [
   { to: '/american-underground', img: '/images/au/p4_7.jpeg', alt: 'American Underground', title: 'American Underground', desc: 'Interior art curation proposal — Durham, NC', tags: ['interiors'], style: { objectPosition: '50% 75%' } },
   { to: '/film-durham', img: '/images/film-durham/film-durham-thumb.png', alt: 'Film Durham Brand Guidelines', title: 'Film Durham', desc: 'Brand guidelines — Durham, NC, 2025', tags: ['branding'] },
   { to: '/parrish', img: '/images/parrish/art-category.png', alt: 'Parties on Parrish', title: 'Parties on Parrish', desc: 'Month-long art pop-up — Durham, NC, 2026', tags: ['event', 'non-profit project'] },
-  { to: '/windows', img: '/images/windows/artist-jordan-owens.png', alt: 'Weird Windows', title: 'Weird Windows', desc: 'Holiday window installations — Durham, NC, 2025', tags: ['non-profit project'] },
+  { to: '/windows', alt: 'Weird Windows', title: 'Weird Windows', desc: 'Holiday window installations — Durham, NC, 2026', tags: ['non-profit project'], art: 'windows' },
+  { to: '/windows-2025', img: '/images/windows/artist-jordan-owens.png', alt: 'Weird Windows 2025', title: 'Weird Windows 2025', desc: 'Holiday window installations — Durham, NC, 2025', tags: ['non-profit project'] },
   { to: '/weird-pot-party', img: '/images/pot-party/James.jpg', alt: 'Weird Pot Party', title: 'Weird Pot Party', desc: 'Live painting event — Downtown Durham, 2026', tags: ['event', 'non-profit project'] },
 ];
 
@@ -34,8 +35,16 @@ export default function About() {
       <div className="portfolio-grid page-wrap">
         {items.map((item) => (
           <Link key={item.to} to={item.to} className="portfolio-card">
-            <div className="portfolio-card-img">
-              <img src={item.img} alt={item.alt} loading="lazy" style={item.style} />
+            <div className={`portfolio-card-img ${item.art ? `portfolio-card-img--${item.art}` : ''}`}>
+              {item.img ? (
+                <img src={item.img} alt={item.alt} loading="lazy" style={item.style} />
+              ) : (
+                <div className="portfolio-card-art" aria-hidden="true">
+                  <span>20 artists</span>
+                  <span>18 windows</span>
+                  <span>Durham 2026</span>
+                </div>
+              )}
               <Text as="h2" variant="h3" className="portfolio-card-title">{item.title}</Text>
             </div>
           </Link>

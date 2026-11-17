@@ -19,6 +19,7 @@ import AUBranding from './pages/AUBranding';
 import FilmDurham from './pages/FilmDurham';
 import Parrish from './pages/Parrish';
 import Windows from './pages/Windows';
+import Windows2025 from './pages/Windows2025';
 import WeirdPotParty from './pages/WeirdPotParty';
 import './App.css';
 import './styles/global.css';
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="/film-durham" element={<FilmDurham />} />
           <Route path="/parrish" element={<Parrish />} />
           <Route path="/windows" element={<Windows />} />
+          <Route path="/windows-2025" element={<Windows2025 />} />
           <Route path="/weird-pot-party" element={<WeirdPotParty />} />
         </Routes>
         <Footer />
