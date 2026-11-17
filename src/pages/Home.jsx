@@ -53,27 +53,64 @@ const PORTFOLIO_ITEMS = [
 
 function RapidSlideshow() {
   const [images] = useState(() => shuffle(SLIDESHOW_IMAGES));
-  const [index, setIndex] = useState(0);
-  const intervalRef = useRef(null);
+  const [frame, setFrame] = useState({ current: 0, previous: null });
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setIndex(i => (i + 1) % images.length);
-    }, 600);
-    return () => clearInterval(intervalRef.current);
-  }, [images.length]);
+    let cancelled = false;
+    let scheduled = false;
+    const nextIndex = (frame.current + 1) % images.length;
+    const nextImage = new Image();
+
+    const scheduleAdvance = () => {
+      if (cancelled || scheduled) return;
+      scheduled = true;
+      timeoutRef.current = window.setTimeout(() => {
+        setFrame({ current: nextIndex, previous: frame.current });
+      }, 600);
+    };
+
+    const preloadNext = () => {
+      nextImage.onload = scheduleAdvance;
+      nextImage.onerror = scheduleAdvance;
+      nextImage.src = images[nextIndex];
+      if (nextImage.complete) scheduleAdvance();
+    };
+
+    if (document.readyState === 'complete') {
+      preloadNext();
+    } else {
+      window.addEventListener('load', preloadNext, { once: true });
+    }
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timeoutRef.current);
+      window.removeEventListener('load', preloadNext);
+      nextImage.onload = null;
+      nextImage.onerror = null;
+    };
+  }, [frame.current, images]);
 
   return (
     <div className="slideshow-rapid">
-      {images.map((src, i) => (
+      {frame.previous !== null && (
         <img
-          key={src}
-          src={src}
+          key={`previous-${images[frame.previous]}`}
+          src={images[frame.previous]}
           alt=""
           aria-hidden="true"
-          className={`slideshow-frame ${i === index ? 'active' : ''}`}
+          className="slideshow-frame"
         />
-      ))}
+      )}
+      <img
+        key={`current-${images[frame.current]}`}
+        src={images[frame.current]}
+        alt=""
+        aria-hidden="true"
+        className="slideshow-frame active"
+        fetchPriority="high"
+      />
     </div>
   );
 }
