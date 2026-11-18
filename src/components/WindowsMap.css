@@ -9,7 +9,18 @@
   height: 400px;
   border-radius: 16px;
   overflow: hidden;
+  background: #ebe7df;
   z-index: 1;
+}
+
+/* Soften the standard OSM basemap while keeping its keyless reliability. */
+.windows-map__container .leaflet-tile-pane {
+  filter: grayscale(1) saturate(0) contrast(0.7) brightness(1.18);
+  opacity: 0.72;
+}
+
+.windows-map__container .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.82);
 }
 
 /* Custom marker */
