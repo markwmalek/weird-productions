@@ -1,4 +1,5 @@
 import Text from '../components/Typography';
+import WindowsMap from '../components/WindowsMap';
 import './Windows.css';
 
 const windows = [
@@ -164,6 +165,32 @@ const windows = [
   },
 ];
 
+const windowCoordinates = {
+  1: [35.9964097, -78.9035411],
+  2: [35.9960313, -78.9028822],
+  3: [35.9956049, -78.9021299],
+  4: [35.9960734, -78.9018176],
+  5: [35.9955052, -78.9011847],
+  6: [35.99549, -78.9010626],
+  7: [35.9914022, -78.8948538],
+  8: [35.9949109, -78.9009502],
+  9: [35.9958022, -78.9009394],
+  10: [35.9968685, -78.8994792],
+  11: [35.9973017, -78.8990319],
+  12: [35.9971603, -78.9012848],
+  13: [35.9978168, -78.9034441],
+  14: [35.99924, -78.9033615],
+  15: [36.0036796, -78.9039971],
+  16: [36.0031475, -78.9010283],
+  17: [35.9943285, -78.904297],
+  18: [35.9948116, -78.8998821],
+};
+
+const mappedWindows = windows.map((window) => {
+  const [lat, lng] = windowCoordinates[window.number];
+  return { ...window, lat, lng };
+});
+
 const instagramUrl = (handle) => `https://www.instagram.com/${handle.slice(1)}/`;
 const directionsUrl = (address) => `https://maps.google.com/?q=${encodeURIComponent(`${address}, Durham, NC`)}`;
 
@@ -194,6 +221,22 @@ export default function Windows() {
           <Text as="p" variant="eyebrow" className="windows__eyebrow">Weird × Holiday Season</Text>
           <Text as="h1" variant="h1">Weird<br />Windows</Text>
           <Text as="p" variant="script" className="windows__hero-sub">20 Artists &nbsp;·&nbsp; 18 Downtown Locations &nbsp;·&nbsp; Durham, NC &nbsp;·&nbsp; 2026</Text>
+        </div>
+      </section>
+
+      <section className="windows__map-section" aria-labelledby="windows-map-title">
+        <div className="windows__map-section-inner">
+          <div className="windows__map-header">
+            <Text as="p" variant="label" className="windows__map-label">Plan your route</Text>
+            <div>
+              <Text as="h2" variant="h2" id="windows-map-title">Find every Weird Window.</Text>
+              <Text as="p" variant="bodyLg">
+                Explore all 18 stops across downtown Durham. Select a numbered pin for the artists,
+                address, and walking directions.
+              </Text>
+            </div>
+          </div>
+          <WindowsMap locations={mappedWindows} showLegend={false} />
         </div>
       </section>
 

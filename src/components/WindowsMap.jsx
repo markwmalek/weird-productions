@@ -1,9 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import Text from './Typography';
 import './WindowsMap.css';
 
 // Window locations with coordinates (downtown Durham)
-const locations = [
+const legacyLocations = [
   {
     id: 1,
     artist: 'Ali Waller',
@@ -62,25 +62,60 @@ const locations = [
   },
 ];
 
-export default function WindowsMap() {
+const escapeHtml = (value) => String(value)
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#039;');
+
+export default function WindowsMap({ locations = legacyLocations, showLegend = true }) {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
+
+  const mapLocations = useMemo(() => {
+    const grouped = new Map();
+
+    locations.forEach((location) => {
+      const number = location.number ?? location.id;
+      const key = `${number}-${location.address}`;
+      const installation = { title: location.title, artist: location.artist };
+
+      if (grouped.has(key)) {
+        grouped.get(key).installations.push(installation);
+        return;
+      }
+
+      grouped.set(key, {
+        id: key,
+        number,
+        address: location.address,
+        lat: location.lat,
+        lng: location.lng,
+        installations: [installation],
+      });
+    });
+
+    return [...grouped.values()].sort((a, b) => a.number - b.number);
+  }, [locations]);
 
   useEffect(() => {
     // Only run on client
     if (typeof window === 'undefined') return;
+
+    let cancelled = false;
 
     // Dynamically import Leaflet
     const loadMap = async () => {
       const L = await import('leaflet');
 
       // Don't re-initialize if already created
-      if (mapInstanceRef.current) return;
+      if (cancelled || mapInstanceRef.current || !mapRef.current) return;
 
       // Create map centered on downtown Durham
       const map = L.map(mapRef.current, {
         scrollWheelZoom: false,
-      }).setView([35.9965, -78.9010], 16);
+      });
 
       mapInstanceRef.current = map;
 
@@ -91,57 +126,75 @@ export default function WindowsMap() {
         maxZoom: 20,
       }).addTo(map);
 
-      // Custom marker icon
-      const markerIcon = L.divIcon({
-        className: 'windows-map__marker',
-        html: '<div class="windows-map__marker-inner"></div>',
-        iconSize: [32, 32],
-        iconAnchor: [16, 32],
-        popupAnchor: [0, -32],
-      });
+      const bounds = L.latLngBounds([]);
 
       // Add markers for each location
-      locations.forEach((loc) => {
+      mapLocations.forEach((loc) => {
+        const markerIcon = L.divIcon({
+          className: 'windows-map__marker',
+          html: `<div class="windows-map__marker-inner"><span>${escapeHtml(loc.number)}</span></div>`,
+          iconSize: [38, 44],
+          iconAnchor: [19, 44],
+          popupAnchor: [0, -42],
+        });
         const marker = L.marker([loc.lat, loc.lng], { icon: markerIcon }).addTo(map);
+        const installations = loc.installations.map((installation) => `
+          <div class="windows-map__popup-installation">
+            <strong>${escapeHtml(installation.title)}</strong>
+            <span>by ${escapeHtml(installation.artist)}</span>
+          </div>
+        `).join('');
 
         marker.bindPopup(`
           <div class="windows-map__popup">
-            <strong>${loc.title}</strong>
-            <span>by ${loc.artist}</span>
-            <span class="windows-map__popup-address">${loc.address}</span>
-            <a href="https://maps.google.com/?q=${encodeURIComponent(loc.address + ', Durham, NC')}" target="_blank" rel="noopener noreferrer">
+            <span class="windows-map__popup-number">Window ${escapeHtml(loc.number)}</span>
+            ${installations}
+            <span class="windows-map__popup-address">${escapeHtml(loc.address)}</span>
+            <a href="https://maps.google.com/?q=${encodeURIComponent(`${loc.address}, Durham, NC`)}" target="_blank" rel="noopener noreferrer">
               Get Directions →
             </a>
           </div>
         `);
+
+        bounds.extend([loc.lat, loc.lng]);
       });
+
+      if (bounds.isValid()) {
+        map.fitBounds(bounds, { padding: [44, 44], maxZoom: 16 });
+      }
     };
 
     loadMap();
 
     // Cleanup
     return () => {
+      cancelled = true;
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
       }
     };
-  }, []);
+  }, [mapLocations]);
 
   return (
     <div className="windows-map">
-      <div className="windows-map__container" ref={mapRef}></div>
-      <div className="windows-map__legend">
-        {locations.map((loc) => (
+      <div
+        className="windows-map__container"
+        ref={mapRef}
+        role="region"
+        aria-label={`Interactive map of ${mapLocations.length} Weird Windows locations in Durham`}
+      ></div>
+      {showLegend && <div className="windows-map__legend">
+        {mapLocations.map((loc) => (
           <div className="windows-map__legend-item" key={loc.id}>
-            <Text as="span" variant="displaySm" className="windows-map__legend-number">{loc.id}</Text>
+            <Text as="span" variant="displaySm" className="windows-map__legend-number">{loc.number}</Text>
             <div className="windows-map__legend-info">
-              <Text as="strong" variant="displaySm">{loc.artist}</Text>
+              <Text as="strong" variant="displaySm">{loc.installations[0].artist}</Text>
               <Text as="span" variant="body">{loc.address}</Text>
             </div>
           </div>
         ))}
-      </div>
+      </div>}
     </div>
   );
 }
