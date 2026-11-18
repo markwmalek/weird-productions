@@ -69,16 +69,28 @@ export default function DollyWeird() {
             Durham&rsquo;s love letter to her life and legacy.
           </Text>
 
-          <Text
-            as="a"
-            href="https://fa7b88-3.myshopify.com/products/dollyweird-3-ticket?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="h4"
-            className="dw-ticket-button"
-          >
-            Snag a Ticket
-          </Text>
+          <div className="dw-hero-actions">
+            <Text
+              as="a"
+              href="https://fa7b88-3.myshopify.com/products/dollyweird-3-ticket?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="h4"
+              className="dw-ticket-button"
+            >
+              Snag a Ticket
+            </Text>
+            <Text
+              as="a"
+              href="https://fa7b88-3.myshopify.com/collections/dollyweird-4"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="h4"
+              className="dw-ticket-button dw-art-button"
+            >
+              Buy Art
+            </Text>
+          </div>
 
           <div className="dw-event-card" aria-label="Dollyweird 3 event details">
             <div>

@@ -26,12 +26,20 @@
   margin-bottom: 24px;
 }
 
+.dw-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 52px;
+}
+
 .dw-ticket-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  margin: 0 0 52px 3px;
+  margin: 0;
   padding: 15px 28px 13px;
   color: #000000;
   background: #ff5cab;
@@ -54,6 +62,20 @@
 .dw-ticket-button:focus-visible {
   outline: 3px solid #000000;
   outline-offset: 5px;
+}
+
+.dw-art-button {
+  color: #EFEEEA;
+  background: #000000;
+  box-shadow: 4px 5px 0 #ff5cab;
+  transform: rotate(1.5deg);
+}
+
+.dw-art-button:hover {
+  color: #EFEEEA;
+  background: #2a2a2a;
+  box-shadow: 2px 3px 0 #ff5cab;
+  transform: rotate(-1deg) translate(3px, 3px);
 }
 
 .dw-event-card {
@@ -613,8 +635,12 @@
     margin-bottom: 24px;
   }
 
-  .dw-ticket-button {
+  .dw-hero-actions {
+    gap: 14px;
     margin-bottom: 44px;
+  }
+
+  .dw-ticket-button {
     padding: 14px 24px 12px;
   }
 
