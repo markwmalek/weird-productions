@@ -80,7 +80,7 @@
 
 .dw-event-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   padding-top: 28px;
   border-top: 1px solid #000000;

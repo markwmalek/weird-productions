@@ -113,6 +113,22 @@ export default function DollyWeird() {
               </Text>
               <Text as="p" variant="body" className="dw-detail-note">Downtown Durham, NC</Text>
             </div>
+            <div>
+              <Text as="p" variant="eyebrow" className="dw-detail-label">Parking</Text>
+              <Text
+                as="a"
+                href="https://maps.google.com/?q=Maizon+Parking+Deck,+500+E+Main+St,+Durham,+NC"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="h4"
+                className="dw-detail-value dw-detail-link"
+              >
+                Maizon Deck ↗
+              </Text>
+              <Text as="p" variant="body" className="dw-detail-note">
+                One block away, or find street parking nearby.
+              </Text>
+            </div>
           </div>
         </div>
       </section>
