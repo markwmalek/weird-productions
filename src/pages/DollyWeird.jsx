@@ -60,6 +60,15 @@ export default function DollyWeird() {
   return (
     <main className="dw-page">
 
+      {/* Photo hero */}
+      <section className="dw-photo-hero" aria-label="Dollyweird celebration">
+        <img
+          src="/images/dollyweird/dollyweird-hero.jpg"
+          alt="Dollyweird guests celebrating in front of a wall of Dolly-inspired artwork"
+          fetchPriority="high"
+        />
+      </section>
+
       {/* Hero */}
       <section className="dw-hero">
         <div className="page-wrap">
