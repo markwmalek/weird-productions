@@ -25,25 +25,27 @@
   animation: nav-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Full-width bar, logo centered on top, nav centered below */
+/* Full-width single-row banner */
 .pill-nav {
   width: 100%;
   max-width: var(--max-width);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 18px var(--gutter) 16px;
+  justify-content: space-between;
+  gap: clamp(32px, 6vw, 96px);
+  padding: 14px 48px;
 }
 
 /* Logo */
 .header-logo {
+  font-size: clamp(48px, 4vw, 60px);
   color: #000000;
   text-decoration: none;
   line-height: 1;
   transition: opacity 0.15s;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 
 .header-logo:hover {
@@ -55,7 +57,7 @@
   z-index: 1;
 }
 
-/* Animated heads flanking the wordmark */
+/* Animated heads grouped to the right of the wordmark */
 @keyframes header-bobble {
   0%, 100% { transform: rotate(-4deg) translateY(0); }
   50%      { transform: rotate(4deg)  translateY(-6px); }
@@ -67,10 +69,10 @@
 }
 
 .header-head {
-  position: absolute;
-  top: 65%;
+  position: relative;
   width: 0.5em;
   height: 0.5em;
+  flex: 0 0 0.5em;
   pointer-events: none;
   z-index: 0;
 }
@@ -84,8 +86,7 @@
 }
 
 .header-head-lindsay {
-  left: -0.15em;
-  transform: translate(-100%, -50%);
+  margin-left: 0.06em;
 }
 
 .header-head-lindsay img {
@@ -93,8 +94,7 @@
 }
 
 .header-head-mark {
-  right: -0.15em;
-  transform: translate(100%, -50%);
+  margin-left: 0.12em;
 }
 
 .header-head-mark img {
@@ -109,8 +109,8 @@
 .pill-links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: flex-end;
+  gap: clamp(24px, 3.25vw, 48px);
 }
 
 .nav-link {
@@ -345,13 +345,20 @@
   overflow: hidden;
 }
 
+@media (max-width: 900px) {
+  .pill-nav {
+    padding: 14px 24px;
+  }
+}
+
 /* ── MOBILE ── */
 @media (max-width: 640px) {
   .pill-nav {
     flex-direction: row;
+    gap: 0;
     align-items: center;
     justify-content: center;
-    padding: 14px var(--gutter);
+    padding: 14px 24px;
     position: relative;
   }
 

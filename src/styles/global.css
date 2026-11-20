@@ -71,8 +71,8 @@
   --font-sans: var(--font-body);
   --font-mono: var(--font-body);
 
-  /* Fixed banner: logo row + nav row. Content-offset variable used by pages. */
-  --header-height: 165px;
+  /* Fixed banner height. Content-offset variable used by pages. */
+  --header-height: clamp(77px, calc(4vw + 29px), 89px);
   --page-padding: var(--gutter);
 }
 
@@ -267,7 +267,7 @@ h3 {
 @media (max-width: 768px) {
   :root {
     --gutter: 5vw;
-    --header-height: 92px;
+    --header-height: 77px;
   }
   .section { padding: 56px 0; }
 }

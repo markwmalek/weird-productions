@@ -100,10 +100,10 @@ export default function Header() {
 
           {/* Logo */}
           <Text as={Link} to="/" variant="h1" className="header-logo" onClick={() => setMenuOpen(false)}>
+            <span className="header-logo-text">Weird</span>
             <span className="header-head header-head-lindsay" aria-hidden="true">
               <img src="/images/hero-lindsay.png" alt="" />
             </span>
-            <span className="header-logo-text">Weird</span>
             <span className="header-head header-head-mark" aria-hidden="true">
               <img src="/images/hero-mark.png" alt="" />
             </span>

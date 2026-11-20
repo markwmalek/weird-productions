@@ -60,6 +60,28 @@
   opacity: 1;
 }
 
+/* ── DOLLYWEIRD ANNOUNCEMENT ── */
+.home-dollyweird-strip {
+  display: block;
+  background: #000000;
+  color: #ffffff;
+}
+
+.home-dollyweird-strip .marquee {
+  border-color: #000000;
+}
+
+.home-dollyweird-strip:hover .marquee__content {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-dollyweird-strip .marquee__track {
+    animation: none;
+  }
+}
+
 /* Figma: Sora 24px weight 400, centered, #000 */
 .home-slideshow-caption {
   font-family: var(--font-body);

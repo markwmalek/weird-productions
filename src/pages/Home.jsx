@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Text from '../components/Typography';
+import Marquee from '../components/Marquee';
 import './Home.css';
 
 const SLIDESHOW_IMAGES = [
@@ -156,6 +157,17 @@ export default function Home() {
 
   return (
     <main className="home-page">
+
+      <Link
+        to="/dollyweird"
+        className="home-dollyweird-strip"
+        aria-label="Dollyweird 3 tonight at the Fruit! Learn more"
+      >
+        <Marquee
+          items={['Dollyweird 3 tonight at the Fruit!']}
+          speed={14}
+        />
+      </Link>
 
       {/* ── SLIDESHOW ── */}
       <section className="home-slideshow">
