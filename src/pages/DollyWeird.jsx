@@ -61,19 +61,15 @@ export default function DollyWeird() {
     <main className="dw-page">
 
       {/* Photo hero */}
-      <section className="dw-photo-hero" aria-label="Dollyweird celebration">
+      <section className="dw-photo-hero" aria-labelledby="dw-hero-title">
         <img
           src="/images/dollyweird/dollyweird-hero.jpg"
           alt="Dollyweird guests celebrating in front of a wall of Dolly-inspired artwork"
           fetchPriority="high"
         />
-      </section>
-
-      {/* Hero */}
-      <section className="dw-hero">
-        <div className="page-wrap">
+        <div className="page-wrap dw-photo-hero-content">
           <Text as="p" variant="eyebrow" className="dw-eyebrow">Tickets on sale — one night only</Text>
-          <Text as="h1" variant="display" className="dw-title">Dollyweird 3</Text>
+          <Text as="h1" variant="display" className="dw-title" id="dw-hero-title">Dollyweird 3</Text>
           <Text as="p" variant="bodyLg" className="dw-tagline">
             Durham&rsquo;s love letter to her life and legacy.
           </Text>
@@ -100,7 +96,12 @@ export default function DollyWeird() {
               Buy Art
             </Text>
           </div>
+        </div>
+      </section>
 
+      {/* Event details */}
+      <section className="dw-hero">
+        <div className="page-wrap">
           <div className="dw-event-card" aria-label="Dollyweird 3 event details">
             <div>
               <Text as="p" variant="eyebrow" className="dw-detail-label">When</Text>
